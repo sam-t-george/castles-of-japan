@@ -39,11 +39,6 @@ CREATE TABLE castle_img (
 	FOREIGN KEY (castle_id) REFERENCES castle(castle_id)
 );
 
-CREATE TABLE img (
-	img_id serial primary key,
-	img_name varchar(50) NOT NULL,
-	img_path varchar(50) NOT NULL
-);
 
 COMMIT TRANSACTION;
 
