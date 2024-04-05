@@ -27,17 +27,18 @@ CREATE TABLE castle (
 	site_url varchar(255)
 );
 
+CREATE TABLE img (
+	img_id serial primary key,
+	img_name varchar(50) NOT NULL,
+	img_path varchar(50) NOT NULL
+);
+
+
 CREATE TABLE castle_img (
 	img_id int,
 	castle_id int,
 	FOREIGN KEY (img_id) REFERENCES img (img_id),
 	FOREIGN KEY (castle_id) REFERENCES castle(castle_id)
-);
-
-CREATE TABLE img (
-	img_id serial primary key,
-	img_name varchar(50) NOT NULL,
-	img_path varchar(50) NOT NULL
 );
 
 COMMIT TRANSACTION;
