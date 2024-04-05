@@ -1,7 +1,5 @@
 BEGIN TRANSACTION;
 
-
-
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS castle;
 DROP TABLE IF EXISTS castle_img;
@@ -39,6 +37,7 @@ CREATE TABLE img (
 	img_name varchar(50) NOT NULL,
 	img_path varchar(50) NOT NULL
 );
+
 
 COMMIT TRANSACTION;
 
