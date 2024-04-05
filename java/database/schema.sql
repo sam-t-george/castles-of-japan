@@ -25,6 +25,13 @@ CREATE TABLE castle (
 	site_url varchar(255)
 );
 
+CREATE TABLE img (
+	img_id serial primary key,
+	img_name varchar(50) NOT NULL,
+	img_path varchar(50) NOT NULL
+);
+
+
 CREATE TABLE castle_img (
 	img_id int,
 	castle_id int,
@@ -37,7 +44,6 @@ CREATE TABLE img (
 	img_name varchar(50) NOT NULL,
 	img_path varchar(50) NOT NULL
 );
-
 
 COMMIT TRANSACTION;
 
