@@ -33,7 +33,6 @@ CREATE TABLE img (
 	img_path varchar(50) NOT NULL
 );
 
-
 CREATE TABLE castle_img (
 	img_id int,
 	castle_id int,
