@@ -1,5 +1,7 @@
 BEGIN TRANSACTION;
 
+
+
 DROP TABLE IF EXISTS users;
 DROP TABLE IF EXISTS castle;
 DROP TABLE IF EXISTS castle_img;
@@ -25,12 +27,12 @@ CREATE TABLE castle (
 	site_url varchar(255)
 );
 
+
 CREATE TABLE img (
 	img_id serial primary key,
 	img_name varchar(50) NOT NULL,
 	img_path varchar(50) NOT NULL
 );
-
 
 CREATE TABLE castle_img (
 	img_id int,
@@ -38,7 +40,6 @@ CREATE TABLE castle_img (
 	FOREIGN KEY (img_id) REFERENCES img (img_id),
 	FOREIGN KEY (castle_id) REFERENCES castle(castle_id)
 );
-
 
 COMMIT TRANSACTION;
 
