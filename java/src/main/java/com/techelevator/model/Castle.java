@@ -12,11 +12,12 @@ public class Castle {
     private String longitude;
     private String latitude;
     private String siteUrl;
+    private String mapLocation;
 
     public Castle(){
     }
     public Castle(int castleId, String castleName, String castleBannerPhoto, String shortDesc,
-                  String longDesc, String address, String longitude, String latitude, String siteUrl) {
+                  String longDesc, String address, String longitude, String latitude, String siteUrl, String mapLocation) {
         this.castleId = castleId;
         this.castleName = castleName;
         this.castleBannerPhoto = castleBannerPhoto;
@@ -26,6 +27,15 @@ public class Castle {
         this.longitude = longitude;
         this.latitude = latitude;
         this.siteUrl = siteUrl;
+        this.mapLocation = mapLocation;
+    }
+
+    public String getMapLocation() {
+        return mapLocation;
+    }
+
+    public void setMapLocation(String mapLocation) {
+        this.mapLocation = mapLocation;
     }
 
     public int getCastleId() {
