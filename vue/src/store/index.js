@@ -17,7 +17,7 @@ export function createStore(currentToken, currentUser) {
           .catch(err => console.error(err));
       },
       searchForCastle(context, searchTerms) {
-        CastleService.searchForCastle(searchTerms.name, searchTerms.region, searchTerms.address)
+        CastleService.searchForCastles(searchTerms.name, searchTerms.region, searchTerms.address)
           .then(response => {
             context.commit('SET_CASTLELIST', response.data);
           })
@@ -26,7 +26,7 @@ export function createStore(currentToken, currentUser) {
     },
     mutations: {
       SET_CASTLELIST(state, castles) {
-        state.castlelist = castles;
+        state.castleList = castles;
       },
       SET_AUTH_TOKEN(state, token) {
         state.token = token;

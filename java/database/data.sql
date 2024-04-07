@@ -1,4 +1,3 @@
-BEGIN TRANSACTION;
 
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
 INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
@@ -134,5 +133,3 @@ insert into img (img_name, img_path) values('Maruoka_1', 'https://images.squares
 insert into img (img_name, img_path) values('Maruoka_2', 'https://japandeluxetours.com/uploads/2015/08/20150817184123_55d27f33e096f.jpg');
 insert into img (img_name, img_path) values('Maruoka_3', 'https://pbs.twimg.com/media/GHTrRC3bsAAHid8?format=jpg&name=large');
 insert into img (img_name, img_path) values('Maruoka_4', 'https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2023/05/pixta_79765363_M-1024x640.jpeg');
-
-COMMIT TRANSACTION;
