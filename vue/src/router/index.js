@@ -10,6 +10,8 @@ import CastleDetailView from '../views/CastleDetailView.vue';
 import DashboardView from '../views/DashboardView.vue';
 import MapView from '../views/MapView.vue';
 import CastleListView from '../views/CastleListView.vue';
+import CastleDetailViewVue from '../views/CastleDetailView.vue';
+
 
 
 /**
@@ -82,7 +84,15 @@ const routes = [
     name: "dashboard",
     component: DashboardView,
     meta: {
-      requiresAuth: true
+      requiresAuth: false
+    }
+  },
+  {
+    path: "/castleDetail",
+    name: "castleDetail",
+    component: CastleDetailView,
+    meta: {
+      requiresAuth: false
     }
   },
 ];
