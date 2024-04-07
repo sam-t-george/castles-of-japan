@@ -21,14 +21,15 @@ CREATE TABLE castle (
 	address varchar(255) NOT NULL,
 	longitude varchar(50),
 	latitude varchar(50),
-	site_url varchar(255)
+	site_url varchar(255),
+	map_location text
 );
 
 
 CREATE TABLE img (
  	img_id serial primary key,
+	castle_id int,
  	img_name varchar(50) NOT NULL,
  	img_path varchar(255) NOT NULL,
- 	castle_id int, 
  	CONSTRAINT FK_img FOREIGN KEY(castle_id) REFERENCES castle(castle_id)
  );

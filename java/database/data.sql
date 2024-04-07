@@ -122,7 +122,7 @@ insert into img (castle_id, img_name, img_path) values(15, 'Marugame_2', 'https:
 insert into img (castle_id, img_name, img_path) values(15, 'Marugame_3', 'https://assets.my-kagawa.jp/storage/tourism_attractions/10084/responsive_images/LJ2D9EcCIMLsj1Qj29rDFKYQlZvljrglyektyMdl__1611_1074.jpeg');
 insert into img (castle_id, img_name, img_path) values(15, 'Marugame_4', 'https://media-cdn.tripadvisor.com/media/photo-s/0a/c5/99/81/caption.jpg');
 
-insert into img (castle_id, img_name, img_path) values(16'Kiyosu_1', 'https://muza-chan.net/aj/poze-weblog7/kiyosu-jo-main-keep-big.jpg');
+insert into img (castle_id, img_name, img_path) values(16, 'Kiyosu_1', 'https://muza-chan.net/aj/poze-weblog7/kiyosu-jo-main-keep-big.jpg');
 insert into img (castle_id, img_name, img_path) values(16, 'Kiyosu_2', 'https://static.gltjp.com/glt/prd/data/directory/12000/11928/20210812_012001_c826458b_w1920.jpg');
 insert into img (castle_id, img_name, img_path) values(16, 'Kiyosu_3', 'https://aichinavi.jp/upload/spot_images/69213a1a559c0aac84a06fe5e4bb583e.jpg');
 insert into img (castle_id, img_name, img_path) values(16, 'Kiyosu_4', 'https://www.jcastle.info/images/3/3b/KiyosujouART_%287%29.jpg ');
