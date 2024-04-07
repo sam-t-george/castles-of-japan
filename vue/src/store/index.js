@@ -1,13 +1,33 @@
 import { createStore as _createStore } from 'vuex';
 import axios from 'axios';
+import CastleService from '../services/CastleService';
 
 export function createStore(currentToken, currentUser) {
   let store = _createStore({
     state: {
       token: currentToken || '',
-      user: currentUser || {}
+      user: currentUser || {},
+      castleList: []
+    },
+    actions: {
+      getAllCastles(context) {
+        CastleService.listCastles().then(response => {
+          context.commit('SET_CASTLELIST', response.data);
+        })
+          .catch(err => console.error(err));
+      },
+      searchForCastle(context, searchTerms) {
+        CastleService.searchForCastles(searchTerms.name, searchTerms.region, searchTerms.address)
+          .then(response => {
+            context.commit('SET_CASTLELIST', response.data);
+          })
+          .catch(err => console.error(err));
+      }
     },
     mutations: {
+      SET_CASTLELIST(state, castles) {
+        state.castleList = castles;
+      },
       SET_AUTH_TOKEN(state, token) {
         state.token = token;
         localStorage.setItem('token', token);
