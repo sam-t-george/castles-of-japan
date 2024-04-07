@@ -1,11 +1,7 @@
-BEGIN TRANSACTION;
-
-
-
-DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS castle;
-DROP TABLE IF EXISTS castle_img;
+DROP TABLE IF EXISTS users CASCADE;
+DROP TABLE IF EXISTS castle CASCADE;
 DROP TABLE IF EXISTS img;
+
 
 CREATE TABLE users (
 	user_id SERIAL,
@@ -14,6 +10,7 @@ CREATE TABLE users (
 	role varchar(50) NOT NULL,
 	CONSTRAINT PK_user PRIMARY KEY (user_id)
 );
+
 
 CREATE TABLE castle (
 	castle_id serial primary key,
@@ -29,17 +26,9 @@ CREATE TABLE castle (
 
 
 CREATE TABLE img (
-	img_id serial primary key,
-	img_name varchar(50) NOT NULL,
-	img_path varchar(255) NOT NULL
-);
-
-CREATE TABLE castle_img (
-	img_id int,
-	castle_id int,
-	FOREIGN KEY (img_id) REFERENCES img (img_id),
-	FOREIGN KEY (castle_id) REFERENCES castle(castle_id)
-);
-
-COMMIT TRANSACTION;
-
+ 	img_id serial primary key,
+ 	img_name varchar(50) NOT NULL,
+ 	img_path varchar(255) NOT NULL,
+ 	castle_id int, 
+ 	CONSTRAINT FK_img FOREIGN KEY(castle_id) REFERENCES castle(castle_id)
+ );

@@ -1,5 +1,3 @@
-BEGIN TRANSACTION;
-
 INSERT INTO users (username,password_hash,role) VALUES ('user','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_USER');
 INSERT INTO users (username,password_hash,role) VALUES ('admin','$2a$08$UkVvwpULis18S19S5pZFn.YHPZt3oaqHZnDwqbCW9pft6uFtkXKDC','ROLE_ADMIN');
 
@@ -48,23 +46,26 @@ values('Uwajima Castle','https://www.japan-guide.com/g21/5577_11.jpg', 'Original
 insert into castle (castle_name, castle_banner_photo, short_desc, long_desc, address) 
 values('Zakimi Castle','https://visitokinawajapan.com/wp-content/themes/visit-okinawa_multi-language/lang/en/assets/img/discover/149/di149_kv_zakimi-castle-ruins.webp', 'Historical fortress ruins in Okinawa', 'Zakimi Castle, located in Okinawa Prefecture, is not just an archaeological site but a testament to the Ryukyu Kingdoms military ingenuity. Built in the early 15th century under the reign of the legendary Ryukyuan commander Gosamaru, its ruins now serve as a silent witness to the rich history and cultural fusion of the Ryukyu Islands. The castles ingenious design, featuring massive limestone walls and arched gates, exemplifies the advanced architectural skills of the Ryukyuans and their strategic military planning. Though what remains today are largely ruins, Zakimi Castle has been recognized for its historical and cultural significance, with its inclusion as a UNESCO World Heritage Site in 2000 as part of the Gusuku Sites and Related Properties of the Kingdom of Ryukyu. The site offers panoramic views of the surrounding landscape, including the East China Sea, making it a poignant reminder of Okinawas storied past and a place of serene beauty.', '708-6 Zakimi, Yomitan, Nakagami District, Okinawa 904-0301, Japan');
 
-
 insert into img (img_name, img_path) values('Gifu_1', 'https://i.pinimg.com/originals/e0/d6/29/e0d629fee2fe8b34a39517830780c08d.jpg');
 insert into img (img_name, img_path) values('Gifu_2', 'https://live.staticflickr.com/3359/3614239196_0c05b9af4b_b.jpg');
 insert into img (img_name, img_path) values('Gifu_3', 'https://go-centraljapan.jp/route/dragon/en/site/img/spot14/box04_slide03.jpg');
 insert into img (img_name, img_path) values('Gifu_4', 'https://live.staticflickr.com/3441/3226675109_5b149b7054_b.jpg');
+
 insert into img (img_name, img_path) values('Marugame_1', 'https://www.japan-guide.com/g21/5469_01.jpg');
 insert into img (img_name, img_path) values('Marugame_2', 'https://i0.wp.com/japanonlinetour.com/wp-content/uploads/2020/12/marugame-castle.png?fit=2090%2C1394&ssl=1');
 insert into img (img_name, img_path) values('Marugame_3', 'https://assets.my-kagawa.jp/storage/tourism_attractions/10084/responsive_images/LJ2D9EcCIMLsj1Qj29rDFKYQlZvljrglyektyMdl__1611_1074.jpeg');
 insert into img (img_name, img_path) values('Marugame_4', 'https://media-cdn.tripadvisor.com/media/photo-s/0a/c5/99/81/caption.jpg');
+
 insert into img (img_name, img_path) values('Kiyosu_1', 'https://muza-chan.net/aj/poze-weblog7/kiyosu-jo-main-keep-big.jpg');
 insert into img (img_name, img_path) values('Kiyosu_2', 'https://static.gltjp.com/glt/prd/data/directory/12000/11928/20210812_012001_c826458b_w1920.jpg');
 insert into img (img_name, img_path) values('Kiyosu_3', 'https://aichinavi.jp/upload/spot_images/69213a1a559c0aac84a06fe5e4bb583e.jpg');
 insert into img (img_name, img_path) values('Kiyosu_4', 'https://www.jcastle.info/images/3/3b/KiyosujouART_%287%29.jpg ');
+
 insert into img (img_name, img_path) values('Kanazawa_1', 'https://japanjourneys.jp/wp-content/uploads/2020/06/kanazawa-castle-retouched-header.jpg');
 insert into img (img_name, img_path) values('Kanazawa_2', 'https://images.ctfassets.net/uoecnmts6wfs/3m0qD2GArHlMQUN9BNwhak/bcc17eb950f8d82b91e460d8139372c1/img_spot_019_03.jpg?q=70');
 insert into img (img_name, img_path) values('Kanazawa_3', 'https://www.japan-guide.com/g19/4202_12.jpg');
 insert into img (img_name, img_path) values('Kanazawa_4', 'https://images.ctfassets.net/uoecnmts6wfs/KKNytjBDhMZPfyMJ1am3W/2faf13d9baed0b9a524514ceb8a779b4/img_spot_019_01.jpg?q=70');
+
 insert into img (img_name, img_path) values('Iwamura_1', 'https://www.jcastle.info/images/b/bc/Iwamura3.jpg');
 insert into img (img_name, img_path) values('Iwamura_2', 'https://svcstrg.cld.navitime.jp/imgfile/02301_2500626n_01.jpg');
 insert into img (img_name, img_path) values('Iwamura_3', 'https://upload.wikimedia.org/wikipedia/commons/f/f8/Iwamurajo17.jpg');
@@ -134,5 +135,3 @@ insert into img (img_name, img_path) values('Maruoka_1', 'https://images.squares
 insert into img (img_name, img_path) values('Maruoka_2', 'https://japandeluxetours.com/uploads/2015/08/20150817184123_55d27f33e096f.jpg');
 insert into img (img_name, img_path) values('Maruoka_3', 'https://pbs.twimg.com/media/GHTrRC3bsAAHid8?format=jpg&name=large');
 insert into img (img_name, img_path) values('Maruoka_4', 'https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2023/05/pixta_79765363_M-1024x640.jpeg');
-
-COMMIT TRANSACTION;
