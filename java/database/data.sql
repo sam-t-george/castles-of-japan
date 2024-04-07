@@ -135,5 +135,4 @@ insert into img (img_name, img_path) values('Maruoka_2', 'https://japandeluxetou
 insert into img (img_name, img_path) values('Maruoka_3', 'https://pbs.twimg.com/media/GHTrRC3bsAAHid8?format=jpg&name=large');
 insert into img (img_name, img_path) values('Maruoka_4', 'https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2023/05/pixta_79765363_M-1024x640.jpeg');
 
-
 COMMIT TRANSACTION;
