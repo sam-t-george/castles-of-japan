@@ -31,7 +31,7 @@ CREATE TABLE castle (
 CREATE TABLE img (
 	img_id serial primary key,
 	img_name varchar(50) NOT NULL,
-	img_path varchar(50) NOT NULL
+	img_path varchar(255) NOT NULL
 );
 
 CREATE TABLE castle_img (
