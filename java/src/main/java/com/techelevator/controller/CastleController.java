@@ -17,12 +17,12 @@ public class CastleController {
         this.castleDao = castleDao;
     }
     @RequestMapping(path = "/castles", method = RequestMethod.GET)
-    public Castle[] listCastles() {
-        List<Castle> castleList = castleDao.getCastles();
-        if (castleList.size() == 0) {
+    public Castle[] getCastles() {
+        List<Castle> castles = castleDao.getCastles();
+        if (castles.size() == 0) {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No castles found");
         } else {
-            return castleDao.getCastles().toArray(new Castle[castleList.size()]);
+            return castleDao.getCastles().toArray(new Castle[castles.size()]);
         }
     }
 }
