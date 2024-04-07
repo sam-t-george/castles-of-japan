@@ -6,6 +6,11 @@ import HomeView from '../views/HomeView.vue';
 import LoginView from '../views/LoginView.vue';
 import LogoutView from '../views/LogoutView.vue';
 import RegisterView from '../views/RegisterView.vue';
+import CastleDetailView from '../views/CastleDetailView.vue';
+import DashboardView from '../views/DashboardView.vue';
+import MapView from '../views/MapView.vue';
+import CastleListView from '../views/CastleListView.vue';
+
 
 /**
  * The Vue Router is used to "direct" the browser to render a specific view component
@@ -21,7 +26,7 @@ const routes = [
     name: 'home',
     component: HomeView,
     meta: {
-      requiresAuth: true // changed home authentication to false for now
+      requiresAuth: false // changed home authentication to false for now
     }
   },
   {
@@ -41,13 +46,45 @@ const routes = [
     }
   },
   {
+    path: "/castles",
+    name: "castles",
+    component: CastleListView,
+    meta: {
+      requiresAuth: false
+    }
+  },
+  {
     path: "/register",
     name: "register",
     component: RegisterView,
     meta: {
       requiresAuth: false
     }
-  }
+  },
+  {
+  path: '/map',
+    name: 'map',
+    component: MapView,
+    meta: {
+      requiresAuth: false // changed home authentication to false for now
+    }
+  },
+  {
+    path: "/details",
+    name: "details",
+    component: CastleDetailView,
+    meta: {
+      requiresAuth: false
+    }
+  },
+  {
+    path: "/dashboard",
+    name: "dashboard",
+    component: DashboardView,
+    meta: {
+      requiresAuth: true
+    }
+  },
 ];
 
 // Create the router
