@@ -110,19 +110,19 @@ public class Castle {
         this.siteUrl = siteUrl;
     }
 
-    @Override
-    public String toString() {
-        return "{" +
-                "castleId:" + castleId + ", " +
-                "castleName:'" + castleName + '\'' +
-                ", castleBannerPhoto:'" + castleBannerPhoto + '\'' +
-                ", shortDesc:'" + shortDesc + '\'' +
-                ", longDesc:'" + longDesc + '\'' +
-                ", address:'" + address + '\'' +
-                ", longitude:'" + longitude + '\'' +
-                ", latitude:'" + latitude + '\'' +
-                ", siteUrl:'" + siteUrl + '\'' +
-                ", mapLocation:'" + mapLocation + '\'' +
-                '}';
-    }
+//    @Override
+//    public String toString() {
+//        return "{" +
+//                "castleId:" + castleId + ", " +
+//                "castleName:'" + castleName + '\'' +
+//                ", castleBannerPhoto:'" + castleBannerPhoto + '\'' +
+//                ", shortDesc:'" + shortDesc + '\'' +
+//                ", longDesc:'" + longDesc + '\'' +
+//                ", address:'" + address + '\'' +
+//                ", longitude:'" + longitude + '\'' +
+//                ", latitude:'" + latitude + '\'' +
+//                ", siteUrl:'" + siteUrl + '\'' +
+//                ", mapLocation:'" + mapLocation + '\'' +
+//                '}';
+//    }
 }

@@ -30,4 +30,9 @@ public class CastleController {
         Castle castle = castleDao.getCastleById(castleId);
         return castle;
     }
+
+    @RequestMapping(path = "/castle/search/{castleName}", method = RequestMethod.GET)
+    public List<Castle> getCastleByName(@PathVariable("castleName") String castleName) {
+        return castleDao.getCastlesByName(castleName);
+    }
 }
