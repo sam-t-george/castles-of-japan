@@ -7,7 +7,8 @@ export function createStore(currentToken, currentUser) {
     state: {
       token: currentToken || '',
       user: currentUser || {},
-      castleList: []
+      castleList: [],
+      castle: {}, //may or may not need this 
     },
     actions: {
       getAllCastles(context) {
@@ -22,11 +23,29 @@ export function createStore(currentToken, currentUser) {
             context.commit('SET_CASTLELIST', response.data);
           })
           .catch(err => console.error(err));
+      },
+      getCastleDetails(context, castleId) {
+        CastleService.getCastleById(castleId).then(response => {
+          context.commit('SET_CASTLE', response.data);
+        })
+        .catch(err => console.error(err));
+      },
+      getCastlePictures(context, castleId) {
+        CastleService.getImagesByCastleId(castleId).then(response => {
+          context.commit('SET_CASTLE_IMAGES', response.data);
+        })
+        .catch(err => console.error(err));
       }
     },
     mutations: {
       SET_CASTLELIST(state, castles) {
         state.castleList = castles;
+      },
+      SET_CASTLE(state, castle) {
+        state.castle = castle;
+      },
+      SET_CASTLE_IMAGES(state, images) {
+        state.castle.images = images;
       },
       SET_AUTH_TOKEN(state, token) {
         state.token = token;
@@ -43,7 +62,7 @@ export function createStore(currentToken, currentUser) {
         state.token = '';
         state.user = {};
         axios.defaults.headers.common = {};
-      }
+      },
     },
   });
   return store;

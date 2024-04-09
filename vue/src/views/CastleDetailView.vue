@@ -1,9 +1,7 @@
 <template>
-
-    <h1> DETAILVIEW </h1>
     <CastleDetail :castle="castle"/>
     <div class="google-map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3250.8428659514193!2d136.77949637622285!3d35.433922343519065!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6003a9798f2e0eab%3A0x2871c3655542c94a!2sGifu%20Castle!5e0!3m2!1sen!2sus!4v1712526771452!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13070.828175646166!2d135.7484258!3d35.0140379!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x600107d40a2b9b0b%3A0x106b8759906a2f2f!2sNij%C5%8D%20Castle!5e0!3m2!1sen!2sus!4v1712615526641!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </template>
   
@@ -19,13 +17,25 @@ export default {
 props: ['castleId'],
 data() {
     return {
+        images: {},
         castle: {},  // could be [] or {} also probably maybe we have no idea
+        
     };
 },
-
- // fetch castle details here in created
-
+async created() {
+    if (this.castleId) {
+        try {
+            const response = await CastleService.getCastleById(this.castleId);
+            this.castle = response.data;
+            this.$store.dispatch('getCastlePictures', this.castleId);
+        } catch (error) {
+            console.error(error);
+        } //add better error message later
+    }
+},
 }
+
+
 </script>
 
 <style scoped>

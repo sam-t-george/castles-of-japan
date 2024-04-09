@@ -15,7 +15,7 @@ public class ImgController {
     public ImgController (ImgDao imgDao) {
         this.imgDao = imgDao;
     }
-    @RequestMapping(path = "/castles/{castleId}", method = RequestMethod.GET)
+    @RequestMapping(path = "/images/{castleId}", method = RequestMethod.GET)
     public Img[] getImagesByCastleId(@PathVariable("castleId") int castleId) {
         List<Img> imagesByCastleId = imgDao.getImagesByCastleId(castleId);
         if (imagesByCastleId.size() == 0) {
