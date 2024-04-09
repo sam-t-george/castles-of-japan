@@ -1,5 +1,5 @@
 <template>
-    <div id="container">
+    <div id="footer">
       <p id="copyright">&#169; Copyright - Foxtrot Enterprises</p>
     </div>
   </template>
