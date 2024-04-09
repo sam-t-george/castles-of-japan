@@ -17,7 +17,7 @@ export default {
 
 <style scoped>
 div.castle {
-    border: 2px solid rgb(139, 0, 125);
+    border: 2px solid rgb(50, 134, 24);
     margin: 10px;
     width: 300px;
     min-width: 300px;
