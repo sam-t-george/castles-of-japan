@@ -6,18 +6,9 @@ export default {
         return axios.get('/castles');
     },
     searchForCastles(name) {
-        let url = '/castles?';
+        let url = '/castle/search?';
         if (name) {
-        //     url += 'name=' + name;
-        // }
-        // if (name && region) {
-        //     url += '&'; 
-        // }
-        // if (region) {
-        //     url += 'region=' + region;
-        // }
-        // if (address) {
-        //     url += "address=" + address
+            url += name.toLowerCase().replace(/\s/g, '');
         }
         return axios.get(url);
     },
