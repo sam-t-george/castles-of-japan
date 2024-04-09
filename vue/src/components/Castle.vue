@@ -1,11 +1,16 @@
 <template>
-    <div class="castle">
-        <h3>{{ castle.castleName }}</h3>
+<router-link :to="{ name: 'details' }" class="card" style="max-width: 540px;">
+  <div class="row-no-gutters">
+    <div class="image-container">
         <img id=" bannerPhoto" :src = "castle.castleBannerPhoto" alt = "bannerPhoto">
-        <p>{{ castle.address }}</p>
-        <p>{{ castle.shortDesc }}</p>
-       
     </div>
+      <div class="card-body">
+        <h5 class="castle-name">{{ castle.castleName }}</h5>
+        <p class="castle-desc">{{ castle.shortDesc }}</p>
+        <p class="castle-address"><small class="text-muted">{{ castle.address }}</small></p>
+      </div>
+  </div>
+</router-link>
 </template>
 
 <script>
@@ -16,13 +21,12 @@ export default {
 </script>
 
 <style scoped>
-div.castle {
-    border: 2px solid rgb(50, 134, 24);
-    margin: 10px;
-    width: 300px;
-    min-width: 300px;
-    height: 250px;
-    text-align: center;
-    border-radius: 5px;
+
+div.image-container img {
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 </style>
