@@ -22,4 +22,7 @@ export default {
         return axios.get(url);
     },
 
+    getCastleById(castleId) {
+        return axios.get
+    }
 }
