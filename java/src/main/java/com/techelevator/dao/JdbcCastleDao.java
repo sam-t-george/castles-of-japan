@@ -40,6 +40,36 @@ public class JdbcCastleDao implements CastleDao {
         }
         return castles;
     }
+    @Override
+    public Castle getCastleById(int castleId){
+        Castle castle = new Castle();
+        String sql =
+                "SELECT " +
+
+                "castle_id, " +
+                "castle_name, " +
+                "castle_banner_photo, " +
+                "short_desc, " +
+                "long_desc, " +
+                "address, " +
+                "longitude, " +
+                "latitude, " +
+                "site_url, " +
+                "map_location " +
+
+                "FROM castle " +
+                "WHERE castle_id = ?;";
+        try {
+            SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, castleId);
+            while (rowSet.next()) {
+                castle = mapRowToCastle(rowSet);
+            }
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to server or database", e);
+        }
+        return castle;
+    };
+
 
     public Castle mapRowToCastle(SqlRowSet rowSet) {
         Castle castle = new Castle();
@@ -55,4 +85,6 @@ public class JdbcCastleDao implements CastleDao {
         castle.setMapLocation(rowSet.getString("map_location"));
         return castle;
     }
+
+
 }
