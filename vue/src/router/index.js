@@ -10,7 +10,7 @@ import CastleDetailView from '../views/CastleDetailView.vue';
 import DashboardView from '../views/DashboardView.vue';
 import MapView from '../views/MapView.vue';
 import CastleListView from '../views/CastleListView.vue';
-import CastleDetailViewVue from '../views/CastleDetailView.vue';
+
 
 
 
