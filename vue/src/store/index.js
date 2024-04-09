@@ -17,7 +17,7 @@ export function createStore(currentToken, currentUser) {
           .catch(err => console.error(err));
       },
       searchForCastle(context, searchTerms) {
-        CastleService.searchForCastles(searchTerms.name, searchTerms.region, searchTerms.address)
+        CastleService.searchForCastles(searchTerms.name)
           .then(response => {
             context.commit('SET_CASTLELIST', response.data);
           })
