@@ -13,7 +13,6 @@ import CastleListView from '../views/CastleListView.vue';
 
 
 
-
 /**
  * The Vue Router is used to "direct" the browser to render a specific view component
  * inside of App.vue depending on the URL.
@@ -72,14 +71,6 @@ const routes = [
     }
   },
   {
-    path: "/details",
-    name: "details",
-    component: CastleDetailView,
-    meta: {
-      requiresAuth: false
-    }
-  },
-  {
     path: "/dashboard",
     name: "dashboard",
     component: DashboardView,
@@ -88,9 +79,10 @@ const routes = [
     }
   },
   {
-    path: "/castleDetail",
+    path: "/castleDetail/:castleId", //added :castleId as path specifier
     name: "castleDetail",
     component: CastleDetailView,
+    props: true,  //allowing route to pass castleId
     meta: {
       requiresAuth: false
     }

@@ -2,11 +2,9 @@ package com.techelevator.controller;
 
 import com.techelevator.dao.CastleDao;
 import com.techelevator.model.Castle;
+import com.techelevator.model.Img;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 import java.util.List;
 
@@ -25,5 +23,11 @@ public class CastleController {
         } else {
             return castleDao.getCastles().toArray(new Castle[castles.size()]);
         }
+    }
+
+    @RequestMapping(path = "/castle/{castleId}", method = RequestMethod.GET)
+    public Castle getCastleById(@PathVariable("castleId") int castleId) {
+        Castle castle = castleDao.getCastleById(castleId);
+        return castle;
     }
 }

@@ -1,8 +1,8 @@
 <template>
-<router-link :to="{ name: 'details' }" class="card" style="max-width: 540px;">
+<router-link :to="{ name: 'castleDetail', params: { castleId: castle.castleId } }" class="card" style="max-width: 540px;"> <!--adding castleId as param-->
   <div class="row-no-gutters">
     <div class="image-container">
-        <img id=" bannerPhoto" :src = "castle.castleBannerPhoto" alt = "bannerPhoto">
+        <img id="bannerPhoto" :src = "castle.castleBannerPhoto" alt = "bannerPhoto">
     </div>
       <div class="card-body">
         <h5 class="castle-name">{{ castle.castleName }}</h5>

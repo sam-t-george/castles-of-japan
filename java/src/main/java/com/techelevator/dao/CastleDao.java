@@ -6,4 +6,5 @@ import java.util.List;
 
 public interface CastleDao {
     List<Castle> getCastles();
+    Castle getCastleById(int castleId);
 }

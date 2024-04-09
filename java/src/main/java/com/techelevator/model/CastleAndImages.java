@@ -1,8 +1,6 @@
 package com.techelevator.model;
 
-import javax.validation.constraints.NotNull;
-
-public class Castle {
+public class CastleAndImages {
     private int castleId;
     private String castleName;
     private String castleBannerPhoto;
@@ -14,10 +12,28 @@ public class Castle {
     private String siteUrl;
     private String mapLocation;
 
-    public Castle(){
+    private int imgId;
+    private String imgName;
+    private String imgPath;
+
+    public CastleAndImages() {
     }
-    public Castle(int castleId, String castleName, String castleBannerPhoto, String shortDesc,
-                  String longDesc, String address, String longitude, String latitude, String siteUrl, String mapLocation) {
+
+    public CastleAndImages(
+            int castleId,
+            String castleName,
+            String castleBannerPhoto,
+            String shortDesc,
+            String longDesc,
+            String address,
+            String longitude,
+            String latitude,
+            String siteUrl,
+            String mapLocation,
+            int imgId,
+            String imgName,
+            String imgPath
+    ) {
         this.castleId = castleId;
         this.castleName = castleName;
         this.castleBannerPhoto = castleBannerPhoto;
@@ -28,14 +44,9 @@ public class Castle {
         this.latitude = latitude;
         this.siteUrl = siteUrl;
         this.mapLocation = mapLocation;
-    }
-
-    public String getMapLocation() {
-        return mapLocation;
-    }
-
-    public void setMapLocation(String mapLocation) {
-        this.mapLocation = mapLocation;
+        this.imgId = imgId;
+        this.imgName = imgName;
+        this.imgPath = imgPath;
     }
 
     public int getCastleId() {
@@ -110,19 +121,35 @@ public class Castle {
         this.siteUrl = siteUrl;
     }
 
-    @Override
-    public String toString() {
-        return "{" +
-                "castleId:" + castleId + ", " +
-                "castleName:'" + castleName + '\'' +
-                ", castleBannerPhoto:'" + castleBannerPhoto + '\'' +
-                ", shortDesc:'" + shortDesc + '\'' +
-                ", longDesc:'" + longDesc + '\'' +
-                ", address:'" + address + '\'' +
-                ", longitude:'" + longitude + '\'' +
-                ", latitude:'" + latitude + '\'' +
-                ", siteUrl:'" + siteUrl + '\'' +
-                ", mapLocation:'" + mapLocation + '\'' +
-                '}';
+    public String getMapLocation() {
+        return mapLocation;
+    }
+
+    public void setMapLocation(String mapLocation) {
+        this.mapLocation = mapLocation;
+    }
+
+    public int getImgId() {
+        return imgId;
+    }
+
+    public void setImgId(int imgId) {
+        this.imgId = imgId;
+    }
+
+    public String getImgName() {
+        return imgName;
+    }
+
+    public void setImgName(String imgName) {
+        this.imgName = imgName;
+    }
+
+    public String getImgPath() {
+        return imgPath;
+    }
+
+    public void setImgPath(String imgPath) {
+        this.imgPath = imgPath;
     }
 }
