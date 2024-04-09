@@ -14,6 +14,9 @@ export default {
     },
 
     getCastleById(castleId) {
-        return axios.get
+        return axios.get(`/castle/${castleId}`);
+    },
+    getImagesByCastleId(castleId) {
+        return axios.get(`/images/${castleId}`);
     }
 }
