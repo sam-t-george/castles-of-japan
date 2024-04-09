@@ -4,8 +4,8 @@
         <p>{{ castle.longDesc }}</p>
         <img id=" bannerPhoto" :src = "castle.castleBannerPhoto" alt = "bannerPhoto">
         <p>{{ castle.address }}</p>
-        <p>{{ castle.shortDesc }}</p>
-       
+        <p>{{ castle.shortDesc }}</p> <!--these are placeholders til we decide what goes in here--> <!--we will be calling alt images from img table with our castle_id that we also need to connect to here from castle on list that they select-->
+        
     </div>
 </template>
 
