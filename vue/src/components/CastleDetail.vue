@@ -101,6 +101,11 @@ export default {
     height: 35vh;
     
 }
+
+.google-map iframe {
+    width: 100%;
+    height: 35vh;
+}
 .img {
     display: flex;
     flex-wrap: wrap;
