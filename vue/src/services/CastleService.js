@@ -7,7 +7,14 @@ export default {
     },
     searchForCastles(name) {
         let url = '/castle/search/';
+        let substring = 'castle';
+
         if (name) {
+
+            if (name.toLowerCase().includes(substring)) { // **********************
+                name = name.replace(substring, '');
+            }
+           
             url += name.toLowerCase().replace(/\s/g, '');
         }
         return axios.get(url);
