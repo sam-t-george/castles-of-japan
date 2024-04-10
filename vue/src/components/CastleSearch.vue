@@ -1,7 +1,12 @@
 <template>
+    <div>
     <div id="castleSearch" class="search-container">
         <input type="text" placeholder="Search by castle name" v-model.trim="search.name" @keyup="submitSearch" class="search-input">
     </div>
+
+
+</div>
+
 </template>
 <script>
 export default {
