@@ -8,4 +8,5 @@ public interface CastleDao {
     List<Castle> getCastles();
     Castle getCastleById(int castleId);
     List<Castle> getCastlesByName(String castleName);
+    List<Castle> getCastlesByRegion(String region);
 }
