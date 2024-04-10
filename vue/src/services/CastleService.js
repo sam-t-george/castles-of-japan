@@ -8,7 +8,6 @@ export default {
     searchForCastles(name) {
         let url = '/castle/search/';
         if (name) {
-
             if (name.toLowerCase().includes('castle')) {
                 name = name.toLowerCase().replace('castle', '');
             }
@@ -28,9 +27,11 @@ export default {
                 name = name.toLowerCase().replace('c', '');
             }
             url += name.toLowerCase().replace(/\s/g, '');
+
         } else {
             return axios.get('/castles');
         }
+        
         return axios.get(url);
     },
 

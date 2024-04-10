@@ -26,8 +26,6 @@
         <button class="region"></button>
         <button class="region"></button>     -->
 </template>
-
-
 <script>
 export default {
     data() {
@@ -81,11 +79,9 @@ export default {
             this.filter.region = 'okinawa';
             this.$store.dispatch('filterByRegion', this.filter);
         }
-
     }
 }
 </script>
-
 <style scoped>
 .search-container {
     display: flex;
