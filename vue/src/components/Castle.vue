@@ -25,27 +25,27 @@ export default {
   display: block;
   max-width: 33rem;
   border: 1.5px solid #000000; 
-  border-radius: 20px; /* Rounded corners */
-  overflow: hidden; /* Ensures the content fits within the border */
-  text-decoration: none; /* Removes underline from link */
-  color: inherit; /* Inherits text color */
-  transition: transform 0.2s; /* Smooth transformation on hover */
+  border-radius: 20px;
+  overflow: hidden; 
+  text-decoration: none; 
+  color: inherit; 
+  transition: transform 0.2s; 
   margin-top: 5rem;
 }
 .castle-card:hover {
-  transform: scale(1.02); /* Slight zoom on hover */
+  transform: scale(1.02); 
 }
 .castle-card-body {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Aligns items vertically center */
+  align-items: center; 
 }
 .castle-image {
   aspect-ratio: 1/1;
-  width: 100%; /* Fixed width, adjust as needed */
-  height: 100%; /* Fixed height, adjust as needed */
+  width: 100%; 
+  height: 100%; 
   object-fit: cover;
-  overflow: hidden; /* Ensures the image covers the area */
+  overflow: hidden; 
   border-radius: 10px;
 }
 .castle-content {
