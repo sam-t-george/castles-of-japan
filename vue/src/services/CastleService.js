@@ -7,8 +7,6 @@ export default {
     },
     searchForCastles(name) {
         let url = '/castle/search/';
-        let substring = 'castle';
-
         if (name) {
             if (name.toLowerCase().includes('castle')) {
                 name = name.toLowerCase().replace('castle', '');
