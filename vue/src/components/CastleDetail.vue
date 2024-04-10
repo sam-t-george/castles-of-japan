@@ -1,8 +1,12 @@
 <template>
     <div class="castleDetail">
-        <h3>{{ castle.castleName }}</h3>
+        <div class="big-image">
+            <div class="overlay">
+        <h1 class="title">{{ castle.castleName }}</h1>
+    </div>
+  </div>
         <p>{{ castle.longDesc }}</p>
-        <img id="bannerPhoto" :src = "castle.castleBannerPhoto" alt = "bannerPhoto"> <!--can be deleted pending stove's input-->
+        <img id="bannerPhoto" :src = "castle.castleBannerPhoto" alt = "bannerPhoto"> <!--can be deleted pending steve's input-->
         <p>{{ castle.address }}</p> <!--these are placeholders til we decide what goes in here--> <!--we will be calling alt images from img table with our castle_id that we also need to connect to here from castle on list that they select-->
         <div v-if="castle.images && castle.images.length"> <!--if they exist bc truthy language-->
             <img v-for="(image, index) in castle.images" :key="index" :src="image" alt="Castle Image">
@@ -40,3 +44,17 @@ export default {
 //     props: ['castle']
 // }
 </script>
+
+<style scoped>
+#castleDetail {
+    /* Add your styles for the castle detail container here */
+    /* Example styles: */
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #000000;
+}
+#bannerPhoto {
+    max-width: 100rem;
+}
+</style>
