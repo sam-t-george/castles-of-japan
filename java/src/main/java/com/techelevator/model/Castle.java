@@ -13,11 +13,24 @@ public class Castle {
     private String latitude;
     private String siteUrl;
     private String mapLocation;
+    private String region;
 
-    public Castle(){
+    public Castle() {
     }
-    public Castle(int castleId, String castleName, String castleBannerPhoto, String shortDesc,
-                  String longDesc, String address, String longitude, String latitude, String siteUrl, String mapLocation) {
+
+    public Castle(
+            int castleId,
+            String castleName,
+            String castleBannerPhoto,
+            String shortDesc,
+            String longDesc,
+            String address,
+            String longitude,
+            String latitude,
+            String siteUrl,
+            String mapLocation,
+            String region
+    ) {
         this.castleId = castleId;
         this.castleName = castleName;
         this.castleBannerPhoto = castleBannerPhoto;
@@ -28,14 +41,7 @@ public class Castle {
         this.latitude = latitude;
         this.siteUrl = siteUrl;
         this.mapLocation = mapLocation;
-    }
-
-    public String getMapLocation() {
-        return mapLocation;
-    }
-
-    public void setMapLocation(String mapLocation) {
-        this.mapLocation = mapLocation;
+        this.region = region;
     }
 
     public int getCastleId() {
@@ -110,19 +116,19 @@ public class Castle {
         this.siteUrl = siteUrl;
     }
 
-//    @Override
-//    public String toString() {
-//        return "{" +
-//                "castleId:" + castleId + ", " +
-//                "castleName:'" + castleName + '\'' +
-//                ", castleBannerPhoto:'" + castleBannerPhoto + '\'' +
-//                ", shortDesc:'" + shortDesc + '\'' +
-//                ", longDesc:'" + longDesc + '\'' +
-//                ", address:'" + address + '\'' +
-//                ", longitude:'" + longitude + '\'' +
-//                ", latitude:'" + latitude + '\'' +
-//                ", siteUrl:'" + siteUrl + '\'' +
-//                ", mapLocation:'" + mapLocation + '\'' +
-//                '}';
-//    }
+    public String getMapLocation() {
+        return mapLocation;
+    }
+
+    public void setMapLocation(String mapLocation) {
+        this.mapLocation = mapLocation;
+    }
+
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
 }

@@ -8,8 +8,11 @@
         <p>{{ castle.longDesc }}</p>
         <img id="bannerPhoto" :src = "castle.castleBannerPhoto" alt = "bannerPhoto"> <!--can be deleted pending steve's input-->
         <p>{{ castle.address }}</p> <!--these are placeholders til we decide what goes in here--> <!--we will be calling alt images from img table with our castle_id that we also need to connect to here from castle on list that they select-->
-        <div v-if="castle.images && castle.images.length"> <!--if they exist bc truthy language-->
-            <img v-for="(image, index) in castle.images" :key="index" :src="image" alt="Castle Image">
+        <div v-if="images && images.length"> <!--if they exist bc truthy language-->
+            <img v-for="(image, index) in images" :key="index" :src="image" alt="Castle Image">
+        </div>
+        <div class="google-map">
+        <iframe :src="castle.mapLocation" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
     </div>
 </template>
@@ -23,7 +26,8 @@ export default {
         castle: {
             type: Object,
             required: true
-        }
+        },
+        images: Array
     },
     data() {
         return {
