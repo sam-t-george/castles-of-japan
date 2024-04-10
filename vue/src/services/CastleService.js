@@ -8,26 +8,23 @@ export default {
     searchForCastles(name) {
         let url = '/castle/search/';
         if (name) {
-            if (name.toLowerCase().includes('castle')) {
-                name = name.toLowerCase().replace('castle', '');
-            }
-            if (name.toLowerCase().includes('castl')) {
-                name = name.toLowerCase().replace('castl', '');
-            }
-            if (name.toLowerCase().includes('cast')) {
-                name = name.toLowerCase().replace('cast', '');
-            }
-            if (name.toLowerCase().includes('cas')) {
-                name = name.toLowerCase().replace('cas', '');
-            }
-            if (name.toLowerCase().includes('ca')) {
-                name = name.toLowerCase().replace('ca', '');
-            }
             if (name.toLowerCase().includes('c')) {
                 name = name.toLowerCase().replace('c', '');
-            }
+            } else if (name.toLowerCase().includes('ca')) {
+                name = name.toLowerCase().replace('ca', '');
+            } else if (name.toLowerCase().includes('cas')) {
+                name = name.toLowerCase().replace('cas', '');
+            } else if (name.toLowerCase().includes('cast')) {
+                name = name.toLowerCase().replace('cast', '');
+            } else if (name.toLowerCase().includes('castl')) {
+                name = name.toLowerCase().replace('castl', '');
+            } else if (name.toLowerCase().includes('castle')) {
+                name = name.toLowerCase().replace('castle', '');
+            } 
             
             url += name.toLowerCase().replace(/\s/g, '');
+        } else {
+            return axios.get('/castles');
         }
         return axios.get(url);
     },
