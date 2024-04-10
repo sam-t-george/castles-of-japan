@@ -106,6 +106,39 @@ public class JdbcCastleDao implements CastleDao {
         return castles;
     };
 
+    @Override
+    public List<Castle> getCastlesByRegion(String region) {
+        List<Castle> castles = new ArrayList<>();
+        String sql =
+                "SELECT " +
+
+                        "castle_id, " +
+                        "castle_name, " +
+                        "castle_banner_photo, " +
+                        "short_desc, " +
+                        "long_desc, " +
+                        "address, " +
+                        "longitude, " +
+                        "latitude, " +
+                        "site_url, " +
+                        "map_location, " +
+                        "region " +
+
+                        "FROM castle " +
+                        "WHERE region ILIKE ?;";
+        try {
+            SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, region);
+            while (rowSet.next()) {
+                Castle castle = mapRowToCastle(rowSet);
+                castles.add(castle);
+            }
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to server or database", e);
+        }
+        return castles;
+    }
+
+
 
     public Castle mapRowToCastle(SqlRowSet rowSet) {
         Castle castle = new Castle();

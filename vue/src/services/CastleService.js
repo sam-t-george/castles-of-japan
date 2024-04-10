@@ -34,6 +34,14 @@ export default {
         return axios.get(url);
     },
 
+    filterByRegion(region) {
+        let url = '/castle/filter/'
+        if (region) {
+            url += region;
+        }
+        return axios.get(url);
+    },
+
     getCastleById(castleId) {
         return axios.get(`/castle/${castleId}`);
     },

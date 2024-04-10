@@ -35,4 +35,8 @@ public class CastleController {
     public List<Castle> getCastleByName(@PathVariable("castleName") String castleName) {
         return castleDao.getCastlesByName(castleName);
     }
+    @RequestMapping(path = "/castle/filter/{region}", method = RequestMethod.GET)
+    public List<Castle> getCastlesByRegion(@PathVariable("region") String region) {
+        return castleDao.getCastlesByRegion(region);
+    }
 }
