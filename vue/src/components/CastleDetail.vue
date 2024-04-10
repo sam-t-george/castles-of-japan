@@ -7,6 +7,9 @@
         <div v-if="images && images.length"> <!--if they exist bc truthy language-->
             <img v-for="(image, index) in images" :key="index" :src="image" alt="Castle Image">
         </div>
+        <div class="google-map">
+        <iframe :src="castle.mapLocation" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
     </div>
 </template>
 

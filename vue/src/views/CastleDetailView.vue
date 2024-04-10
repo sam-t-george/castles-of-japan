@@ -1,8 +1,8 @@
 <template>
     <CastleDetail :castle="castle" :images="images"/>
-    <div class="google-map">
+    <!-- <div class="google-map">
         <iframe :src="castle.mapLocation" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    </div> -->
 </template>
   
 <script>
