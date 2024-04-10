@@ -5,7 +5,7 @@
       <div class="castle-content">
         <h5 class="castle-name">{{ castle.castleName }}</h5>
         <p class="castle-desc">{{ castle.shortDesc }}</p>
-        <p class="castle-address"><small>{{ castle.address }}</small></p>
+        <p class="castle-address"><small>{{ castle.region }}</small></p>
       </div>
     </div>
   </router-link>
