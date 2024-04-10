@@ -1,43 +1,37 @@
 <template>
-    <div id="castleSearch">
-        <input type="text" placeholder="Search Castle" v-model.trim="search.name" @keyup="castleSearch">
+    <div id="castleSearch" class="search-container">
+        <input type="text" placeholder="Search by castle name" v-model.trim="search.name" @keyup="submitSearch" class="search-input">
     </div>
-
-    <label for="region">Kansai</label>
-    <input type="checkbox" id="region" v-model.trim="search.region" @click="castleSearch">
-
-    <label for="region">Chubu</label>
-    <input type="checkbox" id="region" v-model.trim="search.region" @click="castleSearch">
-     
-    <label for="region">Shikoku</label>
-    <input type="checkbox" id="region" v-model.trim="search.region" @click="castleSearch">
-
-    <label for="region">Chugoku</label>
-    <input type="checkbox" id="region" v-model.trim="search.region" @click="castleSearch">
-
-    <label for="region">Kyushu</label>
-    <input type="checkbox" id="region" v-model.trim="search.region" @click="castleSearch">
-
- 
 </template>
-
-
 <script>
-
 export default {
-   
     data() {
         return {
             search: {
                 name: ''
-            } 
+            }
         }
     },
     methods: {
-        castleSearch() {
+        submitSearch() {
             this.$store.dispatch('searchForCastle', this.search);
         }
     }
-
 }
 </script>
+<style scoped>
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-input {
+width: 50vw;
+height: 3vh;
+box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+font-size: 1em;
+padding: 6px;
+border: 1px solid #193144;
+border-radius: 14px;
+}
+</style>
