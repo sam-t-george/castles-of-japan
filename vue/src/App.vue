@@ -27,3 +27,9 @@ export default {
 };
 
 </script> 
+
+<style scoped>
+#capstone-app{
+  background-color: #FFFDF1;
+}
+</style>

@@ -9,3 +9,13 @@
   
   }
   </script>
+
+<style scoped> 
+
+#footer {
+display: flex;
+align-items: center; 
+color: #193144;
+}
+
+</style>
