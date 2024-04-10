@@ -1,5 +1,5 @@
 <template>
-    <CastleDetail :castle="castle"/>
+    <CastleDetail :castle="castle" :images="images"/>
     <div class="google-map">
         <iframe :src="castle.mapLocation" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
@@ -22,11 +22,13 @@ data() {
         
     };
 },
-async created() {
+async created() {  //EDITED TO CALL FOR IMAGES
     if (this.castleId) {
         try {
-            const response = await CastleService.getCastleById(this.castleId);
-            this.castle = response.data;
+            const castleResponse = await CastleService.getCastleById(this.castleId);
+            this.castle = castleResponse.data;
+            const imagesResponse = await CastleService.getImagesByCastleId(this.castleId);
+            this.images = imagesResponse.data.map(image => image.imgPath);
             this.$store.dispatch('getCastlePictures', this.castleId);
         } catch (error) {
             console.error(error);
