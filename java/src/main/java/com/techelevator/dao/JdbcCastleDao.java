@@ -27,7 +27,8 @@ public class JdbcCastleDao implements CastleDao {
                 "longitude, " +
                 "latitude, " +
                 "site_url, " +
-                "map_location " +
+                "map_location, " +
+                        "region " +
                 "FROM castle;";
         try {
             SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql);
@@ -55,7 +56,8 @@ public class JdbcCastleDao implements CastleDao {
                 "longitude, " +
                 "latitude, " +
                 "site_url, " +
-                "map_location " +
+                "map_location, " +
+                        "region " +
 
                 "FROM castle " +
                 "WHERE castle_id = ?;";
@@ -87,7 +89,8 @@ public class JdbcCastleDao implements CastleDao {
                         "longitude, " +
                         "latitude, " +
                         "site_url, " +
-                        "map_location " +
+                        "map_location, " +
+                        "region " +
 
                         "FROM castle " +
                         "WHERE castle_name ILIKE concat('%', ?, '%');";
@@ -116,6 +119,7 @@ public class JdbcCastleDao implements CastleDao {
         castle.setLatitude(rowSet.getString("latitude"));
         castle.setSiteUrl(rowSet.getString("site_url"));
         castle.setMapLocation(rowSet.getString("map_location"));
+        castle.setRegion(rowSet.getString("region"));
         return castle;
     }
 
