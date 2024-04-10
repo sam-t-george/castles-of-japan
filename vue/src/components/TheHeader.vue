@@ -4,11 +4,10 @@
         <h1>Castles Of Japan / 日本の城 </h1>
         
         <nav id= "nav">
-            <router-link v-bind:to="{ name: 'home' }" class="nav-link">Home</router-link>
-            <router-link v-bind:to="{ name: 'castles' }" class="nav-link">Castle List</router-link>
-            <router-link v-bind:to="{ name: 'dashboard' }" class="nav-link">Dashboard</router-link>
+            <router-link v-bind:to="{ name: 'home' }" class="nav-link">Home &nbsp; |</router-link>
+            <router-link v-bind:to="{ name: 'castles' }" class="nav-link">Castle List &nbsp; |</router-link>
+            <router-link v-bind:to="{ name: 'dashboard' }" class="nav-link">Dashboard &nbsp; |</router-link>
             <router-link v-bind:to="{ name: 'map' }" class="nav-link">Map</router-link>
-           
         </nav>
     </div>
 </template>
@@ -22,23 +21,22 @@
 <style scoped> 
     #header {
         display: flex;
-        align-items: center; /* Align items vertically */
+        align-items: center;
         color: #193144;
+        border-bottom: 2px solid #8BBAB1;
     }
     #nav {
         margin-left: auto;
-        
     }
  
     .nav-link {
-        text-decoration: none; /* Remove underline */
-        color: inherit; /* Inherit color from parent */
-        margin-right: 20px; /* Add some spacing between nav links */
-    
+        text-decoration: none;
+        color: inherit;
+        margin-right: 20px;
+        font-size: 1.5em;
     }
-    #nav-link:hover {
-    /* Scale font size by 1.02 on hover */
-    font-size: 1.02em;
+    .nav-link:hover {
+        font-size: 1.75em;
     }
 
 </style>
