@@ -22,7 +22,7 @@
 <style scoped> 
     #header {
         display: flex;
-        align-items: center; /* Align items vertically */
+        align-items: center;
         color: #193144;
     }
     #nav {
@@ -31,13 +31,12 @@
     }
  
     .nav-link {
-        text-decoration: none; /* Remove underline */
-        color: inherit; /* Inherit color from parent */
-        margin-right: 20px; /* Add some spacing between nav links */
+        text-decoration: none;
+        color: inherit;
+        margin-right: 20px;
     
     }
     #nav-link:hover {
-    /* Scale font size by 1.02 on hover */
     font-size: 1.02em;
     }
 
