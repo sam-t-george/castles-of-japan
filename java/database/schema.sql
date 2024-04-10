@@ -22,7 +22,8 @@ CREATE TABLE castle (
 	longitude varchar(50),
 	latitude varchar(50),
 	site_url varchar(255),
-	map_location text
+	map_location text,
+	region text
 );
 
 
