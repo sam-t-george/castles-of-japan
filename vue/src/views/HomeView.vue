@@ -3,6 +3,9 @@
 
     <div class="overlay">
     <h1>Unlock the Majesty: Explore Japan's Castles</h1>
+    <router-link v-bind:to="{ name: 'castles' }">
+    <button class="explore"> EXPLORE </button>
+  </router-link>
     </div>
   </div>
 </template>
@@ -23,17 +26,29 @@ export default {
     width: 100vw;
     position: relative;
     background-size: cover;
-    background-position: 50% 50%;
+    background-position: 50%;
     background-image: url('https://i.pinimg.com/originals/bb/b6/75/bbb6757f33883aa8703215437c054e96.jpg');
-
+    
+  }
+  .explore {
+    font-size: 1.6em;
+    background-color: #fffdf1b9;
+    border-radius: 10px;
+    width: 10vw;
+    height: 3vw;
+    color: #193144;
+  }
+  .explore:hover {
+    font-weight: bold;
+    color: #000;
+    background-color:   #fffdf1de;;
+    transform: scale(1.05);
   }
   .overlay {
     position: absolute;
     height: 100vh;
-    width: 100%;
-    top: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.401);
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.429);
     color: white;
     display: flex;
     align-items: center;

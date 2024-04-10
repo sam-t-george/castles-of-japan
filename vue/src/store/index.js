@@ -24,6 +24,17 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
+
+
+      filterByRegion(context, searchTerms) {
+        CastleService.filterByRegion(searchTerms.region)
+          .then(response => {
+            context.commit('SET_CASTLELIST', response.data);
+          })
+          .catch(err => console.error(err));
+      },
+
+
       getCastleDetails(context, castleId) {
         CastleService.getCastleById(castleId).then(response => {
           context.commit('SET_CASTLE', response.data);

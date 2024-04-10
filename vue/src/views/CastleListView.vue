@@ -1,7 +1,9 @@
 <template>
     <CastleSearch />
     <CastleList />
-
+    <!-- <div>
+        <b-badge href="#" variant="dark">Dark</b-badge>
+    </div> --> <!--cant figure out bootstrap-->
 </template>
 
 <script>
@@ -20,6 +22,5 @@ export default {
 h1 {
     display: flex;
     justify-content:  center;
-
 }
 </style>

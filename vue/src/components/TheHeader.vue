@@ -20,6 +20,7 @@
 
 <style scoped> 
     #header {
+        width: 100vw;
         display: flex;
         align-items: center;
         color: #193144;

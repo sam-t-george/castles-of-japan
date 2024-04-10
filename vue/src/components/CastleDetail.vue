@@ -1,22 +1,24 @@
 <template>
-    <div class="castleDetail">
+    <div class="castleDetailPage">
         <div class="big-image" :style="{ backgroundImage: 'url(' + castle.castleBannerPhoto + ')' }">
             <div class="overlay">
                 <h1 class="title">{{ castle.castleName }}</h1>
             </div>
         </div>
-        <div class="content">
+        <div class="information">
             <div class="text-section">
                 <p class="address">Address: {{ castle.address }}</p>
                 <p class="body">{{ castle.longDesc }}</p>
             </div>
             <div class="google-map">
-                <iframe :src="castle.mapLocation" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe :src="castle.mapLocation" width="600" height="450" style="border:0;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-        </div>
-        <div class="img-container">
-            <div class="img" v-if="images && images.length">
-                <img v-for="(image, index) in images" :key="index" :src="image" alt="Castle Image">
+
+            <div class="img-container">
+                <div class="img" v-if="images && images.length">
+                    <img v-for="(image, index) in images" :key="index" :src="image" alt="Castle Image">
+                </div>
             </div>
         </div>
     </div>
@@ -46,17 +48,17 @@ export default {
 </script>
 
 <style scoped>
-.castleDetail {
-    max-width: 100vw; 
-    margin: 0 auto;
-    padding: 20px;
-    display: flex; 
+.castleDetailPage {
+    max-width: 100vw;
+    margin-top: 10px;
+
+    display: flex;
     flex-wrap: wrap;
 }
 
 .big-image {
-    height: 30vh; 
-    width: 100%; 
+    height: 25vh;
+    width: 100vw;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -68,7 +70,7 @@ export default {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.63); 
+    background: rgba(0, 0, 0, 0.63);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -79,43 +81,42 @@ export default {
 }
 
 .content {
-    width: 50%; 
-    padding-left: 20px; 
+    
+    padding-left: 5px;
     box-sizing: border-box;
 }
 
 .address {
-    font-size: large;
+    font-size: 20px;
 }
 
 .body {
-    font-size: 35px;
+    font-size: 25px;
+    width: 50%;
 }
 
 .google-map {
-    margin-top: 20px;
-    width: 75%; 
-    box-sizing: border-box;
+    margin: 20px;
+    width: 50%;
+    height: 35vh;
+    
 }
 
 .google-map iframe {
     width: 100%;
-    height: 35vh; 
+    height: 35vh;
 }
-
-.img-container {
-    width: 100%; 
-    margin-top: 20px;
-}
-
 .img {
-    display: flex; 
-    flex-wrap: wrap; 
+    display: flex;
+    flex-wrap: wrap;
+    
 }
 
 .img img {
+    
     width: 50rem;
-    box-sizing: border-box; 
-    padding: 5px; 
+    box-sizing: border-box;
+    padding: 5px;
+
 }
 </style>
