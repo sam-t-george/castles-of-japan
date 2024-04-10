@@ -6,18 +6,28 @@ export default {
         return axios.get('/castles');
     },
     searchForCastles(name) {
-        let url = '/castles?';
+        let url = '/castle/search/';
         if (name) {
-        //     url += 'name=' + name;
-        // }
-        // if (name && region) {
-        //     url += '&'; 
-        // }
-        // if (region) {
-        //     url += 'region=' + region;
-        // }
-        // if (address) {
-        //     url += "address=" + address
+            if (name.toLowerCase().includes('castle')) {
+                name = name.toLowerCase().replace('castle', '');
+            }
+            if (name.toLowerCase().includes('castl')) {
+                name = name.toLowerCase().replace('castl', '');
+            }
+            if (name.toLowerCase().includes('cast')) {
+                name = name.toLowerCase().replace('cast', '');
+            }
+            if (name.toLowerCase().includes('cas')) {
+                name = name.toLowerCase().replace('cas', '');
+            }
+            if (name.toLowerCase().includes('ca')) {
+                name = name.toLowerCase().replace('ca', '');
+            }
+            if (name.toLowerCase().includes('c')) {
+                name = name.toLowerCase().replace('c', '');
+            }
+            
+            url += name.toLowerCase().replace(/\s/g, '');
         }
         return axios.get(url);
     },
