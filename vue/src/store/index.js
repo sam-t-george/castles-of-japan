@@ -24,6 +24,8 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
+      
+
       getCastleDetails(context, castleId) {
         CastleService.getCastleById(castleId).then(response => {
           context.commit('SET_CASTLE', response.data);
