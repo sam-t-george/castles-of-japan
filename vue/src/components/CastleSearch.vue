@@ -29,14 +29,15 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 4rem;
 }
 .search-input {
 width: 50vw;
 height: 3vh;
-box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+box-shadow: 4px 4px 15px rgba(0,0,0,0.4);
 font-size: 1em;
-padding: 6px;
-border: 1px solid #193144;
+padding: 8px;
+border: 1.5px solid #193144;
 border-radius: 14px;
 }
 </style>

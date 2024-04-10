@@ -1,8 +1,5 @@
 <template>
     <CastleDetail :castle="castle" :images="images"/>
-    <!-- <div class="google-map">
-        <iframe :src="castle.mapLocation" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div> -->
 </template>
   
 <script>
@@ -41,17 +38,5 @@ async created() {  //EDITED TO CALL FOR IMAGES
 </script>
 
 <style scoped>
-.google-map {
-     padding-bottom: 50%;
-     position: relative;
-}
-
-.google-map iframe {
-     height: 100%;
-     width: 100%;
-     left: 0;
-     top: 0;
-     position: absolute;
-}
 
 </style>
