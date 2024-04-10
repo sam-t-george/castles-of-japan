@@ -5,7 +5,7 @@
       <div class="castle-content">
         <h5 class="castle-name">{{ castle.castleName }}</h5>
         <p class="castle-desc">{{ castle.shortDesc }}</p>
-        <p class="castle-address"><small>{{ castle.region }}</small></p>
+        <p class="castle-region"><small>{{ castle.region }}</small></p>
       </div>
     </div>
   </router-link>
@@ -51,11 +51,11 @@ export default {
 .castle-content {
   flex: 1; 
 }
-.castle-name, .castle-desc, .castle-address {
+.castle-name, .castle-desc, .castle-region {
   margin: 7px 0; 
   text-align: center;
 }
-.castle-address small {
+.castle-region small {
   color: #6C757D; 
 }
 </style>

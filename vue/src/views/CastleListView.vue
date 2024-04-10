@@ -1,6 +1,4 @@
 <template>
-
-    <h1>Castles</h1>
     <CastleSearch />
     <CastleList />
 
