@@ -1,9 +1,9 @@
 <template>
-  
+    <div class="page">
     <h1> Castles </h1>
     <CastleSearch />
     <CastleList />
- 
+</div>
 </template>
 
 <script>
