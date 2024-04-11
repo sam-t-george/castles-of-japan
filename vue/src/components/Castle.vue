@@ -8,6 +8,9 @@
         <p class="castle-region"><small>{{ castle.region }}</small></p>
         <i class="pi pi-plus-circle" ></i> <!--@click=""-->
       </div>
+      <div class="icons">
+        
+      </div>
     </div>
   </router-link>
 

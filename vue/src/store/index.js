@@ -24,8 +24,6 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
-
-
       filterByRegion(context, searchTerms) {
         CastleService.filterByRegion(searchTerms.region)
           .then(response => {
@@ -33,8 +31,6 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
-
-
       getCastleDetails(context, castleId) {
         CastleService.getCastleById(castleId).then(response => {
           context.commit('SET_CASTLE', response.data);
@@ -46,7 +42,7 @@ export function createStore(currentToken, currentUser) {
           context.commit('SET_CASTLE_IMAGES', response.data);
         })
         .catch(err => console.error(err));
-      }
+      },
     },
     mutations: {
       SET_CASTLELIST(state, castles) {

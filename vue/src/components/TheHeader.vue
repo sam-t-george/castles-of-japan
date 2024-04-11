@@ -6,7 +6,7 @@
         <nav id= "nav">
             <router-link v-bind:to="{ name: 'home' }" class="nav-link">Home</router-link>
             <span class="bars"> &nbsp;|&nbsp;</span>
-            <router-link v-bind:to="{ name: 'castles' }" class="nav-link">Explore Castles</router-link>
+            <router-link v-bind:to="{ name: 'castles' }" class="nav-link">Explore Castles</router-link> <!--@click="location.reload()"-->
             <span class="bars"> &nbsp;|&nbsp;</span>
             <router-link v-bind:to="{ name: 'dashboard' }" class="nav-link">My Dashboard</router-link>
             <span class="bars"> &nbsp;|&nbsp;</span>
@@ -21,6 +21,13 @@
 
 
 <script>
+import { mapActions } from 'vuex';
+
+export default {
+    methods: {}
+}
+
+  
 </script>
 
 

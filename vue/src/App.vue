@@ -28,11 +28,12 @@ export default {
 
 </script> 
 
-<style >
+<style>
 #capstone-app{
   background-color: #FFFDF1;
 }
 body {
-  margin: 0 !important;
+  margin: 0 !important; 
+  overflow-x: hidden;
 }
 </style>
