@@ -7,6 +7,8 @@ values('Kansai','https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13070.8281
 insert into castle (region, map_location, castle_name, castle_banner_photo, short_desc, long_desc, address) 
 values('Kansai', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3274.667429407991!2d134.69132977620288!3d34.83945337575458!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3554e003a23324b3%3A0x7a4f8c2f6eba81b1!2sHimeji%20Castle!5e0!3m2!1sen!2sus!4v1712615704152!5m2!1sen!2sus', 'Himeji Castle','https://www.japan-guide.com/g21/740/3501_11.jpg', 'Ancient white heron', 'Himeji Castle, often called the White Heron Castle, stands as a pinnacle of 17th-century Japanese castle architecture, incorporating 83 buildings within its complex. Designated as Japans first UNESCO World Heritage Site in 1993, its recognized for its magnificent defensive structures and aesthetic beauty. Uniquely, it has never been destroyed by war, earthquake, or fire, maintaining its original form for centuries. The castles roof tiles were fired at 1,150 degrees Celsius, making them exceptionally durable and are marked with the crests of the castles historic lords, including the Ikeda clans swallowtail butterfly and paulownia flower.', '68 Honmachi, Himeji, Hyogo 670-0012, Japan');
 insert into castle (region, map_location, castle_name, castle_banner_photo, short_desc, long_desc, address) 
+values('Tohoku', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3029.016863888546!2d140.4616054758373!3d40.60745157140947!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f9b01c41b4a4d5b%3A0x49498bb2c56dcef0!2sHirosaki%20Castle!5e0!3m2!1sen!2sus!4v1712865114565!5m2!1sen!2sus', 'Hirosaki Castle', 'https://www.japan-experience.com/sites/default/files/styles/scale_610w/public/legacy/japan_experience/1570621293045.jpg?itok=gdIgbfeN', '1 of the 12 authentic castles in Japan.', 'The Hirosaki Castle Cherry Blossom Festival is one of the most famous cherry blossom festivals in Japan. The castle`s grounds, surrounded by over 2,500 cherry trees, create a breathtaking sight during the blooming season, attracting millions of visitors each year. The castle is renowned for its impressive system of moats and bridges, which are carefully designed to provide both defensive functions and aesthetic beauty. The castles reflection in the surrounding water creates stunning photo opportunities.', '1 Shimoshiroganecho, Hirosaki, Aomori 036-8356, Japan');insert into castle (region, map_location, castle_name, castle_banner_photo, short_desc, long_desc, address) 
+insert into castle (region, map_location, castle_name, castle_banner_photo, short_desc, long_desc, address)
 values('Kansai','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d820.1990653611182!2d135.52184689790005!3d34.68509119210671!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e72d7e040001%3A0x442925e785ee0c98!2sOtemon%20Gate!5e0!3m2!1sen!2sus!4v1712615838796!5m2!1sen!2sus', 'Osaka Castle','https://resources.matcha-jp.com/resize/720x2000/2023/03/28-136333.webp', 'Icon of unity', 'Osaka Castle is a symbol of Japans unification, constructed in 1583 by Toyotomi Hideyoshi on the ruins of the Ishiyama Honganji Temple. Throughout its history, the castle has experienced destruction and subsequent rebuilding, notably after the Siege of Osaka, when it fell to the Tokugawa clan. The current reconstruction from 1931 stands as a museum and features an observation deck with panoramic views of Osaka. The castle is distinguished by its use of gold leaf decorations and large stones in its construction, showcasing Hideyoshis ambition and the architectural ingenuity of the era. Osaka Castles grounds are a popular spot for cherry blossom viewing, encapsulating the beauty of Japanese nature alongside historic grandeur.', '1-1 Osakajo, Chuo Ward, Osaka, 540-0002, Japan');
 insert into castle (region, map_location, castle_name, castle_banner_photo, short_desc, long_desc, address) 
 values('Chubu', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3218.034441841165!2d137.96629247625032!3d36.23865729915143!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601d0e850a9a5999%3A0x902d0e20fabcf654!2sMatsumoto-j%C5%8D%20Castle!5e0!3m2!1sen!2sus!4v1712615888298!5m2!1sen!2sus', 'Matsumoto-jo Castle','https://www.centrair.jp/en/special/campaign/snowtravel-japan/assets/img/matsumoto/common/spot-1.jpg', 'The Crow Castle', 'Matsumoto Castle, also known as the Crow Castle due to its striking black exterior, is one of Japans premier historic castles and a National Treasure. The castles main tower, which dates back to the late sixteenth century, is the oldest surviving such structure in Japan, making it a significant cultural and historical site. Notably, the castle features a gun museum on its second floor and is surrounded by three moats, setting it apart in its defensive capabilities and architectural beauty. Matsumoto Castle is not just a relic of the past; it actively hosts cultural events such as the Taiko Drum Festival and Takigi Noh plays, and is a popular spot for cherry blossom viewing in April.', '4-1 Marunouchi, Matsumoto, Nagano 390-0873, Japan');
@@ -16,6 +18,8 @@ insert into castle (region, map_location, castle_name, castle_banner_photo, shor
 values('Shikoku', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3313.7102891714126!2d132.76295967617045!3d33.84558122861362!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354fe5eb4ff98c1b%3A0x4a1825ad87a37b82!2sMatsuyama-j%C5%8D%20Castle!5e0!3m2!1sen!2sus!4v1712616011336!5m2!1sen!2sus', 'Matsuyama-jo Castle','https://en.japantravel.com/photo/poi-146-208131/1200x630/ehime-matsuyama-castle-208131.jpg', 'Feudal elegance', 'Matsuyama Castle, constructed between 1602 and 1628 and later assigned to the Matsudaira family, stands as a testament to Japans feudal architecture. Rebuilt in 1854 after being struck by lightning in 1820, the castle features a simple interior across its three floors and a basement. Its walls are adorned with black wooden panels, and it has been recognized as an Important Cultural Property since 1935. The castle grounds are celebrated for their cherry blossoms, making it a picturesque site in spring. A museum within the main keep offers insights into the castles history, complemented by an observation deck providing sweeping views of Matsuyama and the Seto Inland Sea.', '1 Marunouchi, Matsuyama, Ehime 790-0008, Japan');
 insert into castle (region, map_location, castle_name, castle_banner_photo, short_desc, long_desc, address) 
 values('Chugoku','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3249.178071095853!2d133.04580738798188!3d35.47513777077171!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x355705052603bbf5%3A0x14102c41ce9afb3d!2sMatsue-j%C5%8D%20Castle!5e0!3m2!1sen!2sus!4v1712616150646!5m2!1sen!2sus', 'Matsue-jo Castle','https://www.japanexplorer.com.au/wp-content/uploads/2017/11/Matsue-Castle-1-e1510717665521.jpg', 'Plover Castle', 'Matsue Castle, known for its nickname "Plover Castle" due to its elegant appearance, is one of the few remaining medieval castles in Japan that still retains its original wooden structure. Constructed between 1607 and 1611 under the order of Horio Yoshiharu, a significant lord of the Edo period, the castle has withstood the test of time, including the Meiji Restoration period when many Japanese castles were dismantled. The castles architecture is noteworthy for its black tiles, creating a striking contrast against the white plaster of its walls, and it is surrounded by a moat, enhancing its defensive features as well as its scenic beauty. Now a popular tourist destination, Matsue Castle offers visitors a glimpse into Japans samurai past, with exhibitions that display armor, weapons, and other historical artifacts. The surrounding area, including the castle grounds, is a favored spot for cherry blossom viewing, adding to the castles charm and attractiveness.', '1-5 Tonomachi, Matsue, Shimane 690-0887, Japan');
+insert into castle (region, map_location, castle_name, castle_banner_photo, short_desc, long_desc, address) 
+values('Hokkaido', 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d382540.0678078097!2d139.4415894954168!3d41.49139485152398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f993b2bbebe2e39%3A0x7553b269c39d9133!2sMatsumae%2C%20Matsumae%20District%2C%20Hokkaido%2C%20Japan!5e0!3m2!1sen!2sus!4v1712863984336!5m2!1sen!2sus', 'Matsumae Castle', 'https://a2.cdn.japantravel.com/photo/25324-135311/840x560!/hokkaido-matsumae-castle-135311.jpg', 'The Lonely Castle of Hokkaido', 'Built in 1611, Matsumae Castle stands as one of the few remaining original castles in the country. Its construction was part of the efforts by the Matsudaira clan to consolidate their power in the Izumo region during the Edo period. Matsue Castle is also rumored to be haunted, with several ghost. One famous tale tells of a ghostly woman named "Okiku" who is said to haunt the castle grounds to this day.', '144 Matsushiro, Matsumae, Matsumae District, Hokkaido 049-1511, Japan');
 insert into castle (region, map_location, castle_name, castle_banner_photo, short_desc, long_desc, address) 
 values('Chubu','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3252.6810946190003!2d136.93660167622122!3d35.38836474600568!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60030ef5ad48ed91%3A0x285afa434603f635!2sInuyama%20Castle!5e0!3m2!1sen!2sus!4v1712616209087!5m2!1sen!2sus', 'Inuyama Castle','https://www.nagoyaisnotboring.com/wp-content/uploads/2021/03/Inuyama-Castle.jpg', 'Japans oldest castle tower', 'Inuyama Castle, perched on a hill overlooking the Kiso River, is celebrated as the oldest surviving castle tower in Japan, dating from the 1580s. This National Treasure, known for its small but complex design, offers varied silhouettes from different angles. The castle has seen numerous rebuilds, with significant work by Oda Nobukatsu, Oda Nobunagas son, shaping its current form. It was once a crucial defensive hold against Nobunagas unification ambitions, witnessing many historical turnovers before being governed by the Naruse clan under the Tokugawa shogunate. Remarkably, it remained privately owned until 2004, when it was entrusted to a foundation established by Aichi Prefectures Board of Education.', 'Kitakoken-65-2 Inuyama, Aichi 484-0082, Japan');
 insert into castle (region, map_location, castle_name, castle_banner_photo, short_desc, long_desc, address) 
@@ -41,7 +45,7 @@ values('Chubu','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3253.82606
 insert into castle (region, map_location, castle_name, castle_banner_photo, short_desc, long_desc, address) 
 values('Shikoku','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3337.7956306186334!2d132.56270907615075!3d33.21945366124351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x354f61ccbe3d248d%3A0x66b168b00f08d9d1!2sUwajima%20Castle!5e0!3m2!1sen!2sus!4v1712616735514!5m2!1sen!2sus', 'Uwajima Castle','https://www.japan-guide.com/g21/5577_11.jpg', 'Original hilltop castle', 'Uwajima Castle, a remarkable example of Japans few original castles that remained intact from the Edo Period, is nestled in Uwajima city, Ehime Prefecture, on Shikoku Island. The castle is historically significant, not only for its strategic coastal location but also for its connection to the Date family, who ruled from here. Originally built around the turn of the 17th century and later refurbished under the Date family in 1615, Uwajima Castle has witnessed numerous historical events, including severe damage from earthquakes in 1649 and again in the 1854 Ansei great earthquakes. Despite such adversities, major restoration and expansion were undertaken, particularly in the 1660s by Date Munetoshi, who replaced the former keep with the current structure. The castles preservation as a cultural heritage was ensured when, in 1934, the keep and Otemon gate were designated as a National Treasure, and in 1952, one surviving gate, the Nagaya Gate, was relocated and reconstructed on the site of the former Otemon.', '3 Chome-6-2 Marunouchi, Uwajima, Ehime 798-0060, Japan');
 insert into castle (region, map_location, castle_name, castle_banner_photo, short_desc, long_desc, address) 
-values('Kyushu','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.5096041996217!2d127.73948577595887!3d26.407026581638316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e51120929aa65f%3A0xa6e58af9110a7808!2sZakimi%20Castle%20Ruins!5e0!3m2!1sen!2sus!4v1712616765784!5m2!1sen!2sus', 'Zakimi Castle','https://visitokinawajapan.com/wp-content/themes/visit-okinawa_multi-language/lang/en/assets/img/discover/149/di149_kv_zakimi-castle-ruins.webp', 'Historical fortress ruins in Okinawa', 'Zakimi Castle, located in Okinawa Prefecture, is not just an archaeological site but a testament to the Ryukyu Kingdoms military ingenuity. Built in the early 15th century under the reign of the legendary Ryukyuan commander Gosamaru, its ruins now serve as a silent witness to the rich history and cultural fusion of the Ryukyu Islands. The castles ingenious design, featuring massive limestone walls and arched gates, exemplifies the advanced architectural skills of the Ryukyuans and their strategic military planning. Though what remains today are largely ruins, Zakimi Castle has been recognized for its historical and cultural significance, with its inclusion as a UNESCO World Heritage Site in 2000 as part of the Gusuku Sites and Related Properties of the Kingdom of Ryukyu. The site offers panoramic views of the surrounding landscape, including the East China Sea, making it a poignant reminder of Okinawas storied past and a place of serene beauty.', '708-6 Zakimi, Yomitan, Nakagami District, Okinawa 904-0301, Japan');
+values('Okinawa','https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3573.5096041996217!2d127.73948577595887!3d26.407026581638316!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x34e51120929aa65f%3A0xa6e58af9110a7808!2sZakimi%20Castle%20Ruins!5e0!3m2!1sen!2sus!4v1712616765784!5m2!1sen!2sus', 'Zakimi Castle','https://visitokinawajapan.com/wp-content/themes/visit-okinawa_multi-language/lang/en/assets/img/discover/149/di149_kv_zakimi-castle-ruins.webp', 'Historical fortress ruins in Okinawa', 'Zakimi Castle, located in Okinawa Prefecture, is not just an archaeological site but a testament to the Ryukyu Kingdoms military ingenuity. Built in the early 15th century under the reign of the legendary Ryukyuan commander Gosamaru, its ruins now serve as a silent witness to the rich history and cultural fusion of the Ryukyu Islands. The castles ingenious design, featuring massive limestone walls and arched gates, exemplifies the advanced architectural skills of the Ryukyuans and their strategic military planning. Though what remains today are largely ruins, Zakimi Castle has been recognized for its historical and cultural significance, with its inclusion as a UNESCO World Heritage Site in 2000 as part of the Gusuku Sites and Related Properties of the Kingdom of Ryukyu. The site offers panoramic views of the surrounding landscape, including the East China Sea, making it a poignant reminder of Okinawas storied past and a place of serene beauty.', '708-6 Zakimi, Yomitan, Nakagami District, Okinawa 904-0301, Japan');
 
 
 insert into img (castle_id, img_name, img_path) values(1, 'Nijo_1', 'https://www.touristinjapan.com/wp-content/uploads/2019/03/nijo-castle-1020x600.jpg');
@@ -54,103 +58,103 @@ insert into img (castle_id, img_name, img_path) values(2, 'Himeji_2 ', 'https://
 insert into img (castle_id, img_name, img_path) values(2, 'Himeji_3 ', 'https://h2.gifposter.com/bingImages/JapanHimeji_1920x1080.jpg');
 insert into img (castle_id, img_name, img_path) values(2, 'Himeji_4 ', 'https://www.nippon.com/en/ncommon/contents/guide-to-japan/2425569/2425569.jpg');
 
-insert into img (castle_id, img_name, img_path) values(3, 'Osakai_1 ', 'https://www.ribapix.com/images/thumbs/041/0410511_RIBA58912_600.jpeg');
-insert into img (castle_id, img_name, img_path) values(3, 'Osakai_2 ', 'https://leadnine.co.jp/osaka-tourism/wp-content/uploads/2023/11/AdobeStock_425187545-1024x683.jpeg');
-insert into img (castle_id, img_name, img_path) values(3, 'Osakai_3 ', 'https://images.squarespace-cdn.com/content/v1/5438e2c6e4b0b18459a8ca06/1565331079349-3G9YOFUFW5D1NXNBPEB9/GTJ-2019-0622-33.jpg');
-insert into img (castle_id, img_name, img_path) values(3, 'Osakai_4 ', 'https://assets.fxnetworks.com/cms-next/production/70fd744c-0ac8-4cf0-a376-b7c3d4927e09.png?imwidth=1200');
+insert into img (castle_id, img_name, img_path) values(3, 'Hirosaki_1 ', 'https://facts.net/wp-content/uploads/2023/07/39-facts-about-hirosaki-1689656095.jpeg');
+insert into img (castle_id, img_name, img_path) values(3, 'Hirosaki_2 ', 'https://www.hirosaki-kanko.or.jp/hirosaki-pamphlet/english/img/001.jpg');
+insert into img (castle_id, img_name, img_path) values(3, 'Hirosaki_3 ', 'https://s3.voyapon.com/wp-content/uploads/2021/11/19173520/Choshoji-main-hall-1024x767.jpg');
+insert into img (castle_id, img_name, img_path) values(3, 'Hirosaki_4 ', 'https://res.cloudinary.com/jnto/image/upload/w_1000,h_600,c_fill,f_auto,fl_lossy,q_60/v1/media/filer_public/cf/7b/cf7b4459-356b-44aa-9cb8-6d3f9c6eb26f/tian-shou-toyan-mu-shan-xiu-zheng_ak4dhx');
 
-insert into img (castle_id, img_name, img_path) values(4, 'Matsumoto_1 ', 'https://www.japan-experience.com/sites/default/files/images/content_images/matsumoto20181.jpg');
-insert into img (castle_id, img_name, img_path) values(4, 'Matsumoto_2 ', 'https://www.tokyoweekender.com/wp-content/uploads/2018/12/Matsumoto-Castle-winter-Tokyo-Weekender.jpg');
-insert into img (castle_id, img_name, img_path) values(4, 'Matsumoto_3 ', 'https://cdn.omni-links.com/eurex/Matsumoto_castle_%2C_%E6%9D%BE%E6%9C%AC%E5%9F%8E_-_panoramio_(27).jpg');
-insert into img (castle_id, img_name, img_path) values(4, 'Matsumoto_4 ', 'https://live.staticflickr.com/8124/8618983380_2926746701_b.jpg');
+insert into img (castle_id, img_name, img_path) values(4, 'Osakai_1 ', 'https://www.ribapix.com/images/thumbs/041/0410511_RIBA58912_600.jpeg');
+insert into img (castle_id, img_name, img_path) values(4, 'Osakai_2 ', 'https://leadnine.co.jp/osaka-tourism/wp-content/uploads/2023/11/AdobeStock_425187545-1024x683.jpeg');
+insert into img (castle_id, img_name, img_path) values(4, 'Osakai_3 ', 'https://images.squarespace-cdn.com/content/v1/5438e2c6e4b0b18459a8ca06/1565331079349-3G9YOFUFW5D1NXNBPEB9/GTJ-2019-0622-33.jpg');
+insert into img (castle_id, img_name, img_path) values(4, 'Osakai_4 ', 'https://assets.fxnetworks.com/cms-next/production/70fd744c-0ac8-4cf0-a376-b7c3d4927e09.png?imwidth=1200');
 
-insert into img (castle_id, img_name, img_path) values(5, 'Nagoya_1 ', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Nagoya_Castle%28Larger%29.jpg/1280px-Nagoya_Castle%28Larger%29.jpg');
-insert into img (castle_id, img_name, img_path) values(5, 'Nagoya_2 ', 'https://www.japantimes.co.jp/wp-content/uploads/2017/07/n-nagoya-a-20170717.jpg');
-insert into img (castle_id, img_name, img_path) values(5, 'Nagoya_3 ', 'https://www.nagoyajo.city.nagoya.jp/en/assets/images/content/home/reconstruction_bg.jpg');
-insert into img (castle_id, img_name, img_path) values(5, 'Nagoya_4 ', 'https://www.nippon.com/en/ncommon/contents/guide-to-japan/170817/170817.jpg');
+insert into img (castle_id, img_name, img_path) values(5, 'Matsumoto_1 ', 'https://www.japan-experience.com/sites/default/files/images/content_images/matsumoto20181.jpg');
+insert into img (castle_id, img_name, img_path) values(5, 'Matsumoto_2 ', 'https://www.tokyoweekender.com/wp-content/uploads/2018/12/Matsumoto-Castle-winter-Tokyo-Weekender.jpg');
+insert into img (castle_id, img_name, img_path) values(5, 'Matsumoto_3 ', 'https://cdn.omni-links.com/eurex/Matsumoto_castle_%2C_%E6%9D%BE%E6%9C%AC%E5%9F%8E_-_panoramio_(27).jpg');
+insert into img (castle_id, img_name, img_path) values(5, 'Matsumoto_4 ', 'https://live.staticflickr.com/8124/8618983380_2926746701_b.jpg');
 
-insert into img (castle_id, img_name, img_path) values(6, 'Matsuyama_1 ', 'https://www.japan-guide.com/g21/5501_11.jpg');
-insert into img (castle_id, img_name, img_path) values(6,'Matsuyama_2 ', 'https://muza-chan.net/aj/poze-weblog7/matsuyama-jo-honmaru-wide-angle.jpg');
-insert into img (castle_id, img_name, img_path) values(6, 'Matsuyama_3 ', 'https://bcjapan.net/wp-content/uploads/2022/07/Matsuyama-Castle-30.jpg');
-insert into img (castle_id, img_name, img_path) values(6, 'Matsuyama_4 ', 'https://www.nippon.com/en/ncommon/contents/guide-to-japan/454599/454599.jpg');
+insert into img (castle_id, img_name, img_path) values(6, 'Nagoya_1 ', 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/Nagoya_Castle%28Larger%29.jpg/1280px-Nagoya_Castle%28Larger%29.jpg');
+insert into img (castle_id, img_name, img_path) values(6, 'Nagoya_2 ', 'https://www.japantimes.co.jp/wp-content/uploads/2017/07/n-nagoya-a-20170717.jpg');
+insert into img (castle_id, img_name, img_path) values(6, 'Nagoya_3 ', 'https://www.nagoyajo.city.nagoya.jp/en/assets/images/content/home/reconstruction_bg.jpg');
+insert into img (castle_id, img_name, img_path) values(6, 'Nagoya_4 ', 'https://www.nippon.com/en/ncommon/contents/guide-to-japan/170817/170817.jpg');
 
-insert into img (castle_id, img_name, img_path) values(7, 'Matsue-jo_1 ', 'https://matsuetravelguide.files.wordpress.com/2014/06/matsue-castle-tenshukaku.jpg');
-insert into img (castle_id, img_name, img_path) values(7, 'Matsue-jo_2 ', 'https://i0.wp.com/www.elleofakind.com/wp-content/uploads/2024/01/DSC_7554-scaled.jpg?fit=2560%2C1440&ssl=1');
-insert into img (castle_id, img_name, img_path) values(7, 'Matsue-jo_3', 'https://www.gov-online.go.jp/eng/publicity/book/hlj/html/202008/img/img_13_02.jpg');
-insert into img (castle_id, img_name, img_path) values(7, 'Matsue-jo_4', 'https://media.istockphoto.com/id/506242304/photo/matsue-castle.jpg?s=612x612&w=0&k=20&c=hUFB4nipgxU4pl1xY0n6_77qsoJPEesVGsBaC7nfztY=');
+insert into img (castle_id, img_name, img_path) values(7, 'Matsuyama_1 ', 'https://www.japan-guide.com/g21/5501_11.jpg');
+insert into img (castle_id, img_name, img_path) values(7, 'Matsuyama_2 ', 'https://muza-chan.net/aj/poze-weblog7/matsuyama-jo-honmaru-wide-angle.jpg');
+insert into img (castle_id, img_name, img_path) values(7, 'Matsuyama_3 ', 'https://bcjapan.net/wp-content/uploads/2022/07/Matsuyama-Castle-30.jpg');
+insert into img (castle_id, img_name, img_path) values(7, 'Matsuyama_4 ', 'https://www.nippon.com/en/ncommon/contents/guide-to-japan/454599/454599.jpg');
 
-insert into img (castle_id, img_name, img_path) values(8, 'Inuyama_1', 'https://www.nagoyaisnotboring.com/wp-content/uploads/2021/03/Inuyama-Castle.jpg');
-insert into img (castle_id, img_name, img_path) values(8, 'Inuyama_2', 'https://www.japan-guide.com/blog/g/sakura10_100406_inuyama_03.jpg');
-insert into img (castle_id, img_name, img_path) values(8, 'Inuyama_3', 'https://jref.com/media/inuyama-castle.3250/full?d=1462372586');
-insert into img (castle_id, img_name, img_path) values(8, 'Inuyama_4', 'https://www.aichi-now.jp/upload/spot_images/0de42fe410534621af04780ece0f1025.jpg');
+insert into img (castle_id, img_name, img_path) values(8, 'Matsue-jo_1 ', 'https://matsuetravelguide.files.wordpress.com/2014/06/matsue-castle-tenshukaku.jpg');
+insert into img (castle_id, img_name, img_path) values(8, 'Matsue-jo_2 ', 'https://i0.wp.com/www.elleofakind.com/wp-content/uploads/2024/01/DSC_7554-scaled.jpg?fit=2560%2C1440&ssl=1');
+insert into img (castle_id, img_name, img_path) values(8, 'Matsue-jo_3', 'https://www.gov-online.go.jp/eng/publicity/book/hlj/html/202008/img/img_13_02.jpg');
+insert into img (castle_id, img_name, img_path) values(8, 'Matsue-jo_4', 'https://media.istockphoto.com/id/506242304/photo/matsue-castle.jpg?s=612x612&w=0&k=20&c=hUFB4nipgxU4pl1xY0n6_77qsoJPEesVGsBaC7nfztY=');
 
-insert into img (castle_id, img_name, img_path) values(9, 'Hiroshima_1', 'https://media.istockphoto.com/id/458088615/photo/hiroshima-castle.jpg?s=612x612&w=0&k=20&c=jx1vamWLvZjFMrr30z4dl06iZDLuea6Fuu8MK1E98J4=');
-insert into img (castle_id, img_name, img_path) values(9, 'Hiroshima_2', 'https://media.istockphoto.com/id/1170084793/photo/hiroshima-castle-also-known-as-car');
-insert into img (castle_id, img_name, img_path) values(9, 'Hiroshima_3', 'p-castle.jpg?s=612x612&w=0&k=20&c=r-PUN56YA4J3kU7jHyCHnxxiurm2m0e8sagflS0svDs=');
-insert into img (castle_id, img_name, img_path) values(9, 'Hiroshima_4', 'https://media.istockphoto.com/id/1271549599/photo/hiroshima-castle-at-night-hiroshima-city-japan.jpg?s=612x612&w=0&k=20&c=i46MizuSzTT_UaZ1aLWFXphYcNR7Jc0AA8SSSlAH1HY=');
+insert into img (castle_id, img_name, img_path) values(9, 'Matsumae_1', 'https://a2.cdn.japantravel.com/photo/25324-135311/840x560!/hokkaido-matsumae-castle-135311.jpg');
+insert into img (castle_id, img_name, img_path) values(9, 'Matsumae_2', 'https://hokkaidoguide.com/wp-content/uploads/2019/06/126A3180-2000x1334.jpg');
+insert into img (castle_id, img_name, img_path) values(9, 'Matsumae_3', 'https://ihearthokkaidohome.files.wordpress.com/2020/09/img_1374.jpg?w=1024');
+insert into img (castle_id, img_name, img_path) values(9, 'Matsumae_4', 'https://jl-db.nfaj.go.jp/assets/images/200604/l/951c04db5307eba045b76e3facda5c8f.jpg');
 
-insert into img (castle_id, img_name, img_path) values(10, 'Edo_1', 'https://live.staticflickr.com/5445/31245644272_2a3ad4bc96_h.jpg');
-insert into img (castle_id, img_name, img_path) values(10, 'Edo_2', 'https://old-tokyo.info/wp-content/uploads/2018/03/formeredo-1200x675.jpg'); 
-insert into img (castle_id, img_name, img_path) values(10, 'Edo_3', 'https://www.jcastle.info/images/1/14/Edo6.jpg');
-insert into img (castle_id, img_name, img_path) values(10, 'Edo_4', 'https://media.istockphoto.com/id/1223999809/photo/donjon-with-moats-lined-with-pines-at-tokyo-imperial-palace.jpg?s=612x612&w=0&k=20&c=F2HpmGx0K0diSUO0FYSlzPfb-bCL8SEq7CGJ0SOi3_M=');
+insert into img (castle_id, img_name, img_path) values(10, 'Inuyama_1', 'https://www.nagoyaisnotboring.com/wp-content/uploads/2021/03/Inuyama-Castle.jpg');
+insert into img (castle_id, img_name, img_path) values(10, 'Inuyama_2', 'https://www.japan-guide.com/blog/g/sakura10_100406_inuyama_03.jpg');
+insert into img (castle_id, img_name, img_path) values(10, 'Inuyama_3', 'https://jref.com/media/inuyama-castle.3250/full?d=1462372586');
+insert into img (castle_id, img_name, img_path) values(10, 'Inuyama_4', 'https://www.aichi-now.jp/upload/spot_images/0de42fe410534621af04780ece0f1025.jpg');
 
-insert into img (castle_id, img_name, img_path) values(11, 'Shimabara_1', 'https://www.nagasaki-tabinet.com/storage/tourism_attractions/298/responsive_images/mAqjFDbJ0PHhdlpn3Cip8gp9p3anZTZKuQO0cMyn__1690_1119.jpeg');
-insert into img (castle_id, img_name, img_path) values(11, 'Shimabara_2', 'https://www.nagasaki-tabinet.com/storage/special_features/312/responsive_images/nVbcGgsDq3l1dCCs5SoorLuAKLUVqVFEQYSP8FYH__1639_1090.jpeg');
-insert into img (castle_id, img_name, img_path) values(11, 'Shimabara_3', 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Shimabara_castle_02_r_2004.jp');
-insert into img (castle_id, img_name, img_path) values(11, 'Shimabara_4', 'https://www.nagasaki-tabinet.com/storage/tourism_attractions/298/responsive_images/yEFJk4253IrtACNlbrP2sCvjUj08OHjRQJjVtUcK__1570_1047.jpeg');
+insert into img (castle_id, img_name, img_path) values(11, 'Hiroshima_1', 'https://media.istockphoto.com/id/458088615/photo/hiroshima-castle.jpg?s=612x612&w=0&k=20&c=jx1vamWLvZjFMrr30z4dl06iZDLuea6Fuu8MK1E98J4=');
+insert into img (castle_id, img_name, img_path) values(11, 'Hiroshima_2', 'https://media.istockphoto.com/id/1170084793/photo/hiroshima-castle-also-known-as-car');
+insert into img (castle_id, img_name, img_path) values(11, 'Hiroshima_3', 'p-castle.jpg?s=612x612&w=0&k=20&c=r-PUN56YA4J3kU7jHyCHnxxiurm2m0e8sagflS0svDs=');
+insert into img (castle_id, img_name, img_path) values(11, 'Hiroshima_4', 'https://media.istockphoto.com/id/1271549599/photo/hiroshima-castle-at-night-hiroshima-city-japan.jpg?s=612x612&w=0&k=20&c=i46MizuSzTT_UaZ1aLWFXphYcNR7Jc0AA8SSSlAH1HY=');
 
-insert into img (castle_id, img_name, img_path) values(12, 'Hikone_1', 'https://cdn.cheapoguides.com/wp-content/uploads/sites/3/2016/01/Hikone-Castle-iStock-628137660-1024x600.jpg');
-insert into img (castle_id, img_name, img_path) values(12, 'Hikone_2', 'https://www.japan-guide.com/g20/7001_11.jpg');
-insert into img (castle_id, img_name, img_path) values(12, 'Hikone_3', 'https://upload.wikimedia.org/wikipedia/commons/3/32/HIkoneCastle01.jpg');
-insert into img (castle_id, img_name, img_path) values(12, 'Hikone_4', 'https://kansai-odyssey.com/wp-content/uploads/2019/04/IMG_6395thumb-800x445.png');
+insert into img (castle_id, img_name, img_path) values(12, 'Edo_1', 'https://live.staticflickr.com/5445/31245644272_2a3ad4bc96_h.jpg');
+insert into img (castle_id, img_name, img_path) values(12, 'Edo_2', 'https://old-tokyo.info/wp-content/uploads/2018/03/formeredo-1200x675.jpg'); 
+insert into img (castle_id, img_name, img_path) values(12, 'Edo_3', 'https://www.jcastle.info/images/1/14/Edo6.jpg');
+insert into img (castle_id, img_name, img_path) values(12, 'Edo_4', 'https://media.istockphoto.com/id/1223999809/photo/donjon-with-moats-lined-with-pines-at-tokyo-imperial-palace.jpg?s=612x612&w=0&k=20&c=F2HpmGx0K0diSUO0FYSlzPfb-bCL8SEq7CGJ0SOi3_M=');
 
-insert into img (castle_id, img_name, img_path) values(13, 'Maruoka_1', 'https://images.squarespace-cdn.com/content/v1/5cb09473755be259f904d128/c0488e61-658f-4a38-baa8-a0af09f6b642/PXL_20211203_062526011~4+WEB.jpg');
-insert into img (castle_id, img_name, img_path) values(13, 'Maruoka_2', 'https://japandeluxetours.com/uploads/2015/08/20150817184123_55d27f33e096f.jpg');
-insert into img (castle_id, img_name, img_path) values(13, 'Maruoka_3', 'https://pbs.twimg.com/media/GHTrRC3bsAAHid8?format=jpg&name=large');
-insert into img (castle_id, img_name, img_path) values(13, 'Maruoka_4', 'https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2023/05/pixta_79765363_M-1024x640.jpeg');
+insert into img (castle_id, img_name, img_path) values(13, 'Shimabara_1', 'https://www.nagasaki-tabinet.com/storage/tourism_attractions/298/responsive_images/mAqjFDbJ0PHhdlpn3Cip8gp9p3anZTZKuQO0cMyn__1690_1119.jpeg');
+insert into img (castle_id, img_name, img_path) values(13, 'Shimabara_2', 'https://www.nagasaki-tabinet.com/storage/special_features/312/responsive_images/nVbcGgsDq3l1dCCs5SoorLuAKLUVqVFEQYSP8FYH__1639_1090.jpeg');
+insert into img (castle_id, img_name, img_path) values(13, 'Shimabara_3', 'https://upload.wikimedia.org/wikipedia/commons/c/c5/Shimabara_castle_02_r_2004.jp');
+insert into img (castle_id, img_name, img_path) values(13, 'Shimabara_4', 'https://www.nagasaki-tabinet.com/storage/tourism_attractions/298/responsive_images/yEFJk4253IrtACNlbrP2sCvjUj08OHjRQJjVtUcK__1570_1047.jpeg');
 
-insert into img (castle_id, img_name, img_path) values(14, 'Gifu_1', 'https://i.pinimg.com/originals/e0/d6/29/e0d629fee2fe8b34a39517830780c08d.jpg');
-insert into img (castle_id, img_name, img_path) values(14, 'Gifu_2', 'https://live.staticflickr.com/3359/3614239196_0c05b9af4b_b.jpg');
-insert into img (castle_id, img_name, img_path) values(14, 'Gifu_3', 'https://go-centraljapan.jp/route/dragon/en/site/img/spot14/box04_slide03.jpg');
-insert into img (castle_id, img_name, img_path) values(14, 'Gifu_4', 'https://live.staticflickr.com/3441/3226675109_5b149b7054_b.jpg');
+insert into img (castle_id, img_name, img_path) values(14, 'Hikone_1', 'https://cdn.cheapoguides.com/wp-content/uploads/sites/3/2016/01/Hikone-Castle-iStock-628137660-1024x600.jpg');
+insert into img (castle_id, img_name, img_path) values(14, 'Hikone_2', 'https://www.japan-guide.com/g20/7001_11.jpg');
+insert into img (castle_id, img_name, img_path) values(14, 'Hikone_3', 'https://upload.wikimedia.org/wikipedia/commons/3/32/HIkoneCastle01.jpg');
+insert into img (castle_id, img_name, img_path) values(14, 'Hikone_4', 'https://kansai-odyssey.com/wp-content/uploads/2019/04/IMG_6395thumb-800x445.png');
 
-insert into img (castle_id, img_name, img_path) values(15, 'Marugame_1', 'https://www.japan-guide.com/g21/5469_01.jpg');
-insert into img (castle_id, img_name, img_path) values(15, 'Marugame_2', 'https://i0.wp.com/japanonlinetour.com/wp-content/uploads/2020/12/marugame-castle.png?fit=2090%2C1394&ssl=1');
-insert into img (castle_id, img_name, img_path) values(15, 'Marugame_3', 'https://assets.my-kagawa.jp/storage/tourism_attractions/10084/responsive_images/LJ2D9EcCIMLsj1Qj29rDFKYQlZvljrglyektyMdl__1611_1074.jpeg');
-insert into img (castle_id, img_name, img_path) values(15, 'Marugame_4', 'https://media-cdn.tripadvisor.com/media/photo-s/0a/c5/99/81/caption.jpg');
+insert into img (castle_id, img_name, img_path) values(15, 'Maruoka_1', 'https://images.squarespace-cdn.com/content/v1/5cb09473755be259f904d128/c0488e61-658f-4a38-baa8-a0af09f6b642/PXL_20211203_062526011~4+WEB.jpg');
+insert into img (castle_id, img_name, img_path) values(15, 'Maruoka_2', 'https://japandeluxetours.com/uploads/2015/08/20150817184123_55d27f33e096f.jpg');
+insert into img (castle_id, img_name, img_path) values(15, 'Maruoka_3', 'https://pbs.twimg.com/media/GHTrRC3bsAAHid8?format=jpg&name=large');
+insert into img (castle_id, img_name, img_path) values(15, 'Maruoka_4', 'https://gaijinpot.scdn3.secure.raxcdn.com/app/uploads/sites/6/2023/05/pixta_79765363_M-1024x640.jpeg');
 
-insert into img (castle_id, img_name, img_path) values(16, 'Kiyosu_1', 'https://muza-chan.net/aj/poze-weblog7/kiyosu-jo-main-keep-big.jpg');
-insert into img (castle_id, img_name, img_path) values(16, 'Kiyosu_2', 'https://static.gltjp.com/glt/prd/data/directory/12000/11928/20210812_012001_c826458b_w1920.jpg');
-insert into img (castle_id, img_name, img_path) values(16, 'Kiyosu_3', 'https://aichinavi.jp/upload/spot_images/69213a1a559c0aac84a06fe5e4bb583e.jpg');
-insert into img (castle_id, img_name, img_path) values(16, 'Kiyosu_4', 'https://www.jcastle.info/images/3/3b/KiyosujouART_%287%29.jpg ');
+insert into img (castle_id, img_name, img_path) values(16, 'Gifu_1', 'https://i.pinimg.com/originals/e0/d6/29/e0d629fee2fe8b34a39517830780c08d.jpg');
+insert into img (castle_id, img_name, img_path) values(16, 'Gifu_2', 'https://live.staticflickr.com/3359/3614239196_0c05b9af4b_b.jpg');
+insert into img (castle_id, img_name, img_path) values(16, 'Gifu_3', 'https://go-centraljapan.jp/route/dragon/en/site/img/spot14/box04_slide03.jpg');
+insert into img (castle_id, img_name, img_path) values(16, 'Gifu_4', 'https://live.staticflickr.com/3441/3226675109_5b149b7054_b.jpg');
 
-insert into img (castle_id, img_name, img_path) values(17, 'Kanazawa_1', 'https://japanjourneys.jp/wp-content/uploads/2020/06/kanazawa-castle-retouched-header.jpg');
-insert into img (castle_id, img_name, img_path) values(17, 'Kanazawa_2', 'https://images.ctfassets.net/uoecnmts6wfs/3m0qD2GArHlMQUN9BNwhak/bcc17eb950f8d82b91e460d8139372c1/img_spot_019_03.jpg?q=70');
-insert into img (castle_id, img_name, img_path) values(17, 'Kanazawa_3', 'https://www.japan-guide.com/g19/4202_12.jpg');
-insert into img (castle_id, img_name, img_path) values(17, 'Kanazawa_4', 'https://images.ctfassets.net/uoecnmts6wfs/KKNytjBDhMZPfyMJ1am3W/2faf13d9baed0b9a524514ceb8a779b4/img_spot_019_01.jpg?q=70');
+insert into img (castle_id, img_name, img_path) values(17, 'Marugame_1', 'https://www.japan-guide.com/g21/5469_01.jpg');
+insert into img (castle_id, img_name, img_path) values(17, 'Marugame_2', 'https://i0.wp.com/japanonlinetour.com/wp-content/uploads/2020/12/marugame-castle.png?fit=2090%2C1394&ssl=1');
+insert into img (castle_id, img_name, img_path) values(17, 'Marugame_3', 'https://assets.my-kagawa.jp/storage/tourism_attractions/10084/responsive_images/LJ2D9EcCIMLsj1Qj29rDFKYQlZvljrglyektyMdl__1611_1074.jpeg');
+insert into img (castle_id, img_name, img_path) values(17, 'Marugame_4', 'https://media-cdn.tripadvisor.com/media/photo-s/0a/c5/99/81/caption.jpg');
 
-insert into img (castle_id, img_name, img_path) values(18, 'Iwamura_1', 'https://www.jcastle.info/images/b/bc/Iwamura3.jpg');
-insert into img (castle_id, img_name, img_path) values(18, 'Iwamura_2', 'https://svcstrg.cld.navitime.jp/imgfile/02301_2500626n_01.jpg');
-insert into img (castle_id, img_name, img_path) values(18, 'Iwamura_3', 'https://upload.wikimedia.org/wikipedia/commons/f/f8/Iwamurajo17.jpg');
-insert into img (castle_id, img_name, img_path) values(18, 'Iwamura_4', 'https://place.matcha-jp.com/resize/1280x2000/2024/01/26-14-23-35-20718c0cb1e4d09cda9edf58fae1a533f7f8.webp?w=656');
+insert into img (castle_id, img_name, img_path) values(18, 'Kiyosu_1', 'https://muza-chan.net/aj/poze-weblog7/kiyosu-jo-main-keep-big.jpg');
+insert into img (castle_id, img_name, img_path) values(18, 'Kiyosu_2', 'https://static.gltjp.com/glt/prd/data/directory/12000/11928/20210812_012001_c826458b_w1920.jpg');
+insert into img (castle_id, img_name, img_path) values(18, 'Kiyosu_3', 'https://aichinavi.jp/upload/spot_images/69213a1a559c0aac84a06fe5e4bb583e.jpg');
+insert into img (castle_id, img_name, img_path) values(18, 'Kiyosu_4', 'https://www.jcastle.info/images/3/3b/KiyosujouART_%287%29.jpg ');
 
-insert into img (castle_id, img_name, img_path) values(19, 'Uwajima_1', 'https://muza-chan.net/aj/poze-weblog7//uwajima-jo-interior-ehime.jpg');
-insert into img (castle_id, img_name, img_path) values(19, 'Uwajima_2', 'https://res.cloudinary.com/dho7osbtl/image/upload/w_1500,h_1000,c_fill,f_auto,fl_lossy,q_auto/v1/cms/filer_public/be/62/be623292-a6cd-4b20-9bcd-39c4e37cbdb5/spot_0039_01_bsqg7s');
-insert into img (castle_id, img_name, img_path) values(19, 'Uwajima_3', 'https://upload.wikimedia.org/wikipedia/commons/6/60/Uwajima_Castle_and_cherry_blossom.jpg');
-insert into img (castle_id, img_name, img_path) values(19, 'Uwajima_4', 'https://article-image.travel.navitime.jp/img/NTJtrv0828-en/2.jpeg');
+insert into img (castle_id, img_name, img_path) values(19, 'Kanazawa_1', 'https://japanjourneys.jp/wp-content/uploads/2020/06/kanazawa-castle-retouched-header.jpg');
+insert into img (castle_id, img_name, img_path) values(19, 'Kanazawa_2', 'https://images.ctfassets.net/uoecnmts6wfs/3m0qD2GArHlMQUN9BNwhak/bcc17eb950f8d82b91e460d8139372c1/img_spot_019_03.jpg?q=70');
+insert into img (castle_id, img_name, img_path) values(19, 'Kanazawa_3', 'https://www.japan-guide.com/g19/4202_12.jpg');
+insert into img (castle_id, img_name, img_path) values(19, 'Kanazawa_4', 'https://images.ctfassets.net/uoecnmts6wfs/KKNytjBDhMZPfyMJ1am3W/2faf13d9baed0b9a524514ceb8a779b4/img_spot_019_01.jpg?q=70');
 
-insert into img (castle_id, img_name, img_path) values(20, 'Zakimi_1', 'https://arilab.unit.oist.jp/wp-content/uploads/2013/08/193_original.jpg');
-insert into img (castle_id, img_name, img_path) values(20, 'Zakimi_2', 'https://visitokinawajapan.com/wp-content/themes/visit-okinawa_multi-language/lang/en/assets/img/discover/149/di149_01_zakimi-castle-ruins-fortification.webp');
-insert into img (castle_id, img_name, img_path) values(20, 'Zakimi_3', 'https://filmoffice.ocvb.or.jp/wp-content/uploads/2018/02/0283_001.jpg');
-insert into img (castle_id, img_name, img_path) values(20, 'Zakimi_4', 'https://visitokinawajapan.com/wp-content/themes/visit-okinawa_multi-language/lang/en/assets/img/discover/149/di149_03_zakimi-castle-ruins-walls.webp');
+insert into img (castle_id, img_name, img_path) values(20, 'Iwamura_1', 'https://www.jcastle.info/images/b/bc/Iwamura3.jpg');
+insert into img (castle_id, img_name, img_path) values(20, 'Iwamura_2', 'https://svcstrg.cld.navitime.jp/imgfile/02301_2500626n_01.jpg');
+insert into img (castle_id, img_name, img_path) values(20, 'Iwamura_3', 'https://upload.wikimedia.org/wikipedia/commons/f/f8/Iwamurajo17.jpg');
+insert into img (castle_id, img_name, img_path) values(20, 'Iwamura_4', 'https://place.matcha-jp.com/resize/1280x2000/2024/01/26-14-23-35-20718c0cb1e4d09cda9edf58fae1a533f7f8.webp?w=656');
 
+insert into img (castle_id, img_name, img_path) values(21, 'Uwajima_1', 'https://muza-chan.net/aj/poze-weblog7//uwajima-jo-interior-ehime.jpg');
+insert into img (castle_id, img_name, img_path) values(21, 'Uwajima_2', 'https://res.cloudinary.com/dho7osbtl/image/upload/w_1500,h_1000,c_fill,f_auto,fl_lossy,q_auto/v1/cms/filer_public/be/62/be623292-a6cd-4b20-9bcd-39c4e37cbdb5/spot_0039_01_bsqg7s');
+insert into img (castle_id, img_name, img_path) values(21, 'Uwajima_3', 'https://upload.wikimedia.org/wikipedia/commons/6/60/Uwajima_Castle_and_cherry_blossom.jpg');
+insert into img (castle_id, img_name, img_path) values(21, 'Uwajima_4', 'https://article-image.travel.navitime.jp/img/NTJtrv0828-en/2.jpeg');
 
+insert into img (castle_id, img_name, img_path) values(22, 'Zakimi_1', 'https://arilab.unit.oist.jp/wp-content/uploads/2013/08/193_original.jpg');
+insert into img (castle_id, img_name, img_path) values(22, 'Zakimi_2', 'https://visitokinawajapan.com/wp-content/themes/visit-okinawa_multi-language/lang/en/assets/img/discover/149/di149_01_zakimi-castle-ruins-fortification.webp');
+insert into img (castle_id, img_name, img_path) values(22, 'Zakimi_3', 'https://filmoffice.ocvb.or.jp/wp-content/uploads/2018/02/0283_001.jpg');
+insert into img (castle_id, img_name, img_path) values(22, 'Zakimi_4', 'https://visitokinawajapan.com/wp-content/themes/visit-okinawa_multi-language/lang/en/assets/img/discover/149/di149_03_zakimi-castle-ruins-walls.webp');
 
-
-
-
-
-INSERT INTO visit (user_id, castle_id, visit_date) VALUES (1, 1, '2024-01-01');
-
-
-INSERT INTO itinerary (user_id, visit_id) VALUES (1, 1);

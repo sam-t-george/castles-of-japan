@@ -1,6 +1,8 @@
 DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS castle CASCADE;
 DROP TABLE IF EXISTS img;
+DROP TABLE IF EXISTS visit CASCADE;
+DROP TABLE IF EXISTS itinerary CASCADE;
 
 
 CREATE TABLE users (
@@ -36,18 +38,6 @@ CREATE TABLE img (
  );
 
 
-
-
-
-
-
-
-
-
-
-DROP TABLE IF EXISTS visit CASCADE;
-DROP TABLE IF EXISTS itinerary CASCADE;
-
 CREATE TABLE visit (
 	visit_id SERIAL PRIMARY KEY,
 	user_id int,
@@ -55,12 +45,4 @@ CREATE TABLE visit (
 	visit_date date,
 	CONSTRAINT FK_visit_user FOREIGN KEY(user_id) REFERENCES users(user_id),
 	CONSTRAINT FK_visit_castle FOREIGN KEY(castle_id) REFERENCES castle(castle_id)
-);
-
-CREATE TABLE itinerary (
-	itinerary_id SERIAL PRIMARY KEY,
-	user_id int,
-	visit_id int,
-	CONSTRAINT FK_itinerary_user FOREIGN KEY(user_id) REFERENCES users(user_id),
-	CONSTRAINT FK_itinerary_visit FOREIGN KEY(visit_id) REFERENCES visit(visit_id)
 );
