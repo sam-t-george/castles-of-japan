@@ -14,9 +14,10 @@
             <input type="button" value="Shikoku" v-bind="filter.region" @click="shikoku">
             <input type="button" value="Kyushu" v-bind="filter.region" @click="kyushu">
             <input type="button" value="Okinawa" v-bind="filter.region" @click="okinawa">
-            <input type="button" class="reset" value="Reset Filters" @click="submitSearch">
+            <input type="button" value="Reset Filters"  @click="submitSearch">
         </div>
     </div>
+
 </template>
 <script>
 export default {
@@ -107,5 +108,9 @@ export default {
     padding-left: 15px;
     border: 1.5px solid #193144;
     border-radius: 14px;
+}
+
+.Hokkaido {
+    color: #fff;
 }
 </style>
