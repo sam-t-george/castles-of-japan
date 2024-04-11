@@ -7,6 +7,7 @@ import 'bootstrap';
 import 'primeicons/primeicons.css'
 import PrimeVue from 'primevue/config';
 import Calendar from 'primevue/calendar';
+import "bootstrap/dist/css/bootstrap.min.css"
 
 
 
