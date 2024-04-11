@@ -43,7 +43,7 @@ const routes = [
     name: "logout",
     component: LogoutView,
     meta: {
-      requiresAuth: false
+      requiresAuth: true
     }
   },
   {
