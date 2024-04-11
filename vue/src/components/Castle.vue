@@ -24,7 +24,7 @@ export default {
 .castle-card {
   display: block;
   max-width: 30rem;
-  
+  background-color: #8bbab187;
   border: 1.5px solid #000000; 
   border-radius: 20px;
   overflow: hidden; 
@@ -60,6 +60,9 @@ export default {
 .castle-name, .castle-desc, .castle-region {
   margin: .4rem; 
   text-align: center;
+}
+.castle-name {
+  font-size: 1.5rem;
 }
 .castle-region small {
   color: #6C757D; 

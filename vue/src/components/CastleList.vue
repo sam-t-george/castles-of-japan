@@ -37,5 +37,6 @@ section#castleList {
     flex-wrap: wrap;
     justify-content: space-evenly;
     
+
 }
 </style>
