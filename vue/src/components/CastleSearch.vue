@@ -4,30 +4,21 @@
             class="search-input">
     </div>
     <div class="container">
-        <div class="button-container">
-            <input type="button" value="Hokkaido" v-bind="filter.region" @click="hokkaido">
-            <input type="button" value="Tohoku" v-bind="filter.region" @click="tohoku">
-            <input type="button" value="Kanto" v-bind="filter.region" @click="kanto">
-            <input type="button" value="Chubu" v-bind="filter.region" @click="chubu">
-            <input type="button" value="Kansai" v-bind="filter.region" @click="kansai">
-            <input type="button" value="Chugoku" v-bind="filter.region" @click="chugoku">
-            <input type="button" value="Shikoku" v-bind="filter.region" @click="shikoku">
-            <input type="button" value="Kyushu" v-bind="filter.region" @click="kyushu">
-            <input type="button" value="Okinawa" v-bind="filter.region" @click="okinawa">
-        </div>
+    <div class="button-container">
+    <input type="button" value="Hokkaido" v-bind="filter.region" @click="hokkaido">
+    <input type="button" value="Tohoku" v-bind="filter.region" @click="tohoku">
+    <input type="button" value="Kanto" v-bind="filter.region" @click="kanto">
+    <input type="button" value="Chubu" v-bind="filter.region" @click="chubu">
+    <input type="button" value="Kansai" v-bind="filter.region" @click="kansai">
+    <input type="button" value="Chugoku" v-bind="filter.region" @click="chugoku">
+    <input type="button" value="Shikoku" v-bind="filter.region" @click="shikoku">
+    <input type="button" value="Kyushu" v-bind="filter.region" @click="kyushu">
+    <input type="button" value="Okinawa" v-bind="filter.region" @click="okinawa">
     </div>
-    <section id="castleList">
-        <Castle v-for="currentCastle in castles" 
-            v-bind:key="currentCastle.castleId" v-bind:castle="currentCastle" />
-    </section>
+</div>
 </template>
-
 <script>
-
-import Castle from './Castle.vue';
-
 export default {
-
     data() {
         return {
             search: {
@@ -38,7 +29,6 @@ export default {
             }
         }
     },
-
     methods: {
         submitSearch() {
             this.$store.dispatch('searchForCastle', this.search);
@@ -90,27 +80,24 @@ export default {
     margin-top: 4rem;
     padding-bottom: 1rem;
 }
-
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 3rem;
 }
-
 .button-container {
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
-}
-
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+ }
 .search-input {
-    width: 50vw;
-    height: 3vh;
-    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
-    font-size: 1em;
-    padding: 8px;
-    border: 1.5px solid #193144;
-    border-radius: 14px;
+width: 50vw;
+height: 3vh;
+box-shadow: 4px 4px 15px rgba(0,0,0,0.4);
+font-size: 1em;
+padding: 8px;
+border: 1.5px solid #193144;
+border-radius: 14px;
 }
 </style>

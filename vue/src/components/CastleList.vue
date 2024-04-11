@@ -1,14 +1,11 @@
 <template>
     <section id="castleList">
-        <Castle v-for="currentCastle in castles" 
+        <Castle v-for="currentCastle in castles"
             v-bind:key="currentCastle.castleId" v-bind:castle="currentCastle" />
     </section>
 </template>
-
 <script>
 import Castle from './Castle.vue';
-
-
 export default {
     components: {
         Castle
@@ -26,17 +23,12 @@ export default {
     created() {
         this.$store.dispatch('getAllCastles');
     }
-
 }
 </script>
-
-
 <style scoped>
 section#castleList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    
-
 }
 </style>

@@ -1,14 +1,13 @@
 import { createStore as _createStore } from 'vuex';
 import axios from 'axios';
 import CastleService from '../services/CastleService';
-
 export function createStore(currentToken, currentUser) {
   let store = _createStore({
     state: {
       token: currentToken || '',
       user: currentUser || {},
       castleList: [],
-      castle: {}, //may or may not need this 
+      castle: {}, //may or may not need this
     },
     actions: {
       getAllCastles(context) {
@@ -24,8 +23,6 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
-
-
       filterByRegion(context, searchTerms) {
         CastleService.filterByRegion(searchTerms.region)
           .then(response => {
@@ -33,8 +30,6 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
-
-
       getCastleDetails(context, castleId) {
         CastleService.getCastleById(castleId).then(response => {
           context.commit('SET_CASTLE', response.data);
@@ -78,3 +73,17 @@ export function createStore(currentToken, currentUser) {
   });
   return store;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
