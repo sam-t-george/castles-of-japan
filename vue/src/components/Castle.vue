@@ -7,6 +7,9 @@
         <p class="castle-desc">{{ castle.shortDesc }}</p>
         <p class="castle-region"><small>{{ castle.region }}</small></p>
       </div>
+      <div class="icons">
+        
+      </div>
     </div>
   </router-link>
 </template>

@@ -17,6 +17,7 @@
     "vue": "^3.4.21",
     "vue-carousel": "^0.18.0",
     "vue-router": "^4.2.1",
+    "vuetify": "^3.5.15",
     "vuex": "^4.1.0"
   },
   "devDependencies": {
