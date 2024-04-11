@@ -143,3 +143,14 @@ insert into img (castle_id, img_name, img_path) values(20, 'Zakimi_1', 'https://
 insert into img (castle_id, img_name, img_path) values(20, 'Zakimi_2', 'https://visitokinawajapan.com/wp-content/themes/visit-okinawa_multi-language/lang/en/assets/img/discover/149/di149_01_zakimi-castle-ruins-fortification.webp');
 insert into img (castle_id, img_name, img_path) values(20, 'Zakimi_3', 'https://filmoffice.ocvb.or.jp/wp-content/uploads/2018/02/0283_001.jpg');
 insert into img (castle_id, img_name, img_path) values(20, 'Zakimi_4', 'https://visitokinawajapan.com/wp-content/themes/visit-okinawa_multi-language/lang/en/assets/img/discover/149/di149_03_zakimi-castle-ruins-walls.webp');
+
+
+
+
+
+
+
+INSERT INTO visit (user_id, castle_id, visit_date) VALUES (1, 1, '2024-01-01');
+
+
+INSERT INTO itinerary (user_id, visit_id) VALUES (1, 1);
