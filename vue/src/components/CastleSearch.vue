@@ -3,7 +3,6 @@
         <input type="text" placeholder="Search by castle name" v-model.trim="search.name" @keyup="submitSearch"
             class="search-input">
     </div>
-
     <div class="container">
         <div class="button-container">
             <input type="button" class="hokkaido" value="Hokkaido" v-bind="filter.region" @click="hokkaido">
@@ -40,7 +39,7 @@ export default {
         hokkaido() {
             this.filter.region = 'hokkaido';
             this.$store.dispatch('filterByRegion', this.filter);
-            
+
         },
         tohoku() {
             this.filter.region = 'tohoku';
@@ -85,6 +84,7 @@ export default {
     margin-top: 4rem;
     padding-bottom: 1rem;
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -92,18 +92,20 @@ export default {
     margin-bottom: 3rem;
 }
 
-.button-container {
-        display: flex;
-        justify-content: space-between;
-        width: 40%; 
- }
+#button-container {
+    display: flex;
+    justify-content:space-between;
+    width: 45vw;
+
+}
 
 .search-input {
     width: 50vw;
-    height: 3vh;
-    box-shadow: 4px 4px 15px rgba(0,0,0,0.4);
+    height: 5vh;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
     font-size: 1em;
     padding: 8px;
+    padding-left: 15px;
     border: 1.5px solid #193144;
     border-radius: 14px;
 }

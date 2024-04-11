@@ -3,7 +3,8 @@ import CapstoneApp from './App.vue'
 import { createStore } from './store'
 import router from './router'
 import axios from 'axios'
-import 'bootstrap';
+import 'bootstrap'
+import "bootstrap/dist/css/bootstrap.min.css"
 import 'primeicons/primeicons.css'
 import PrimeVue from 'primevue/config';
 import Calendar from 'primevue/calendar';

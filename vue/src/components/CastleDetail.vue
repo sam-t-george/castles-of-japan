@@ -117,6 +117,5 @@ export default {
     width: 50rem;
     box-sizing: border-box;
     padding: 5px;
-
 }
 </style>
