@@ -9,6 +9,10 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
+import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
+
 @Component
 public class JdbcVisitDao implements VisitDao {
 
@@ -52,6 +56,28 @@ public class JdbcVisitDao implements VisitDao {
         return visit;
     }
 
+    public List<Visit> getVisitsByUserIdAndVisitDate(int userId, LocalDate visitDate) {
+        List<Visit> visits = new ArrayList<>();
+        String sql =
+                "SELECT " +
+                "visit_id, " +
+                "user_id, " +
+                "castle_id, " +
+                "visit_date " +
+                "FROM visit " +
+                "WHERE user_id = ? AND visit_date = ?";
+        try{
+            SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, userId, visitDate);
+            while (rowSet.next()) {
+                visits.add(mapRowToVisit(rowSet));
+            }
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to server or database ", e);
+        }
+        return visits;
+    }
+
+
     public Visit mapRowToVisit(SqlRowSet rowSet) {
         Visit visit = new Visit();
         visit.setVisitId(rowSet.getInt("visit_id"));
@@ -60,6 +86,4 @@ public class JdbcVisitDao implements VisitDao {
         visit.setVisitDate(rowSet.getDate("visit_date").toLocalDate());
         return visit;
     }
-
-
 }

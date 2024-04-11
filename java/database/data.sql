@@ -150,7 +150,4 @@ insert into img (castle_id, img_name, img_path) values(20, 'Zakimi_4', 'https://
 
 
 
-INSERT INTO visit (user_id, castle_id, visit_date) VALUES (1, 1, '2024-01-01');
-
-
-INSERT INTO itinerary (user_id, visit_id) VALUES (1, 1);
+INSERT INTO visit (user_id, castle_id, visit_date, itinerary_id, itinerary_name) VALUES (1, 1, '2024-01-01', 1, 'Itinerary For Dummies' );

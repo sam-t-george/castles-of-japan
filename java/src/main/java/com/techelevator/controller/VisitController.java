@@ -5,10 +5,13 @@ import com.techelevator.dao.VisitDao;
 import com.techelevator.model.Castle;
 import com.techelevator.model.User;
 import com.techelevator.model.Visit;
+import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.security.Principal;
+import java.time.LocalDate;
+import java.util.List;
 
 @CrossOrigin
 @RestController
@@ -33,5 +36,13 @@ public class VisitController {
         Visit visit = visitDao.getVisitById(visitId);
         return visit;
     }
-
+    @RequestMapping(path = "/itinerary/{visitDate}", method = RequestMethod.GET)
+    public List<Visit> getVisitsByUserIdAndVisitDate(
+            Principal principal,
+            @PathVariable("visitDate")
+            @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate visitDate) {
+        User currentUser = userDao.getUserByUsername(principal.getName());
+        return visitDao.getVisitsByUserIdAndVisitDate(currentUser.getId(),visitDate);
+    }
 }
+
