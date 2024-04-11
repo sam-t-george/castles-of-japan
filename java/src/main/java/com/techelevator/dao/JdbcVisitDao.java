@@ -7,7 +7,9 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
+import org.springframework.stereotype.Component;
 
+@Component
 public class JdbcVisitDao implements VisitDao {
 
     private JdbcTemplate jdbcTemplate;
@@ -16,33 +18,24 @@ public class JdbcVisitDao implements VisitDao {
         this.jdbcTemplate = jdbcTemplate;
     }
     @Override
-    public Visit getVisitById(int id) {
-        Visit visit = null;
-
-        String sql =
-                "SELECT user_id, " +
-                "castle_id, " +
-                "visit_date, " +
-                "visit_id" +
-                "FROM visit " +
-                "WHERE visit_id = ?;";
+    public Visit getVisitById(int visitId) {
+        Visit visit = new Visit();
+        String sql = "SELECT visit_id, user_id, castle_id, visit_date FROM visit WHERE visit_id = ?;";
 
         try{
-            SqlRowSet results = jdbcTemplate.queryForRowSet(sql,id);
-            if (results.next()) {
-                visit = mapRowToVisit(results);
-
+            SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql,visitId);
+            while (rowSet.next()) {
+                visit = mapRowToVisit(rowSet);
             }
         } catch (CannotGetJdbcConnectionException e) {
             throw new DaoException("Unable to connect to server or database ", e);
         }
-
         return visit;
     }
 
     @Override
     public Visit createVisit(Visit visit) {
-        Visit newVisit = null;
+        Visit newVisit = new Visit();
         String sql =
                 "INSERT INTO visit(user_id, castle_id, visit_date) " +
                 "VALUES(?, ?, ?) " +

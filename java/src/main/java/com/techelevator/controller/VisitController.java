@@ -17,9 +17,14 @@ public class VisitController {
     private UserDao userDao;
     private VisitDao visitDao;
 
-    @RequestMapping(path = "/add/visit", method = RequestMethod.POST)
-    public Visit createVisit(Principal principal, @RequestBody Visit visit){
-        User user = userDao.getUserByUsername(principal.getName());
+    public VisitController(UserDao userDao, VisitDao visitDao) {
+        this.userDao = userDao;
+        this.visitDao = visitDao;
+    }
+
+    @PostMapping(path = "/add/visit")
+    public Visit createVisit(@Valid @RequestBody Visit visit, Principal principal){
+
         return visitDao.createVisit(visit);
     }
 
