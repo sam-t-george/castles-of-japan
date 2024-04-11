@@ -28,8 +28,11 @@ export default {
 
 </script> 
 
-<style scoped>
+<style >
 #capstone-app{
   background-color: #FFFDF1;
+}
+body {
+  margin: 0 !important;
 }
 </style>

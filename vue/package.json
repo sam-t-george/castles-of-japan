@@ -13,9 +13,12 @@
     "axios": "^0.21.4",
     "bootstrap": "^5.3.3",
     "bootstrap-vue": "^2.23.1",
+    "primeicons": "^7.0.0",
+    "primevue": "^3.51.0",
     "vue": "^3.4.21",
     "vue-carousel": "^0.18.0",
     "vue-router": "^4.2.1",
+    "vuetify": "^3.5.15",
     "vuex": "^4.1.0"
   },
   "devDependencies": {

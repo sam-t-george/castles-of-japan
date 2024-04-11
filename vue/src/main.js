@@ -3,8 +3,12 @@ import CapstoneApp from './App.vue'
 import { createStore } from './store'
 import router from './router'
 import axios from 'axios'
-import 'bootstrap/dist/css/bootstrap.min.css' ;
 import 'bootstrap';
+import 'primeicons/primeicons.css'
+import PrimeVue from 'primevue/config';
+import Calendar from 'primevue/calendar';
+
+
 
 /* sets the base url for server API communication with axios */
 axios.defaults.baseURL = import.meta.env.VITE_REMOTE_API;
@@ -17,6 +21,7 @@ axios.defaults.baseURL = import.meta.env.VITE_REMOTE_API;
  */
 let currentToken = localStorage.getItem('token');
 let currentUser = JSON.parse(localStorage.getItem('user'));
+
 
 if (currentToken) {
   // Set token axios requests

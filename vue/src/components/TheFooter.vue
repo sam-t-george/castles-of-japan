@@ -19,6 +19,7 @@
         color: #193144;
         border-top: 2px solid #8BBAB1;
         height: 10vh;
+        
 }
 
 </style>
