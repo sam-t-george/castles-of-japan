@@ -6,17 +6,27 @@
         <h5 class="castle-name">{{ castle.castleName }}</h5>
         <p class="castle-desc">{{ castle.shortDesc }}</p>
         <p class="castle-region"><small>{{ castle.region }}</small></p>
+        <i class="pi pi-plus-circle" ></i> <!--@click=""-->
       </div>
       <div class="icons">
         
       </div>
     </div>
   </router-link>
+
+    <!-- <div class="dropdown">
+            <button onclick="myFunction()" class="pi pi-plus-circle"></button>
+            <div id="myDropdown" class="dropdown-content">
+              <a href="#">Link 1</a> -->
+ 
 </template>
 
 <script>
+
 export default {
   props: ['castle']
+    
+    
 }
 </script>
 
@@ -58,7 +68,8 @@ export default {
   box-shadow: 0 2px 4px rgba(0,0,0,0.3);
 }
 .castle-content {
-  flex: 1; 
+  flex: 1;
+  width: 100%; 
 }
 .castle-name, .castle-desc, .castle-region {
   margin: .4rem; 
@@ -71,5 +82,10 @@ export default {
   color: #6C757D; 
   font-size: .8em;
 }
-
+.pi-plus-circle {
+font-size: 2rem;
+display: flex;
+justify-content: end;
+padding: 10px;
+}
 </style>

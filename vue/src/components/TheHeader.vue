@@ -17,6 +17,9 @@
         </nav>
     </div>
 </template>
+
+
+
 <script>
 import { mapActions } from 'vuex';
 
@@ -26,6 +29,9 @@ export default {
 
   
 </script>
+
+
+
 <style scoped>
     #header {
         width: 100vw;

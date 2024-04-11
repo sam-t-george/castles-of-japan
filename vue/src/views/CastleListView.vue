@@ -1,6 +1,8 @@
 <template>
     <CastleSearch />
     <CastleList />
+   
+
     <!-- <div>
         <b-badge href="#" variant="dark">Dark</b-badge>
     </div> --> <!--cant figure out bootstrap-->
@@ -10,10 +12,14 @@
 import CastleList from '../components/CastleList.vue';
 import CastleSearch from '../components/CastleSearch.vue';
 
+
+
 export default {
     components: {
         CastleList,
-        CastleSearch
+        CastleSearch,
+     
+   
     }
 }
 </script>
