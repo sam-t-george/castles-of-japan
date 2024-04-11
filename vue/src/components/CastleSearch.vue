@@ -4,21 +4,19 @@
             class="search-input">
     </div>
     <div class="container">
-    <div class="button-container">
-    <input type="button" value="Hokkaido" v-bind="filter.region" @click="hokkaido">
-    <input type="button" value="Tohoku" v-bind="filter.region" @click="tohoku">
-    <input type="button" value="Kanto" v-bind="filter.region" @click="kanto">
-    <input type="button" value="Chubu" v-bind="filter.region" @click="chubu">
-    <input type="button" value="Kansai" v-bind="filter.region" @click="kansai">
-    <input type="button" value="Chugoku" v-bind="filter.region" @click="chugoku">
-    <input type="button" value="Shikoku" v-bind="filter.region" @click="shikoku">
-    <input type="button" value="Kyushu" v-bind="filter.region" @click="kyushu">
-    <input type="button" value="Okinawa" v-bind="filter.region" @click="okinawa">
-    <input type="button" value="Reset Filters"  @click="submitSearch">
-
-
+        <div id="button-container" class="d-flex">
+            <input type="button" value="Hokkaido" v-bind="filter.region" @click="hokkaido">
+            <input type="button" value="Tohoku" v-bind="filter.region" @click="tohoku">
+            <input type="button" value="Kanto" v-bind="filter.region" @click="kanto">
+            <input type="button" value="Chubu" v-bind="filter.region" @click="chubu">
+            <input type="button" value="Kansai" v-bind="filter.region" @click="kansai">
+            <input type="button" value="Chugoku" v-bind="filter.region" @click="chugoku">
+            <input type="button" value="Shikoku" v-bind="filter.region" @click="shikoku">
+            <input type="button" value="Kyushu" v-bind="filter.region" @click="kyushu">
+            <input type="button" value="Okinawa" v-bind="filter.region" @click="okinawa">
+            <input type="button" class="reset" value="Reset Filters" @click="submitSearch">
+        </div>
     </div>
-</div>
 </template>
 <script>
 export default {
@@ -40,7 +38,7 @@ export default {
         hokkaido() {
             this.filter.region = 'hokkaido';
             this.$store.dispatch('filterByRegion', this.filter);
-            
+
         },
         tohoku() {
             this.filter.region = 'tohoku';
@@ -85,6 +83,7 @@ export default {
     margin-top: 4rem;
     padding-bottom: 1rem;
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -92,19 +91,21 @@ export default {
     margin-bottom: 3rem;
 }
 
-.button-container {
-        display: flex;
-        justify-content: space-between;
-        width: 40%; 
- }
+#button-container {
+    display: flex;
+    justify-content:space-between;
+    width: 45vw;
+
+}
 
 .search-input {
-width: 50vw;
-height: 3vh;
-box-shadow: 4px 4px 15px rgba(0,0,0,0.4);
-font-size: 1em;
-padding: 8px;
-border: 1.5px solid #193144;
-border-radius: 14px;
+    width: 50vw;
+    height: 5vh;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+    font-size: 1em;
+    padding: 8px;
+    padding-left: 15px;
+    border: 1.5px solid #193144;
+    border-radius: 14px;
 }
 </style>

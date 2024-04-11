@@ -84,7 +84,6 @@ export default {
 }
 .pi-plus-circle {
 font-size: 2rem;
-
 display: flex;
 justify-content: end;
 padding: 10px;
