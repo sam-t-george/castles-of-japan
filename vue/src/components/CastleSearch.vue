@@ -3,6 +3,8 @@
         <input type="text" placeholder="Search by castle name" v-model.trim="search.name" @keyup="submitSearch"
             class="search-input">
     </div>
+    <div class="container">
+    <div class="button-container">
     <input type="button" value="Hokkaido" v-bind="filter.region" @click="hokkaido">
     <input type="button" value="Tohoku" v-bind="filter.region" @click="tohoku">
     <input type="button" value="Kanto" v-bind="filter.region" @click="kanto">
@@ -25,6 +27,8 @@
         <button class="region"></button>
         <button class="region"></button>
         <button class="region"></button>     -->
+    </div>
+</div>
 </template>
 <script>
 export default {
@@ -87,8 +91,21 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 4rem;
+    margin-top: 4rem;
+    padding-bottom: 1rem;
 }
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.button-container {
+        display: flex;
+        justify-content: space-between;
+        width: 40%; 
+ }
 
 .search-input {
 width: 50vw;
