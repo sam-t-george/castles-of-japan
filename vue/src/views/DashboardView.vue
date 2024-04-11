@@ -1,7 +1,5 @@
 <template>
-  
-    <h1> My Dashboard</h1>
-   
+    <p>Castle</p>
 </template>
 
 

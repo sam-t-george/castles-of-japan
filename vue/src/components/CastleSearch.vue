@@ -16,17 +16,6 @@
     <input type="button" value="Okinawa" v-bind="filter.region" @click="okinawa">
 
 
-
-
-
-    <!-- <button class="region">Tohoku</button>
-        <button class="region"></button>
-        <button class="region"></button>
-        <button class="region"></button>
-        <button class="region">Chugoku</button>
-        <button class="region"></button>
-        <button class="region"></button>
-        <button class="region"></button>     -->
     </div>
 </div>
 </template>

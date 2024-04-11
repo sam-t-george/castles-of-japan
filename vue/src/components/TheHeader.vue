@@ -2,6 +2,7 @@
     <div id="header">
         <router-link to="/"><img src="../assets/logo.png" alt="logo"  width="150" height="150"></router-link>
         <h1>Castles Of Japan | 日本の城 </h1>
+        
         <nav id= "nav">
             <router-link v-bind:to="{ name: 'home' }" class="nav-link">Home</router-link>
             <span class="bars"> &nbsp;|&nbsp;</span>

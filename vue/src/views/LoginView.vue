@@ -9,16 +9,14 @@
         Thank you for registering, please sign in.
       </div>
       <div class="form-input-group">
-        <label for="username">Username</label>
-        <input type="text" id="username" v-model="user.username" required autofocus />
+        <input type="text" placeholder="Username"  id="username" v-model="user.username" required autofocus />
       </div>
       <div class="form-input-group">
-        <label for="password">Password</label>
-        <input type="password" id="password" v-model="user.password" required />
+        <input type="password" placeholder="Username" id="password" v-model="user.password" required />
       </div>
-      <button type="submit">Sign in</button>
+      <router-link v-bind:to="{ name: 'dashboard' }"><button type="submit">Sign in</button></router-link>
       <p>
-      <router-link v-bind:to="{ name: 'register' }">Need an account? Sign up.</router-link></p>
+      <router-link v-bind:to="{ name: 'register' }">New to Castles Of Japan? Register Here.</router-link></p>
     </form>
   </div>
 </template>
@@ -45,7 +43,7 @@ export default {
           if (response.status == 200) {
             this.$store.commit("SET_AUTH_TOKEN", response.data.token);
             this.$store.commit("SET_USER", response.data.user);
-            this.$router.push("/");
+            this.$router.push("/dashboard"); //was just ("/") we changed it to route to dashboard
           }
         })
         .catch(error => {
@@ -66,5 +64,8 @@ export default {
 }
 label {
   margin-right: 0.5rem;
+}
+#login {
+  height: 67vh;
 }
 </style>
