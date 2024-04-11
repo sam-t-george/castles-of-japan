@@ -61,7 +61,7 @@ insert into img (castle_id, img_name, img_path) values(2, 'Himeji_4 ', 'https://
 insert into img (castle_id, img_name, img_path) values(3, 'Hirosaki_1 ', 'https://facts.net/wp-content/uploads/2023/07/39-facts-about-hirosaki-1689656095.jpeg');
 insert into img (castle_id, img_name, img_path) values(3, 'Hirosaki_2 ', 'https://www.hirosaki-kanko.or.jp/hirosaki-pamphlet/english/img/001.jpg');
 insert into img (castle_id, img_name, img_path) values(3, 'Hirosaki_3 ', 'https://s3.voyapon.com/wp-content/uploads/2021/11/19173520/Choshoji-main-hall-1024x767.jpg');
-insert into img (castle_id, img_name, img_path) values(3, 'Hirosaki_4 ', '');
+insert into img (castle_id, img_name, img_path) values(3, 'Hirosaki_4 ', 'https://res.cloudinary.com/jnto/image/upload/w_1000,h_600,c_fill,f_auto,fl_lossy,q_60/v1/media/filer_public/cf/7b/cf7b4459-356b-44aa-9cb8-6d3f9c6eb26f/tian-shou-toyan-mu-shan-xiu-zheng_ak4dhx');
 
 insert into img (castle_id, img_name, img_path) values(4, 'Osakai_1 ', 'https://www.ribapix.com/images/thumbs/041/0410511_RIBA58912_600.jpeg');
 insert into img (castle_id, img_name, img_path) values(4, 'Osakai_2 ', 'https://leadnine.co.jp/osaka-tourism/wp-content/uploads/2023/11/AdobeStock_425187545-1024x683.jpeg');

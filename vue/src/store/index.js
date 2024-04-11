@@ -41,7 +41,7 @@ export function createStore(currentToken, currentUser) {
           context.commit('SET_CASTLE_IMAGES', response.data);
         })
         .catch(err => console.error(err));
-      }
+      },
     },
     mutations: {
       SET_CASTLELIST(state, castles) {

@@ -1,8 +1,10 @@
 <template>
-    <section id="castleList">
-        <Castle v-for="currentCastle in castles"
+    <body id="body">
+        <section id="castleList">
+            <Castle v-for="currentCastle in castles" 
             v-bind:key="currentCastle.castleId" v-bind:castle="currentCastle" />
-    </section>
+        </section>
+    </body>
 </template>
 <script>
 import Castle from './Castle.vue';
@@ -26,9 +28,12 @@ export default {
 }
 </script>
 <style scoped>
+
 section#castleList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    padding-top: 7px;
 }
+
 </style>

@@ -14,6 +14,9 @@
     <input type="button" value="Shikoku" v-bind="filter.region" @click="shikoku">
     <input type="button" value="Kyushu" v-bind="filter.region" @click="kyushu">
     <input type="button" value="Okinawa" v-bind="filter.region" @click="okinawa">
+    <input type="button" value="Reset Filters"  @click="submitSearch">
+
+
     </div>
 </div>
 </template>
@@ -36,6 +39,7 @@ export default {
         hokkaido() {
             this.filter.region = 'hokkaido';
             this.$store.dispatch('filterByRegion', this.filter);
+            
         },
         tohoku() {
             this.filter.region = 'tohoku';
