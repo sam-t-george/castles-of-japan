@@ -17,7 +17,6 @@
         </nav>
     </div>
 </template>
-
 <script>
 import { mapActions } from 'vuex';
 
@@ -27,8 +26,7 @@ export default {
 
   
 </script>
-
-<style scoped> 
+<style scoped>
     #header {
         width: 100vw;
         display: flex;
@@ -39,7 +37,6 @@ export default {
     #nav {
         margin-left: auto;
     }
- 
     .nav-link {
         text-decoration: none;
         color: inherit;
@@ -56,5 +53,4 @@ export default {
         font-size: 1.5em;
         color: inherit;
     }
-
 </style>
