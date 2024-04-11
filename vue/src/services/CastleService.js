@@ -6,7 +6,7 @@ export default {
         return axios.get('/castles');
     },
     searchForCastles(name) {
-        let url = '/castle/search/';
+        let url = '/castle/search';
         if (name) {
             if (name.toLowerCase().includes('castle')) {
                 name = name.toLowerCase().replace('castle', '');
