@@ -22,9 +22,8 @@ const date = ref();
     justify-content: center;
     padding: 1rem;
     height: auto;
-}
-.Calendar {
-    height: fit-content;
+    border: none;
+    background-color: #FFFDF1;
 }
 </style>
 

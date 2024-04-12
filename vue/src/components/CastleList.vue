@@ -41,7 +41,9 @@ section#castleList {
     justify-content: space-evenly;
     padding-top: 7px;
     background-color: #FFFDF1;
+   
 }
+ 
 
 
 

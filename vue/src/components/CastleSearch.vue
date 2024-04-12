@@ -96,6 +96,7 @@ export default {
     padding-bottom: 1rem ;
 }
 .container {
+  
     display: flex;
     justify-content: center;
     align-items: center;

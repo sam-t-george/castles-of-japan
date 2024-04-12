@@ -17,6 +17,7 @@
       </div>
     </div>
   </div>
+
 </template>
 <script>
 import { ref } from 'vue';
@@ -92,13 +93,12 @@ export default {
 }
 
 .pi-plus-circle {
-  margin-top: .5rem;
-  font-size: 2rem;
-  display: flex;
-  justify-content: end;
-  padding: 10px;
-  opacity: 75%;
-  margin-bottom: 5rem;
+margin-top: .5rem;
+font-size: 2rem;
+display: flex;
+justify-content: end;
+padding: 10px;
+opacity: 75%;
 }
 
 .pi-plus-circle:hover {
@@ -108,8 +108,14 @@ export default {
 .calendar-container {
   position: relative;
   left: 0;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: #FFFDF1;
+  border-radius: 30px;
   padding: 10px;
-}</style>
+  margin-bottom: 20px;
+  
+}
+.cardplus {
+    margin-bottom: 5rem;
+ }
+ 
+</style>
