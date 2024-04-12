@@ -5,13 +5,11 @@
     </div>
 </template>
 
-
 <script>
-import { ref } from "vue";
-
+// import { ref } from "vue"; //IS THIS NEEDED
+// const date = ref();
 export default {
     props: ['castle'],
-
     data() {
         return {
             visit: {
@@ -22,7 +20,6 @@ export default {
 
         }
     },
-
     methods: {
         createVisit(castleId, userId) {
             this.visit.castleId = castleId;
@@ -37,7 +34,6 @@ export default {
 </script>
 
 <style scoped>
-
 .card {
     display: flex;
     justify-content: center;
