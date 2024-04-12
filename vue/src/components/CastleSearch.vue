@@ -5,16 +5,23 @@
     </div>
     <div class="container">
         <div id="button-container" class="d-flex">
-            <input type="button" value="Hokkaido" v-bind="filter.region" @click="hokkaido">
-            <input type="button" value="Tohoku" v-bind="filter.region" @click="tohoku">
-            <input type="button" value="Kanto" v-bind="filter.region" @click="kanto">
-            <input type="button" value="Chubu" v-bind="filter.region" @click="chubu">
-            <input type="button" value="Kansai" v-bind="filter.region" @click="kansai">
-            <input type="button" value="Chugoku" v-bind="filter.region" @click="chugoku">
-            <input type="button" value="Shikoku" v-bind="filter.region" @click="shikoku">
-            <input type="button" value="Kyushu" v-bind="filter.region" @click="kyushu">
-            <input type="button" value="Okinawa" v-bind="filter.region" @click="okinawa">
-            <input type="button" value="Reset Filters"  @click="submitSearch">
+
+            <button type="button" class="btn btn-outline-hokkaido" v-bind="filter.region" @click="hokkaido">Hokkaido</button>
+            <button type="button" class="btn btn-outline-tohoku" v-bind="filter.region" @click="tohoku">Tohoku</button>
+            <button type="button" class="btn btn-outline-kanto" v-bind="filter.region" @click="kanto">Kanto</button>
+            <button type="button" class="btn btn-outline-chubu" v-bind="filter.region" @click="chubu">Chubu</button>
+            <button type="button" class="btn btn-outline-kansai" v-bind="filter.region" @click="kansai">Kansai</button>
+            <button type="button" class="btn btn-outline-chugoku" v-bind="filter.region" @click="chugoku">Chugoku</button>
+            <button type="button" class="btn btn-outline-shikoku" v-bind="filter.region" @click="shikoku">Shikoku</button>
+            <button type="button" class="btn btn-outline-kyushu" v-bind="filter.region" @click="kyushu">Kyushu</button>
+            <button type="button" class="btn btn-outline-okinawa" v-bind="filter.region" @click="okinawa">Okinawa</button>
+
+
+
+            <button type="button" class="btn btn-outline-reset" value="Reset Filters"  @click="submitSearch">Reset filter</button>
+        
+            
+            
         </div>
     </div>
 
@@ -77,6 +84,10 @@ export default {
 }
 </script>
 <style scoped>
+
+
+
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -110,7 +121,116 @@ export default {
     border-radius: 14px;
 }
 
-.Hokkaido {
-    color: #fff;
+.btn-outline-hokkaido {
+    color: #358057;
+    border-color: #358057;
 }
+
+.btn-outline-hokkaido:hover {
+    color: white;
+    background-color: #358057;
+    border-color: #358057;
+}
+
+.btn-outline-tohoku {
+    color: #f39438;
+    border-color: #f39438;
+}
+
+.btn-outline-tohoku:hover {
+    
+    background-color: #f39438;
+    border-color: #f39438;
+}
+
+.btn-outline-kanto {
+    color: #eb6363;
+    border-color: #eb6363;
+}
+
+.btn-outline-kanto:hover {
+    color: white;
+    background-color: #eb6363;
+    border-color: #eb6363;
+}
+
+.btn-outline-chubu {
+    color: #3190be;
+    border-color: #3190be;
+}
+
+.btn-outline-chubu:hover {
+    color: white;
+    background-color: #3190be;
+    border-color: #3190be;
+}
+
+.btn-outline-kansai {
+    color: #923063;
+    border-color: #923063;
+}
+
+.btn-outline-kansai:hover {
+    color: white;
+    background-color:#923063;
+    border-color: #923063;
+}
+
+.btn-outline-chugoku {
+    color: #eb6437;
+    border-color: #eb6437;
+}
+
+.btn-outline-chugoku:hover {
+    color: white;
+    background-color:#eb6437;
+    border-color: #eb6437;
+}
+
+.btn-outline-shikoku {
+    color: #80bf26;
+    border-color: #80bf26;
+}
+
+.btn-outline-shikoku:hover {
+    color: white;
+    background-color: #80bf26;
+    border-color: #80bf26;
+}
+
+.btn-outline-kyushu {
+    color: #349493;
+    border-color: #349493;
+}
+
+.btn-outline-kyushu:hover {
+    color: white;
+    background-color: #349493;
+    border-color: #349493;
+}
+
+.btn-outline-okinawa {
+    color: #936034;
+    border-color: #936034;
+}
+
+.btn-outline-okinawa:hover {
+    color: white;
+    background-color: #936034;
+    border-color: #936034;
+}
+
+.btn-outline-reset {
+    color: black;
+    background-color: lightgray;
+    border-color: lightgray;
+}
+
+.btn-outline-reset:hover {
+    border-color: gray;
+    background-color: gray;
+    color: white;
+    display: block;
+}
+
 </style>
