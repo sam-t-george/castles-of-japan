@@ -8,11 +8,7 @@ export function createStore(currentToken, currentUser) {
       token: currentToken || '',
       user: currentUser || {},
       castleList: [],
-<<<<<<< HEAD
       castle: {},
-=======
-      castle: {}, 
->>>>>>> e6a7e4dfb95eac0ef6c00d3996da854c585b1320
       visit: {},
     },
 
