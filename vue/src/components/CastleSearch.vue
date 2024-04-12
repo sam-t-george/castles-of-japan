@@ -88,10 +88,6 @@ export default {
 
 
 <style scoped>
-
-
-
-
 .search-container {
     display: flex;
     justify-content: center;
@@ -99,7 +95,6 @@ export default {
     margin-top: 4rem ;
     padding-bottom: 1rem ;
 }
-
 .container {
   
     display: flex;
@@ -107,14 +102,11 @@ export default {
     align-items: center;
     margin-bottom: 3rem;
 }
-
 #button-container {
     display: flex;
     justify-content:space-between;
     width: 45vw;
-
 }
-
 .search-input {
     width: 50vw;
     height: 5vh;
@@ -125,117 +117,95 @@ export default {
     border: 1.5px solid #193144;
     border-radius: 14px;
 }
-
 .btn-outline-hokkaido {
     color: #358057;
     border-color: #358057;
 }
-
 .btn-outline-hokkaido:hover {
     color: white;
     background-color: #358057;
     border-color: #358057;
 }
-
 .btn-outline-tohoku {
-    color: #f39438;
-    border-color: #f39438;
+    color: #F39438;
+    border-color: #F39438;
 }
-
 .btn-outline-tohoku:hover {
-    
-    background-color: #f39438;
-    border-color: #f39438;
+    background-color: #F39438;
+    border-color: #F39438;
 }
-
 .btn-outline-kanto {
-    color: #eb6363;
-    border-color: #eb6363;
+    color: #EB6363;
+    border-color: #EB6363;
 }
-
 .btn-outline-kanto:hover {
     color: white;
-    background-color: #eb6363;
-    border-color: #eb6363;
+    background-color: #EB6363;
+    border-color: #EB6363;
 }
-
 .btn-outline-chubu {
-    color: #3190be;
-    border-color: #3190be;
+    color: #3190BE;
+    border-color: #3190BE;
 }
-
 .btn-outline-chubu:hover {
     color: white;
-    background-color: #3190be;
-    border-color: #3190be;
+    background-color: #3190BE;
+    border-color: #3190BE;
 }
-
 .btn-outline-kansai {
     color: #923063;
     border-color: #923063;
 }
-
 .btn-outline-kansai:hover {
     color: white;
     background-color:#923063;
     border-color: #923063;
 }
-
 .btn-outline-chugoku {
-    color: #eb6437;
-    border-color: #eb6437;
+    color: #EB6437;
+    border-color: #EB6437;
 }
-
 .btn-outline-chugoku:hover {
     color: white;
     background-color:#eb6437;
-    border-color: #eb6437;
+    border-color: #EB6437;
 }
-
 .btn-outline-shikoku {
-    color: #80bf26;
-    border-color: #80bf26;
+    color: #80BF26;
+    border-color: #80BF26;
 }
-
 .btn-outline-shikoku:hover {
     color: white;
-    background-color: #80bf26;
-    border-color: #80bf26;
+    background-color: #80BF26;
+    border-color: #80BF26;
 }
-
 .btn-outline-kyushu {
     color: #349493;
     border-color: #349493;
 }
-
 .btn-outline-kyushu:hover {
     color: white;
     background-color: #349493;
     border-color: #349493;
 }
-
 .btn-outline-okinawa {
     color: #936034;
     border-color: #936034;
 }
-
 .btn-outline-okinawa:hover {
     color: white;
     background-color: #936034;
     border-color: #936034;
 }
-
 .btn-outline-reset {
     color: black;
     background-color: lightgray;
     border-color: lightgray;
 }
-
 .btn-outline-reset:hover {
     border-color: gray;
     background-color: gray;
     color: white;
     display: block;
 }
-
 </style>
