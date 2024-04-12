@@ -230,7 +230,7 @@ export default {
     border-color: gray;
     background-color: gray;
     color: white;
-    display: block;
+    display: 
 }
 
 </style>
