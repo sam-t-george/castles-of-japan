@@ -39,7 +39,8 @@ export default {
     color: #193144;
   }
   .explore:hover {
-    font-weight: bold;
+    font-weight: 500;
+    font-style: italic;
     color: #000;
     background-color:   #fffdf1de;;
     transform: scale(1.05);

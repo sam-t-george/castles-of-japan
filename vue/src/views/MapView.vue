@@ -1,17 +1,16 @@
 <template>
-    <h1>I AM A MAP</h1>
-    <Calendar/>
+    
+<h1> I am a Map</h1>
    
 </template>
 
+
+
 <script>
-import Calendar from '../components/Calendar.vue';
-
-
 
 export default {
     components: {
-    Calendar
+
 }
 }
 </script>

@@ -3,10 +3,15 @@ import CapstoneApp from './App.vue'
 import { createStore } from './store'
 import router from './router'
 import axios from 'axios'
-import 'bootstrap';
+import 'bootstrap'
+import "bootstrap/dist/css/bootstrap.min.css"
 import 'primeicons/primeicons.css'
 import PrimeVue from 'primevue/config';
 import Calendar from 'primevue/calendar';
+// import AirDatepicker from 'air-datepicker';
+// import 'air-datepicker/air-datepicker.css';
+import 'primevue/resources/themes/aura-light-green/theme.css';
+import Menu from 'primevue/menu';
 
 
 
@@ -35,3 +40,9 @@ const app = createApp(CapstoneApp);
 app.use(store);
 app.use(router);
 app.mount('#app');
+app.use(PrimeVue);
+app.component('Calendar', Calendar);
+app.component('Menu', Menu);
+
+
+
