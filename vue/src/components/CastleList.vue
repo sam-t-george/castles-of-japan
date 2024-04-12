@@ -5,15 +5,10 @@
             v-bind:key="currentCastle.castleId" v-bind:castle="currentCastle" />
         </section>
     </body>
-
-
-
 </template>
 
 <script>
 import Castle from './Castle.vue';
-
-
 export default {
     components: {
         Castle
@@ -31,23 +26,15 @@ export default {
     created() {
         this.$store.dispatch('getAllCastles');
     }
-
 }
 </script>
 
-
 <style scoped>
-
 section#castleList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
-    padding-top: 7px;
     background-color: #FFFDF1;
-   
+    padding-top: 4px;
 }
- 
-
-
-
 </style>

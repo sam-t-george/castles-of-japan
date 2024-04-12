@@ -96,16 +96,13 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem ;
-    padding-bottom: 1rem ;
-    
+    margin-top: 0rem ;
+    padding-bottom: .6rem ;
 }
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-bottom: 3rem;
-    width: fit-content;
 }
 #button-container {
     display: flex;
