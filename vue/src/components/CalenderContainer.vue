@@ -29,11 +29,19 @@ export default {
             // this.visit.date = '2024-04-13';
             this.$store.dispatch('createVisit', this.visit);
         }
-
     }
 }
-
 </script>
 
-<style scoped></style>
+<style scoped>
+
+.card {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    height: auto;
+    border: none;
+    background-color: #FFFDF1;
+}
+</style>
 
