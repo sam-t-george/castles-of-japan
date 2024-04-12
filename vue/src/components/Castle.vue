@@ -6,9 +6,13 @@
         <h5 class="castle-name">{{ castle.castleName }}</h5>
         <p class="castle-desc">{{ castle.shortDesc }}</p>
         <p class="castle-region"><small>{{ castle.region }}</small></p>
-        <i class="pi pi-plus-circle" @click="ShowMenu = true"></i> <!--@click=""-->
+        <i class="pi pi-plus-circle" id="plusbutton" ></i>
+        </div>
+        
       </div>
-    </div>
+      <div class="icons">
+        
+      </div>
   </router-link>
 
     <!-- <div class="dropdown">
@@ -93,4 +97,5 @@ opacity: 75%;
 .pi-plus-circle:hover {
   opacity: 100%;
 }
+
 </style>

@@ -6,8 +6,10 @@
             </div>
         </div>
         <div class="information">
-            <div class="text-section">
+            <!-- <div class="castleaddress">
                 <p class="address">Address: {{ castle.address }}</p>
+            </div> -->
+            <div class="description">
                 <p class="body">{{ castle.longDesc }}</p>
             </div>
             <div class="google-map">
@@ -48,22 +50,6 @@ export default {
 </script>
 
 <style scoped>
-.castleDetailPage {
-    max-width: 100vw;
-    margin-top: 10px;
-
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.big-image {
-    height: 25vh;
-    width: 100vw;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-}
-
 .overlay {
     position: absolute;
     top: 0;
@@ -80,42 +66,51 @@ export default {
     font-style: italic;
 }
 
-.content {
-    
-    padding-left: 5px;
-    box-sizing: border-box;
+.big-image {
+    height: 25vh;
+    width: 100vw;
+    position: relative;
+    background-size: cover;
+    background-position: center;
 }
 
-.address {
-    font-size: 20px;
+.information {
+    display: grid;
+    grid-template-columns: 2.5fr 2fr;
+    grid-template-rows: 3fr 2.5fr;
+    gap: 20px;
+    padding: 20px;
 }
 
-.body {
-    font-size: 25px;
-    width: 50%;
+.img-container {
+    grid-area: 1 / 1 / 3 / 2;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
 }
 
 .google-map {
-    margin: 20px;
-    width: 50%;
-    height: 35vh;
-    
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+    margin: 0;
+}
+
+.description {
+    grid-area: 2 / 2 / 3 / 3;
+    width: 100%;
+    height: auto;
+    font-size: 2.3em;
+    align-content: start;
 }
 
 .google-map iframe {
     width: 100%;
-    height: 35vh;
-}
-.img {
-    display: flex;
-    flex-wrap: wrap;
-    
+    height: 100%;
 }
 
 .img img {
-    
-    width: 50rem;
-    box-sizing: border-box;
-    padding: 5px;
+    width: 100%;
+    padding: 2px;
 }
+
 </style>

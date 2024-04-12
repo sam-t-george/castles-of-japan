@@ -51,7 +51,7 @@ export default {
     }
     .nav-link:hover {
         font-size: 1.5em;
-        font-weight: 500;
+        font-weight: 300;
         /* color: #8BBAB1; */
         font-style: italic;
     }
