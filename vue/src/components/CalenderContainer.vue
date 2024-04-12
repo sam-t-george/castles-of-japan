@@ -8,8 +8,8 @@ console.log(date)
 </script>
 
 <template>
-    <div class="card flex justify-content-center">
-         <Calendar v-model="date" inline showWeek class="Calendar"> </Calendar> 
+    <div class="card flex justify-content-center" >
+         <Calendar v-model="date" inline showWeek class="Calendar" > </Calendar> 
         
     </div>
 </template>
@@ -17,9 +17,7 @@ console.log(date)
 
 
 <style scoped>
-.Calendar {
- 
-}
+
 
 </style>
 
