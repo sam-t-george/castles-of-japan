@@ -35,5 +35,6 @@ export default {
 body {
   margin: 0 !important; 
   overflow-x: hidden;
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 </style>
