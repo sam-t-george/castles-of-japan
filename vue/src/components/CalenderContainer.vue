@@ -1,15 +1,18 @@
 
-<script setup>
+<script>
 import { ref } from "vue";
 
 
 const date = ref();
-console.log(date)
+
+export default {
+    
+}
 </script>
 
 <template>
     <div class="card flex justify-content-center" >
-         <Calendar v-model="date" inline showWeek class="Calendar" > </Calendar> 
+         <Calendar v-model="date" inline showWeek class="Calendar">  </Calendar> 
         
     </div>
 </template>
