@@ -7,7 +7,7 @@ import 'bootstrap';
 import 'primeicons/primeicons.css'
 import PrimeVue from 'primevue/config';
 import Calendar from 'primevue/calendar';
-
+import 'primevue/resources/themes/aura-light-green/theme.css';
 
 
 /* sets the base url for server API communication with axios */
@@ -35,3 +35,6 @@ const app = createApp(CapstoneApp);
 app.use(store);
 app.use(router);
 app.mount('#app');
+app.use(PrimeVue);
+app.component('Calendar', Calendar);
+

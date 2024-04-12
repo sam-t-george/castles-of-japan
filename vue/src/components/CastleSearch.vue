@@ -20,6 +20,8 @@
     </div>
 </div>
 </template>
+
+
 <script>
 export default {
     data() {
@@ -77,13 +79,15 @@ export default {
     }
 }
 </script>
+
+
 <style scoped>
 .search-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
-    padding-bottom: 1rem;
+    margin-top: 4rem ;
+    padding-bottom: 1rem ;
 }
 .container {
     display: flex;
@@ -103,8 +107,8 @@ width: 50vw;
 height: 3vh;
 box-shadow: 4px 4px 15px rgba(0,0,0,0.4);
 font-size: 1em;
-padding: 8px;
+padding: 8px !important;
 border: 1.5px solid #193144;
-border-radius: 14px;
+border-radius: 14px ;
 }
 </style>
