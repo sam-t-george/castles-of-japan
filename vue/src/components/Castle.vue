@@ -106,6 +106,6 @@ opacity: 75%;
   margin-bottom: 20px;
 }
 .cardplus {
-    margin-bottom: 2rem; /* this changes margin on bottom of cards */
+    margin-bottom: 1.2rem; /* this changes margin on bottom of cards */
 }
 </style>
