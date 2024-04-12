@@ -6,7 +6,7 @@
         <h5 class="castle-name">{{ castle.castleName }}</h5>
         <p class="castle-desc">{{ castle.shortDesc }}</p>
         <p class="castle-region"><small>{{ castle.region }}</small></p>
-        <i class="pi pi-plus-circle" ></i> <!--@click=""-->
+        <i class="pi pi-plus-circle" id="plusbutton" ></i> <!--@click=""-->
       </div>
       <div class="icons">
         
@@ -49,7 +49,7 @@ export default {
   box-shadow: 7px 10px 15px rgba(0,0,0,0.4);
 }
 .castle-card:hover {
-  transform: scale(1.02); 
+  transform: scale(1.02);
 }
 .castle-card-body {
   display: flex;
@@ -87,5 +87,9 @@ font-size: 2rem;
 display: flex;
 justify-content: end;
 padding: 10px;
+opacity: 50%;
+}
+#plusbutton:hover {
+opacity: 100%;
 }
 </style>
