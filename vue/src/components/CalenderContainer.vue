@@ -17,45 +17,40 @@ export default {
          
 <template>
     <div class="card flex justify-content-center">
-        <Calendar v-model="date" inline showWeek class="Calendar" v-bind="visit" @dblclick="createVisit"> </Calendar>
-
+        <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit(caast)"> </Calendar>
+        <p> date: {{ visit.date }}</p>
     </div>
 
 
 
 
 </template>
-
-
 <script>
 import { ref } from "vue";
-
 export default {
-
+    props: ['castle'],
     data() {
         return {
             visit: {
                 date: '',
-                userId: 2,       // might want to change this hard codeing later
-                castleId: 22       // might want to change this hard codeing later
-            }   
-
+                userId: '',
+                castleId: ''
+            }
         }
     },
-
     methods: {
-        createVisit() {
-            // this.visit.castleId = 1;
-            // this.visit.userId = 1;
-            // this.visit.date = '2024-04-13';
+        createVisit(castleId, userId) {
+            this.visit.castleId = castleId;
+            this.visit.userId = userId;
             this.$store.dispatch('createVisit', this.visit);
-        }
-    }
+        },
+        dateChange() {
+            console.log(this.visit);
+        },
+    },
 }
 </script>
-
 <style scoped>
-
 .card {
     display: flex;
     justify-content: center;

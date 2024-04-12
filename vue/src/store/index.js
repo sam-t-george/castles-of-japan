@@ -8,6 +8,7 @@ export function createStore(currentToken, currentUser) {
       user: currentUser || {},
       castleList: [],
       castle: {}, 
+      visit: {},
     },
 
 
@@ -66,6 +67,7 @@ export function createStore(currentToken, currentUser) {
       },
 
       SET_VISIT(state, visit) {
+        
         state.visit = visit;
       },
       
