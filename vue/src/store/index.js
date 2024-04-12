@@ -7,7 +7,7 @@ export function createStore(currentToken, currentUser) {
       token: currentToken || '',
       user: currentUser || {},
       castleList: [],
-      castle: {}, //may or may not need this
+      castle: {}, 
     },
     actions: {
       getAllCastles(context) {
