@@ -24,21 +24,21 @@ export default {
 <style scoped>
 .main-container {
   display: flex;
-  justify-content: space-between; /* Adjusts the spacing between the columns */
+  justify-content: space-between;
 }
 
 .calendar-container {
-  flex: 1; /* Allows the container to grow and take up half the space */
+  flex: 1;
   height: fit-content;
 }
 
 .event-cards {
-  flex: 1; /* Similarly, allows this container to grow and take up the remaining space */
+  flex: 1;
   display: flex;
-  flex-direction: column; /* Aligns the event cards in a column */
+  flex-direction: column;
   justify-content: start;
   align-items: center;
-  padding: 20px; /* Optional padding for styling */
+  padding: 20px;
   height: 100vh;
 }
 .calendar-container {
