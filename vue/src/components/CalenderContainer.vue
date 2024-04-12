@@ -18,9 +18,11 @@ const date = ref();
 
 <style scoped>
 .card {
-    width: 95%;
+    width: 100%;
     display: flex;
     justify-content: center;
+    padding: 1rem;
+    height: auto;
 }
 </style>
 

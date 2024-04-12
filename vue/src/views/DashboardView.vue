@@ -30,6 +30,7 @@ export default {
 .calendar-container {
   flex: 1;
   height: fit-content;
+  padding: 20px;
 }
 
 .event-cards {
@@ -44,7 +45,6 @@ export default {
 .calendar-container {
     display: flex;
     justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
+
 }
 </style>
