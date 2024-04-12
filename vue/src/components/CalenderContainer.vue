@@ -1,23 +1,39 @@
-
-<script setup>
-import { ref } from "vue";
-
-
-const date = ref();
-console.log(date)
-</script>
-
 <template>
-    <div class="card flex justify-content-center" >
-         <Calendar v-model="date" inline showWeek class="Calendar" > </Calendar> 
-        
+    <div class="card flex justify-content-center">
+        <Calendar v-model="date" inline showWeek class="Calendar" v-bind="visit" @dblclick="createVisit"> </Calendar>
+
     </div>
 </template>
 
 
+<script>
+import { ref } from "vue";
 
-<style scoped>
+export default {
 
+    data() {
+        return {
+            visit: {
+                date: '',
+                userId: 2,       // might want to change this hard codeing later
+                castleId: 22       // might want to change this hard codeing later
+            }   
 
-</style>
+        }
+    },
+
+    methods: {
+        createVisit() {
+            // this.visit.castleId = 1;
+            // this.visit.userId = 1;
+            // this.visit.date = '2024-04-13';
+            this.$store.dispatch('createVisit', this.visit);
+        }
+
+    }
+}
+
+</script>
+
+<style scoped></style>
 

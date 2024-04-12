@@ -48,5 +48,13 @@ export default {
     },
     getImagesByCastleId(castleId) {
         return axios.get(`/images/${castleId}`);
+    },
+
+    createVisit(visit) {
+        let url = '/add/visit'
+
+        return axios.post(url, visit);
+
     }
+
 }

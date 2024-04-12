@@ -1,39 +1,41 @@
 <template>
-  <router-link :to="{ name: 'castleDetail', params: { castleId: castle.castleId } }" class="castle-card">
-    <div class="castle-card-body">
-      <img class="castle-image" :src="castle.castleBannerPhoto" alt="bannerPhoto">
-      <div class="castle-content">
-        <h5 class="castle-name">{{ castle.castleName }}</h5>
-        <p class="castle-desc">{{ castle.shortDesc }}</p>
-        <p class="castle-region"><small>{{ castle.region }}</small></p>
-        <i class="pi pi-plus-circle" id="plusbutton"></i>
+  <div>
+    <router-link :to="{ name: 'castleDetail', params: { castleId: castle.castleId } }" class="castle-card">
+      <div class="castle-card-body">
+        <img class="castle-image" :src="castle.castleBannerPhoto" alt="bannerPhoto">
+        <div class="castle-content">
+          <h5 class="castle-name">{{ castle.castleName }}</h5>
+          <p class="castle-desc">{{ castle.shortDesc }}</p>
+          <p class="castle-region"><small>{{ castle.region }}</small></p>
         </div>
-        
       </div>
-      <div class="icons">
-        
-      </div>
-  </router-link>
-
-    <!-- <div class="dropdown">
-            <button onclick="myFunction()" class="pi pi-plus-circle"></button>
-            <div id="myDropdown" class="dropdown-content">
-              <a href="#">Link 1</a> -->
- 
+    </router-link>
+    <i class="pi pi-plus-circle" @click="toggleCalendar"></i>
+    <div v-show="showMenu" class="calendar-container">
+      <CalenderContainer/>
+    </div>
+  </div>
 </template>
 
 <script>
-
 import { ref } from 'vue';
 import CalenderContainer from './CalenderContainer.vue';
 
-
-const showMenu = ref(false);
 export default {
-    props: ['castle'],
-    components: {  },
+  props: ['castle'],
+  components: { CalenderContainer },
+  setup() {
+    const showMenu = ref(false);
+
+    const toggleCalendar = () => {
+      showMenu.value = !showMenu.value;
+    }
+
+    return { showMenu, toggleCalendar };
+  }
 }
 </script>
+
 
 
 
@@ -50,7 +52,6 @@ export default {
   font-size: 1.4rem;
   color: inherit; 
   transition: transform 0.2s; 
-  margin-bottom: 5rem;
   box-shadow: 7px 10px 15px rgba(0,0,0,0.4);
 }
 .castle-card:hover {
@@ -88,14 +89,26 @@ export default {
   font-size: .8em;
 }
 .pi-plus-circle {
+  margin-top: .5rem;
 font-size: 2rem;
 display: flex;
 justify-content: end;
 padding: 10px;
 opacity: 75%;
+margin-bottom: 5rem;
 }
 .pi-plus-circle:hover {
   opacity: 100%;
 }
 
+.calendar-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 10px;
+}
 </style>
