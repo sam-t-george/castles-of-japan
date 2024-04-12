@@ -8,7 +8,8 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import 'primeicons/primeicons.css'
 import PrimeVue from 'primevue/config';
 import Calendar from 'primevue/calendar';
-
+import AirDatepicker from 'air-datepicker';
+import 'air-datepicker/air-datepicker.css';
 
 
 /* sets the base url for server API communication with axios */
