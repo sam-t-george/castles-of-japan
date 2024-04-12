@@ -4,7 +4,7 @@
             class="search-input">
     </div>
     <div class="container">
-        <div id="button-container" class="d-flex">
+        <div id="button-container" class="d-flex" Region:>
 
             <button type="button" class="btn btn-outline-hokkaido" v-bind="filter.region" @click="hokkaido">Hokkaido</button>
             <button type="button" class="btn btn-outline-tohoku" v-bind="filter.region" @click="tohoku">Tohoku</button>
