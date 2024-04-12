@@ -42,9 +42,5 @@ export default {
   padding: 20px;
   height: 100vh;
 }
-.calendar-container {
-    display: flex;
-    justify-content: center;
 
-}
 </style>
