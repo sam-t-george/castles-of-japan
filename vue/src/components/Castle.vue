@@ -1,6 +1,7 @@
 <template>
-  <div>
-    <router-link :to="{ name: 'castleDetail', params: { castleId: castle.castleId } }" class="castle-card">
+  <div >
+    <div class="cardplus">
+    <router-link :to="{ name: 'castleDetail', params: { castleId: castle.castleId } }"  class="castle-card">
       <div class="castle-card-body">
         <img class="castle-image" :src="castle.castleBannerPhoto" alt="bannerPhoto">
         <div class="castle-content">
@@ -11,9 +12,10 @@
       </div>
     </router-link>
     <i class="pi pi-plus-circle" @click="toggleCalendar"></i>
-    <div v-show="showMenu" class="calendar-container">
+    <div v-show="showMenu" class="calendar-container" >
       <CalenderContainer/>
     </div>
+  </div>
   </div>
 </template>
 
@@ -30,13 +32,11 @@ export default {
     const toggleCalendar = () => {
       showMenu.value = !showMenu.value;
     }
-
-    return { showMenu, toggleCalendar };
+     
+    return { showMenu, toggleCalendar, };
   }
 }
 </script>
-
-
 
 
 <style scoped>
@@ -89,26 +89,27 @@ export default {
   font-size: .8em;
 }
 .pi-plus-circle {
-  margin-top: .5rem;
+margin-top: .5rem;
 font-size: 2rem;
 display: flex;
 justify-content: end;
 padding: 10px;
 opacity: 75%;
-margin-bottom: 5rem;
 }
 .pi-plus-circle:hover {
   opacity: 100%;
 }
 
 .calendar-container {
-  position: absolute;
-  top: 100%;
+  position: relative;
   left: 0;
-  z-index: 1000;
-  background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  background-color: #FFFDF1;
+  border-radius: 30px;
   padding: 10px;
+  margin-bottom: 20px;
 }
+.cardplus {
+    margin-bottom: 5rem;
+ }
+ 
 </style>
