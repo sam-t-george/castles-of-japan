@@ -6,7 +6,7 @@
         <h5 class="castle-name">{{ castle.castleName }}</h5>
         <p class="castle-desc">{{ castle.shortDesc }}</p>
         <p class="castle-region"><small>{{ castle.region }}</small></p>
-        <i class="pi pi-plus-circle" id="plusbutton" ></i>
+        <i class="pi pi-plus-circle" id="plusbutton"></i>
         </div>
         
       </div>
@@ -31,7 +31,7 @@ import CalenderContainer from './CalenderContainer.vue';
 const showMenu = ref(false);
 export default {
     props: ['castle'],
-    components: {  }
+    components: {  },
 }
 </script>
 

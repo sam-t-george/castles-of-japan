@@ -234,7 +234,7 @@ export default {
     border-color: gray;
     background-color: gray;
     color: white;
-    display: 
+    display: block;
 }
 
 </style>
