@@ -26,6 +26,8 @@
     </div>
 
 </template>
+
+
 <script>
 export default {
     data() {
@@ -83,6 +85,8 @@ export default {
     }
 }
 </script>
+
+
 <style scoped>
 
 
@@ -92,8 +96,8 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
-    padding-bottom: 1rem;
+    margin-top: 4rem ;
+    padding-bottom: 1rem ;
 }
 
 .container {
