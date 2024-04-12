@@ -1,12 +1,22 @@
 <template>
+    <!-- <div class="card flex justify-content-center">
+         <Calendar v-model="date" inline showWeek class="Calendar" >  </Calendar> 
+    </div> 
+      -->
     <div class="card flex justify-content-center">
-        <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit"> </Calendar>
+        <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar>
         <p> date: {{ visit.date }}</p>
     </div>
+
+
 </template>
+    
+
+
+
 
 <script>
-import { ref } from "vue"; //IS THIS NEEDED
+import { ref } from "vue";
 const date = ref();
 export default {
     props: ['castle'],

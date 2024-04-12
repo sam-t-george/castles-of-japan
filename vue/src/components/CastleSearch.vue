@@ -82,6 +82,8 @@ export default {
 
 
 <style scoped>
+
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -107,6 +109,11 @@ export default {
     padding-left: 15px;
     border: 1.5px solid #193144;
     border-radius: 14px;
+}
+
+.ResetRegions{
+    color:black
+
 }
 .btn-outline-hokkaido {
     color: #358057;
@@ -198,6 +205,7 @@ export default {
     border-color: gray;
     background-color: gray;
     color: white;
-    display: block;
 }
+
+
 </style>
