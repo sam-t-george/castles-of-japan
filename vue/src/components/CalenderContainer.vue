@@ -1,4 +1,3 @@
-
 <script setup>
 import { ref } from "vue";
 
@@ -12,13 +11,7 @@ const date = ref();
     <div class="card flex justify-content-center">
          <Calendar v-model="date" inline showWeek class="Calendar" >  </Calendar> 
          
-<template>
-    <div class="card flex justify-content-center">
-        <Calendar v-model="date" inline showWeek class="Calendar" v-bind="visit" @dblclick="createVisit"> </Calendar>
-
     </div>
-
-
 
 
 </template>
