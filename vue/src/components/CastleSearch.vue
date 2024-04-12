@@ -4,8 +4,10 @@
             class="search-input">
     </div>
     <div class="container">
-        <div id="button-container" class="d-flex" Region:>
+        <div id="button-container" class="d-flex">
 
+            <!-- <h1 class="btn ResetRegions">Regions:</h1>
+            <h3>Regions:<span class="badge text-bg-secondary"></span></h3> -->
             <button type="button" class="btn btn-outline-hokkaido" v-bind="filter.region" @click="hokkaido">Hokkaido</button>
             <button type="button" class="btn btn-outline-tohoku" v-bind="filter.region" @click="tohoku">Tohoku</button>
             <button type="button" class="btn btn-outline-kanto" v-bind="filter.region" @click="kanto">Kanto</button>
@@ -15,8 +17,6 @@
             <button type="button" class="btn btn-outline-shikoku" v-bind="filter.region" @click="shikoku">Shikoku</button>
             <button type="button" class="btn btn-outline-kyushu" v-bind="filter.region" @click="kyushu">Kyushu</button>
             <button type="button" class="btn btn-outline-okinawa" v-bind="filter.region" @click="okinawa">Okinawa</button>
-
-
 
             <button type="button" class="btn btn-outline-reset" value="Reset Filters"  @click="submitSearch">Reset filter</button>
         
@@ -90,6 +90,8 @@ export default {
 
 
 <style scoped>
+
+
 .search-container {
     display: flex;
     justify-content: center;
@@ -98,7 +100,6 @@ export default {
     padding-bottom: .6rem ;
 }
 .container {
-  
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,6 +118,11 @@ export default {
     padding-left: 15px;
     border: 1.5px solid #193144;
     border-radius: 14px;
+}
+
+.ResetRegions{
+    color:black
+
 }
 .btn-outline-hokkaido {
     color: #358057;
@@ -207,6 +213,7 @@ export default {
     border-color: gray;
     background-color: gray;
     color: white;
-    display: block;
 }
+
+
 </style>

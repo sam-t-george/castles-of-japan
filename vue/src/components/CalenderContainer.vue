@@ -1,11 +1,18 @@
 <template>
+    <!-- <div class="card flex justify-content-center">
+         <Calendar v-model="date" inline showWeek class="Calendar" >  </Calendar> 
+    </div> 
+      -->
     <div class="card flex justify-content-center">
-        <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit(cast)"> </Calendar>
+        <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar>
         <p> date: {{ visit.date }}</p>
     </div>
 
 
 </template>
+    
+
+
 
 
 <script>
