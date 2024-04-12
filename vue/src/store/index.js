@@ -9,6 +9,8 @@ export function createStore(currentToken, currentUser) {
       castleList: [],
       castle: {}, 
     },
+
+
     actions: {
       getAllCastles(context) {
         CastleService.listCastles().then(response => {
@@ -23,6 +25,19 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
+
+
+
+      createVisit(context, visit) {
+        CastleService.createVisit(visit)
+          .then(response => {
+            context.commit('SET_VISIT', response.data);
+          })
+           .catch(err => console.error(err));
+      },
+
+
+
       filterByRegion(context, searchTerms) {
         CastleService.filterByRegion(searchTerms.region)
           .then(response => {
@@ -43,10 +58,19 @@ export function createStore(currentToken, currentUser) {
         .catch(err => console.error(err));
       },
     },
+
+
     mutations: {
       SET_CASTLELIST(state, castles) {
         state.castleList = castles;
       },
+
+      SET_VISIT(state, visit) {
+        state.visit = visit;
+      },
+      
+
+
       SET_CASTLE(state, castle) {
         state.castle = castle;
       },

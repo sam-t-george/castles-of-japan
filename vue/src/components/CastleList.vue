@@ -5,6 +5,9 @@
             v-bind:key="currentCastle.castleId" v-bind:castle="currentCastle" />
         </section>
     </body>
+
+
+
 </template>
 <script>
 import Castle from './Castle.vue';
