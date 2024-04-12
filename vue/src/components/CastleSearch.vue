@@ -99,6 +99,7 @@ export default {
     display: flex;
     justify-content:space-between;
     width: 45vw;
+    max-height: 3.5rem;
 }
 .search-input {
     width: 50vw;

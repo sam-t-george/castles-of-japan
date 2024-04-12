@@ -22,7 +22,7 @@ export default {
 .search {
     position: fixed;
     width: 100%; /* width: 99% allows scrollbar to be shown but search is offset */
-    top: 8rem;
+    top: 7.95rem;
     z-index: 10;
     background-color: #FFFDF1;
     height: 7.5rem;

@@ -21,6 +21,7 @@ import CastleListView from '../views/CastleListView.vue';
  * If the user has not yet authenticated (and needs to) they are redirected to /login
  * If they have (or don't need to) they're allowed to go about their way.
  */
+
 const routes = [
   {
     path: '/',

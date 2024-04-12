@@ -47,7 +47,7 @@ export default {
   text-decoration: none;
   font-size: 1.4rem;
   color: inherit;
-  transition: transform 0.2s; /* I think this is useless */
+  transition: transform 0.15s; /* I think this is useless */
   box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.4);
 }
 .castle-card:hover {
@@ -65,22 +65,30 @@ export default {
   object-fit: cover;
   overflow: hidden;
   border-radius: 10px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   border-bottom: solid 1.5px black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 .castle-content {
   flex: 1;
   width: 100%;
+  padding-top: 1.2rem;
 }
 .castle-name,
 .castle-desc,
 .castle-region {
-  margin: .4rem;
+  margin: 0rem;
   text-align: center;
+  color:white; /* Changed font to white, will change back. We also need to pick a new font for stuff */
+  
+}
+.castle-desc {
+  font-size: .8em;
+  text-shadow: 1px 1px 2px black; /* Text shadow */
 }
 .castle-name {
   font-size: 1.5rem;
+  text-shadow: 1px 1px 2px black; /* Text shadow */
 }
 .castle-region small {
   color: #6C757D;
