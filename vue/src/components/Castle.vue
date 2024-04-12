@@ -112,6 +112,7 @@ opacity: 75%;
   border-radius: 30px;
   padding: 10px;
   margin-bottom: 20px;
+  
 }
 .cardplus {
     margin-bottom: 5rem;

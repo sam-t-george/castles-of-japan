@@ -23,6 +23,9 @@ const date = ref();
     justify-content: center;
     padding: 1rem;
     height: auto;
+    border: none;
+    background-color: #FFFDF1;
 }
+
 </style>
 
