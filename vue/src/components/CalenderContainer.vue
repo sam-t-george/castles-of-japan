@@ -17,9 +17,10 @@ export default {
         return {
             visit: {
                 date: '',
-                userId: '',
-                castleId: ''
-            }
+                userId: 1,       // might want to change this hard codeing later
+                castleId: 22      // might want to change this hard codeing later
+            }   
+
         }
     },
     methods: {
@@ -34,6 +35,7 @@ export default {
     },
 }
 </script>
+
 <style scoped>
 .card {
     display: flex;
