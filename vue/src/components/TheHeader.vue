@@ -7,13 +7,12 @@
             <router-link v-bind:to="{ name: 'home' }" class="nav-link" v-if="!isHomePage">Home</router-link>
             <span class="bars" v-if="!isHomePage"> &nbsp;|&nbsp;</span>
             <router-link v-bind:to="{ name: 'castles' }" class="nav-link" v-if="!isExplorePage">Explore Castles</router-link>
-            <!--@click="location.reload()"-->
             <span class="bars" v-if="!isExplorePage"> &nbsp;|&nbsp;</span>
             <router-link v-bind:to="{ name: 'dashboard' }" class="nav-link" v-if="!isDashboardPage">My Dashboard</router-link>
             <span class="bars" v-if="!isDashboardPage"> &nbsp;|&nbsp;</span>
             <router-link v-bind:to="{ name: 'map' }" class="nav-link" v-if="!isMapPage">Map</router-link>
-            <span class="bars" v-if="!isMapPage"> &nbsp;|&nbsp;</span>
-            <router-link v-bind:to="{ name: 'login' }" class="nav-link"  || >Sign In &nbsp; </router-link>
+            <span class="bars" v-if="!isMapPage && !isLoginPage"> &nbsp;|&nbsp;</span>
+            <router-link v-bind:to="{ name: 'login' }" class="nav-link" v-if="!isLoginPage">Sign In &nbsp; </router-link>
             <!--" v-if="$store.state.token = ''"-->
             <router-link v-bind:to="{ name: 'logout' }" v-if="user || admin" class="nav-link">Sign Out &nbsp; </router-link>
             <!--" v-if="$store.state.token != ''"-->
@@ -28,7 +27,9 @@ import { mapActions } from 'vuex';
 
 export default {
     computed: {
-           
+        isLoginPage() {
+            return this.$route.name === 'login';
+        },
             isHomePage() {
             return this.$route.name === 'home';
         },
