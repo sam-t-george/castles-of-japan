@@ -1,7 +1,5 @@
 import axios from 'axios';
-
 export default {
-
     listCastles() {
         return axios.get('/castles');
     },
@@ -27,14 +25,11 @@ export default {
                 name = name.toLowerCase().replace('c', '');
             }
             url += name.toLowerCase().replace(/\s/g, '');
-
         } else {
             return axios.get('/castles');
         }
-        
         return axios.get(url);
     },
-
     filterByRegion(region) {
         let url = '/castle/filter/'
         if (region) {
@@ -42,7 +37,6 @@ export default {
         }
         return axios.get(url);
     },
-
     getCastleById(castleId) {
         return axios.get(`/castle/${castleId}`);
     },
