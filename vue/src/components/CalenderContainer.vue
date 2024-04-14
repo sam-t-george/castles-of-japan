@@ -1,19 +1,12 @@
 <template>
-    <!-- <div class="card flex justify-content-center">
+    <div class="card flex justify-content-center">
          <Calendar v-model="date" inline showWeek class="Calendar" >  </Calendar> 
     </div> 
-      -->
     <div class="card flex justify-content-center">
         <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar>
         <p> date: {{ visit.date }}</p>
     </div>
-
-
 </template>
-    
-
-
-
 
 <script>
 import { ref } from "vue";
@@ -26,7 +19,7 @@ export default {
                 date: '',
                 userId: 1,       // might want to change this hard coding later
                 castleId: 22      // might want to change this hard coding later
-            }   
+            }
 
         }
     },
@@ -53,4 +46,3 @@ export default {
     background-color: #FFFDF1;
 }
 </style>
-
