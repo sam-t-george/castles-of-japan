@@ -40,7 +40,7 @@ export default {
   display: block;
   max-width: 20rem; /* max scalable width */
   height: 30rem; /* new card height */
-  background-color: #8bbab187;
+  background-color: #8bbab1;
   border: 1.5px solid #000000;
   border-radius: 20px;
   overflow: hidden;
@@ -91,12 +91,12 @@ export default {
   text-shadow: 1px 1px 2px black; /* Text shadow */
 }
 .castle-region small {
-  color: #6C757D;
+  color: #555b61;
   font-size: .8em;
 }
 .pi-plus-circle {
 margin-top: .5rem;
-font-size: 2rem;
+font-size: 1.5rem;
 display: flex;
 justify-content: end;
 padding: 10px;
