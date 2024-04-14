@@ -34,7 +34,7 @@ export function createStore(currentToken, currentUser) {
           .then(response => {
             context.commit('SET_VISIT', response.data);
           })
-           .catch(err => console.error(err));
+          .catch(err => console.error(err));
       },
 
 
@@ -50,13 +50,13 @@ export function createStore(currentToken, currentUser) {
         CastleService.getCastleById(castleId).then(response => {
           context.commit('SET_CASTLE', response.data);
         })
-        .catch(err => console.error(err));
+          .catch(err => console.error(err));
       },
       getCastlePictures(context, castleId) {
         CastleService.getImagesByCastleId(castleId).then(response => {
           context.commit('SET_CASTLE_IMAGES', response.data);
         })
-        .catch(err => console.error(err));
+          .catch(err => console.error(err));
       },
     },
 
@@ -67,10 +67,10 @@ export function createStore(currentToken, currentUser) {
       },
 
       SET_VISIT(state, visit) {
-        
+
         state.visit = visit;
       },
-      
+
 
 
       SET_CASTLE(state, castle) {
