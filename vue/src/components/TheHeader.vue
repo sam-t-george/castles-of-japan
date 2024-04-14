@@ -1,6 +1,6 @@
 <template>
     <div id="header">
-        <router-link to="/"><img src="../assets/logo.png" alt="logo"  width="150" height="150"></router-link>
+        <router-link to="/"><img src="../assets/logo.png" alt="logo"  width="125" height="125" class="pic"></router-link>
         <h1>Castles Of Japan | 日本の城 </h1>
         
         <nav id= "nav" class="d-flex">
@@ -33,6 +33,9 @@ export default {
 
 
 <style scoped>
+    #pic {
+        overflow: hidden;
+    }
     #header {
         width: 100vw;
         display: flex;

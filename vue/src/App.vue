@@ -20,23 +20,29 @@ export default {
 </script> 
 
 <style>
-#capstone-app { /* Makes the whole app take up 100vh */
+#capstone-app {
+  /* Makes the whole app take up 100vh */
   background-color: #FFFDF1;
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
-Header { /* This is to lock the header in place when scroll is available */
+
+Header {
+  /* This is to lock the header in place when scroll is available */
   width: 100%;
   position: fixed;
   top: 0;
   z-index: 1000;
 }
-.content { /* This is to get the content to scroll */
+
+.content {
+  /* This is to get the content to scroll */
   flex: 1;
   margin-top: 0px;
   overflow-y: auto;
 }
+
 body {
   margin: 0 !important;
   overflow-x: hidden;

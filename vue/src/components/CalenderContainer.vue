@@ -23,8 +23,8 @@ export default {
         return {
             visit: {
                 date: '',
-                userId: 1,       // might want to change this hard codeing later
-                castleId: 22      // might want to change this hard codeing later
+                userId: 1,       // might want to change this hard coding later
+                castleId: 22      // might want to change this hard coding later
             }   
 
         }
