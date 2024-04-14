@@ -13,7 +13,10 @@
       </router-link>
       <i class="pi pi-plus-circle" @click="toggleCalendar"></i>
       <div v-show="showMenu" class="calendar-container">
-        <CalenderContainer />
+        <div class="card flex justify-content-center">
+          <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar>
+          <p> date: {{ visit.date }}</p>
+        </div>
       </div>
     </div>
   </div>
@@ -21,16 +24,35 @@
 
 <script>
 import { ref } from 'vue';
-import CalenderContainer from './CalenderContainer.vue';
+const date = ref();
 export default {
   props: ['castle'],
-  components: { CalenderContainer },
   setup() {
     const showMenu = ref(false);
     const toggleCalendar = () => {
       showMenu.value = !showMenu.value;
     }
     return { showMenu, toggleCalendar, };
+  },
+  data() {
+    return {
+      visit: {
+        date: '',
+        userId: 1,       // might want to change this hard coding later
+        castleId: 22      // might want to change this hard coding later
+      }
+
+    }
+  },
+  methods: {
+    createVisit(castleId, userId) {
+      this.visit.castleId = castleId;
+      this.visit.userId = userId;
+      this.$store.dispatch('createVisit', this.visit);
+    },
+    dateChange() {
+      console.log(this.visit);
+    },
   }
 }
 </script>
@@ -47,17 +69,22 @@ export default {
   text-decoration: none;
   font-size: 1.4rem;
   color: inherit;
-  transition: transform 0.15s; /* I think this is useless */
+  transition: transform 0.15s;
+  /* I think this is useless */
   box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.4);
 }
+
 .castle-card:hover {
-  transform: scale(1.015); /* dropped and raised again due to card size shrink */
+  transform: scale(1.015);
+  /* dropped and raised again due to card size shrink */
 }
+
 .castle-card-body {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .castle-image {
   aspect-ratio: 1/1.1;
   width: 100%;
@@ -69,31 +96,40 @@ export default {
   border-bottom: solid 1.5px black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .castle-content {
   flex: 1;
   width: 100%;
   padding-top: 1.2rem;
 }
+
 .castle-name,
 .castle-desc,
 .castle-region {
   margin: 0rem;
   text-align: center;
-  color:white; /* Changed font to white, will change back. We also need to pick a new font for stuff */
-  
+  color: white;
+  /* Changed font to white, will change back. We also need to pick a new font for stuff */
+
 }
+
 .castle-desc {
   font-size: .8em;
-  text-shadow: 1px 1px 2px black; /* Text shadow */
+  text-shadow: 1px 1px 2px black;
+  /* Text shadow */
 }
+
 .castle-name {
   font-size: 1.5rem;
-  text-shadow: 1px 1px 2px black; /* Text shadow */
+  text-shadow: 1px 1px 2px black;
+  /* Text shadow */
 }
+
 .castle-region small {
   color: #555b61;
   font-size: .8em;
 }
+
 .pi-plus-circle {
 margin-top: .5rem;
 font-size: 1.5rem;
@@ -102,9 +138,11 @@ justify-content: end;
 padding: 10px;
 opacity: 75%;
 }
+
 .pi-plus-circle:hover {
   opacity: 100%;
 }
+
 .calendar-container {
   position: relative;
   left: 0;
@@ -113,7 +151,17 @@ opacity: 75%;
   padding: 10px;
   margin-bottom: 20px;
 }
+
 .cardplus {
-    margin-bottom: 1.2rem; /* this changes margin on bottom of cards */
+  margin-bottom: 1.2rem;
+  /* this changes margin on bottom of cards */
 }
-</style>
+
+.card {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  height: auto;
+  border: none;
+  background-color: #FFFDF1;
+}</style>

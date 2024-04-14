@@ -6,7 +6,6 @@
         </section>
     </body>
 </template>
-
 <script>
 import Castle from './Castle.vue';
 export default {
@@ -28,7 +27,6 @@ export default {
     }
 }
 </script>
-
 <style scoped>
 section#castleList {
     display: flex;

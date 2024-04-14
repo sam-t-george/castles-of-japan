@@ -1,7 +1,6 @@
 import { createStore as _createStore } from 'vuex';
 import axios from 'axios';
 import CastleService from '../services/CastleService';
-
 export function createStore(currentToken, currentUser) {
   let store = _createStore({
     state: {
@@ -100,3 +99,17 @@ export function createStore(currentToken, currentUser) {
   });
   return store;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+

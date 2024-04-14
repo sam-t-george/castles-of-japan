@@ -45,7 +45,6 @@ export default {
             }
         }
     },
-
     methods: {
         submitSearch() {
             this.$store.dispatch('searchForCastle', this.search);
