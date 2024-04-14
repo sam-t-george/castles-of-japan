@@ -7,8 +7,6 @@
         <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar>
         <p> date: {{ visit.date }}</p>
     </div>
-
-
 </template>
     
 

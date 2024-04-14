@@ -12,7 +12,7 @@
         <input type="text" placeholder="Username"  id="username" v-model="user.username" required autofocus />
       </div>
       <div class="form-input-group">
-        <input type="password" placeholder="Username" id="password" v-model="user.password" required />
+        <input type="password" placeholder="Password" id="password" v-model="user.password" required />
       </div>
       <router-link v-bind:to="{ name: 'dashboard' }"><button type="submit">Sign in</button></router-link>
       <p>

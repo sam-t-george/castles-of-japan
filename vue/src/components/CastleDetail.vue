@@ -17,11 +17,28 @@
                     loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
 
-            <div class="img-container">
+            <!-- <div class="img-container">
                 <div class="img" v-if="images && images.length">
                     <img v-for="(image, index) in images" :key="index" :src="image" alt="Castle Image">
                 </div>
+            </div> -->
+            <!---->
+            <div id="carouselExampleIndicators" class="carousel" data-interval="false" ref="carousel">
+                <div class="thumbnail">
+                    <div v-for="(image, index) in images" :key="'item' + index" class="carousel-item"
+                        :class="{ active: index === 0 }">
+                        <img :src="image" class="d-block w-100" alt="Slide Image">
+                    </div>
+                </div>
+                <div class="carousel-indicators">
+                    <button v-for="(image, index) in images" :key="'indicator-' + index" type="button"
+                        data-bs-target="#carouselExampleIndicators" :data-bs-slide-to="index"
+                        :class="{ 'active': index === 0 }" aria-label="'Slide ' + (index + 1)">
+                        <img :src="image" class="d-block w-100" alt="Thumbnail Image">
+                    </button>
+                </div>
             </div>
+
         </div>
     </div>
 </template>
@@ -50,6 +67,12 @@ export default {
 </script>
 
 <style scoped>
+.carousel-item {
+    transition: none !important;
+}
+#carousel-indicators{
+    margin-left: 0px;
+}
 .overlay {
     position: absolute;
     top: 0;
@@ -112,5 +135,4 @@ export default {
     width: 100%;
     padding: 2px;
 }
-
 </style>
