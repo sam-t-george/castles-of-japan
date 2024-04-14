@@ -1,41 +1,33 @@
-
-<script>
-import { ref } from "vue";
-
-const date = ref();
-
-export default {
-    
-}
-</script>
-
-
-
 <template>
-    <div class="card flex justify-content-center">
+    <!-- <div class="card flex justify-content-center">
          <Calendar v-model="date" inline showWeek class="Calendar" >  </Calendar> 
-         
-<template>
+    </div> 
+      -->
     <div class="card flex justify-content-center">
-        <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit(caast)"> </Calendar>
+        <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar>
         <p> date: {{ visit.date }}</p>
     </div>
 
 
-
-
 </template>
+    
+
+
+
+
 <script>
 import { ref } from "vue";
+const date = ref();
 export default {
     props: ['castle'],
     data() {
         return {
             visit: {
                 date: '',
-                userId: '',
-                castleId: ''
-            }
+                userId: 1,       // might want to change this hard codeing later
+                castleId: 22      // might want to change this hard codeing later
+            }   
+
         }
     },
     methods: {
@@ -50,6 +42,7 @@ export default {
     },
 }
 </script>
+
 <style scoped>
 .card {
     display: flex;
