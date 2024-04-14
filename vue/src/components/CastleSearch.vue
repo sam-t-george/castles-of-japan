@@ -1,13 +1,9 @@
 <template>
     <div id="castleSearch" class="search-container">
-        <input type="text" placeholder="Search by castle name" v-model.trim="search.name" @keyup="submitSearch"
-            class="search-input">
+        <input type="text" placeholder="Search by castle name" v-model.trim="search.name" @keyup="submitSearch" class="search-input">
     </div>
     <div class="container">
-        <div id="button-container" class="d-flex">
-
-            <!-- <h1 class="btn ResetRegions">Regions:</h1>
-            <h3>Regions:<span class="badge text-bg-secondary"></span></h3> -->
+        <div id="button-container" class="d-flex" Region:>
             <button type="button" class="btn btn-outline-hokkaido" v-bind="filter.region" @click="hokkaido">Hokkaido</button>
             <button type="button" class="btn btn-outline-tohoku" v-bind="filter.region" @click="tohoku">Tohoku</button>
             <button type="button" class="btn btn-outline-kanto" v-bind="filter.region" @click="kanto">Kanto</button>
@@ -17,11 +13,7 @@
             <button type="button" class="btn btn-outline-shikoku" v-bind="filter.region" @click="shikoku">Shikoku</button>
             <button type="button" class="btn btn-outline-kyushu" v-bind="filter.region" @click="kyushu">Kyushu</button>
             <button type="button" class="btn btn-outline-okinawa" v-bind="filter.region" @click="okinawa">Okinawa</button>
-
             <button type="button" class="btn btn-outline-reset" value="Reset Filters"  @click="submitSearch">Reset filter</button>
-        
-            
-            
         </div>
     </div>
 
@@ -96,8 +88,7 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 0rem ;
-    padding-bottom: .6rem ;
+    padding-bottom: .7rem ;
 }
 .container {
     display: flex;
@@ -108,10 +99,11 @@ export default {
     display: flex;
     justify-content:space-between;
     width: 45vw;
+    max-height: 3.5rem;
 }
 .search-input {
     width: 50vw;
-    height: 5vh;
+    height: 4.7vh;
     box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
     font-size: 1em;
     padding: 8px;
@@ -140,6 +132,7 @@ export default {
 .btn-outline-tohoku:hover {
     background-color: #F39438;
     border-color: #F39438;
+    color: white;
 }
 .btn-outline-kanto {
     color: #EB6363;
