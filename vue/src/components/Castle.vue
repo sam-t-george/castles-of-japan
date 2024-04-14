@@ -12,9 +12,11 @@
         </div>
       </router-link>
       <i class="pi pi-plus-circle" @click="toggleCalendar"></i>
+
       <div v-show="showMenu" class="calendar-container">
         <div class="card flex justify-content-center">
-          <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar>
+          <!-- <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar> -->
+          <input type="date" class="Calendar" v-model="visit.date" @click="createVisit">
           <p> date: {{ visit.date }}</p>
         </div>
       </div>
@@ -24,6 +26,7 @@
 
 <script>
 import { ref } from 'vue';
+import CastleService from '../services/CastleService';
 const date = ref();
 export default {
   props: ['castle'],
@@ -32,27 +35,29 @@ export default {
     const toggleCalendar = () => {
       showMenu.value = !showMenu.value;
     }
-    return { showMenu, toggleCalendar, };
+    return { showMenu, toggleCalendar };
   },
   data() {
     return {
       visit: {
         date: '',
-        userId: 1,       // might want to change this hard coding later
-        castleId: 22      // might want to change this hard coding later
+        userId: '',       // might want to change this hard coding later
+        castleId: ''     // might want to change this hard coding later
       }
 
     }
   },
   methods: {
-    createVisit(castleId, userId) {
-      this.visit.castleId = castleId;
-      this.visit.userId = userId;
-      this.$store.dispatch('createVisit', this.visit);
-    },
-    dateChange() {
+    createVisit() {
+      this.visit.castleId = this.castle.castleId;
+      this.visit.userId = 3;
+      CastleService.createVisit(this.visit);
+      // this.$store.dispatch('createVisit', this.visit);
       console.log(this.visit);
     },
+    dateChange() {
+      console.log(this.visit); // function not being called
+    }
   }
 }
 </script>
@@ -166,4 +171,5 @@ export default {
   height: auto;
   border: none;
   background-color: #FFFDF1;
-}</style>
+}
+</style>

@@ -45,8 +45,7 @@ export default {
     },
 
     createVisit(visit) {
-        let url = '/add/visit'
-        return axios.post(url, visit);
+        return axios.post('add/visit', visit);
     }
 
 }
