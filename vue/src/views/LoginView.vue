@@ -144,4 +144,5 @@ export default {
 
 .register-here:hover {
   color: #193144d5;
+  
 }</style>

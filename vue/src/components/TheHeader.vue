@@ -13,7 +13,7 @@
             <span class="bars" v-if="!isDashboardPage"> &nbsp;|&nbsp;</span>
             <router-link v-bind:to="{ name: 'map' }" class="nav-link" v-if="!isMapPage">Map</router-link>
             <span class="bars" v-if="!isMapPage"> &nbsp;|&nbsp;</span>
-            <router-link v-bind:to="{ name: 'login' }" v-if="!user || !admin" class="nav-link">Sign In &nbsp; </router-link>
+            <router-link v-bind:to="{ name: 'login' }" class="nav-link"  || >Sign In &nbsp; </router-link>
             <!--" v-if="$store.state.token = ''"-->
             <router-link v-bind:to="{ name: 'logout' }" v-if="user || admin" class="nav-link">Sign Out &nbsp; </router-link>
             <!--" v-if="$store.state.token != ''"-->
@@ -28,6 +28,7 @@ import { mapActions } from 'vuex';
 
 export default {
     computed: {
+           
             isHomePage() {
             return this.$route.name === 'home';
         },
