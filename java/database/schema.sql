@@ -40,9 +40,9 @@ CREATE TABLE img (
 
 CREATE TABLE visit (
 	visit_id SERIAL PRIMARY KEY,
-	user_id int,
+	username varchar(50),
 	castle_id int,
 	visit_date date,
-	CONSTRAINT FK_visit_user FOREIGN KEY(user_id) REFERENCES users(user_id),
+	CONSTRAINT FK_visit_user FOREIGN KEY(username) REFERENCES users(username),
 	CONSTRAINT FK_visit_castle FOREIGN KEY(castle_id) REFERENCES castle(castle_id)
 );
