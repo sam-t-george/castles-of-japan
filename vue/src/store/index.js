@@ -82,7 +82,6 @@ export function createStore(currentToken, currentUser) {
         state.castleList = castles;
       },
       SET_VISIT(state, visit) {
-
         state.visit = visit;
       },
       SET_VISITLIST(state, visits) {
@@ -117,20 +116,11 @@ export function createStore(currentToken, currentUser) {
         axios.defaults.headers.common = {};
       },
     },
+    getters: {
+      getVisitByDate(state) {
+        return state.visit.filter(visit => visit)
+      }
+    }
   });
   return store;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

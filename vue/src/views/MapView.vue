@@ -1,16 +1,15 @@
 <template>
-    
-<h1> I am a Map</h1>
-   
+    <GoogleMapAPI/>
+
 </template>
 
 
 
 <script>
-
+import GoogleMapAPI from '../components/GoogleMapAPI.vue';
 export default {
     components: {
-
+        GoogleMapAPI
 }
 }
 </script>
