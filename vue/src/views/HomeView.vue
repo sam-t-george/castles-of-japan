@@ -30,7 +30,6 @@ h1 {
   background-size: cover;
   background-position: 50%;
   background-image: url('https://i.pinimg.com/originals/bb/b6/75/bbb6757f33883aa8703215437c054e96.jpg');
-
 }
 
 .btn-primary {

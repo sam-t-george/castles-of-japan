@@ -1,9 +1,6 @@
 <template>
     <div class="card flex justify-content-center">
          <Calendar v-model="date" inline showWeek class="Calendar" >  </Calendar> 
-    </div> 
-    <div class="card flex justify-content-center">
-        <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar>
     </div>
 </template>
 

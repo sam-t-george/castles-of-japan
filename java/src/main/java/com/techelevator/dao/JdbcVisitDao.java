@@ -10,6 +10,8 @@ import org.springframework.jdbc.core.SqlOutParameter;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
+import java.sql.Types;
+import java.time.LocalDateTime;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -41,6 +43,7 @@ public class JdbcVisitDao implements VisitDao {
 
     @Override
     public Visit createVisit(Visit visit) {
+
         Visit newVisit = new Visit();
         String sql =
                 "INSERT INTO visit(user_id, castle_id, visit_date) " +
@@ -48,9 +51,9 @@ public class JdbcVisitDao implements VisitDao {
                 "RETURNING visit_id;";
 
         try{
-            int newVisitId = jdbcTemplate.queryForObject(sql, int.class, visit.getUserId(), visit.getCastleId(), visit.getVisitDate());
-
-            newVisit = getVisitById(newVisitId);
+            int newVisitId = jdbcTemplate.queryForObject(sql, Integer.class, visit.getUserId(), visit.getCastleId(), visit.getVisitDate()); //int.class before //visit.getUserId(), visit.getCastleId(), visit.getVisitDate() new Object[]{visit.getUserId(), visit.getCastleId(), java.sql.Date.valueOf(visit.getVisitDate())},
+//            new int[]{Types.INTEGER, Types.INTEGER, Types.DATE}
+            newVisit = getVisitById(newVisitId); //newVisit.getVisitId()
 
         } catch (CannotGetJdbcConnectionException e) {
             throw new DaoException("Unable to connect to server or database", e);
