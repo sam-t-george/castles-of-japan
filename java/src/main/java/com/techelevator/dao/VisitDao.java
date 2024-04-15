@@ -9,6 +9,6 @@ public interface VisitDao {
     Visit createVisit(Visit visit);
     Visit getVisitById(int visitId);
 
-    List<Visit> getVisitsByUserIdAndVisitDate(int userId, LocalDate visitDate);
+    List<Visit> getVisitsByUserIdAndVisitDate(String userName, LocalDate visitDate);
 
 }
