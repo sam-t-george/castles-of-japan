@@ -11,12 +11,11 @@
           </div>
         </div>
       </router-link>
-      <i class="pi pi-plus-circle" @click="toggleCalendar"></i>
+      <i class="pi pi-plus-circle" v-show="isAuthenticated" @click="toggleCalendar"></i>
 
       <div v-show="showMenu" class="calendar-container">
         <div class="card flex justify-content-center">
           <Calendar v-model="visit.visitDate" inline class="Calendar" @click="createVisit()"> </Calendar>
-          <p> date: {{ visit.visitDate }}</p>
         </div>
       </div>
     </div>
@@ -25,6 +24,7 @@
 
 <script>
 import { ref } from 'vue';
+import AuthService from '../services/AuthService';
 import CastleService from '../services/CastleService';
 const date = ref();
 export default {
