@@ -14,23 +14,23 @@ export default {
     props: ['castle'],
     data() {
         return {
-            visit: {
-                date: '',
-                userId: 1,       // might want to change this hard coding later
-                castleId: 22      // might want to change this hard coding later
-            }
+            // visit: {
+            //     date: '',
+            //     userId: 1,       // might want to change this hard coding later
+            //     castleId: 22      // might want to change this hard coding later
+            // }
 
         }
     },
     methods: {
-        createVisit(castleId, userId) {
-            this.visit.castleId = castleId;
-            this.visit.userId = userId;
-            this.$store.dispatch('createVisit', this.visit);
-        },
-        dateChange() {
-            console.log(this.visit);
-        },
+        // createVisit(castleId, userId) {
+        //     this.visit.castleId = castleId;
+        //     this.visit.userId = userId;
+        //     this.$store.dispatch('createVisit', this.visit);
+        // },
+        // dateChange() {
+        //     console.log(this.visit);
+        // },
     },
 }
 </script>

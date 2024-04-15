@@ -67,8 +67,8 @@ export function createStore(currentToken, currentUser) {
       },
 
       SET_VISIT(state, visit) {
-        
-        state.visit = visit;
+
+       state.visit = visit;
       },
       
 

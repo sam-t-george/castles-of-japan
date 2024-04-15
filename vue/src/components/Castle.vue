@@ -14,7 +14,7 @@
       <i class="pi pi-plus-circle" @click="toggleCalendar"></i>
       <div v-show="showMenu" class="calendar-container">
         <div class="card flex justify-content-center">
-          <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar>
+          <Calendar v-model="visit.date" inline class="Calendar" @click="createVisit()"> </Calendar>
           <p> date: {{ visit.date }}</p>
         </div>
       </div>
@@ -38,21 +38,25 @@ export default {
     return {
       visit: {
         date: '',
-        userId: 1,       // might want to change this hard coding later
-        castleId: 22      // might want to change this hard coding later
-      }
+        castleId: '',      // might want to change this hard coding later
+        userId: '1'      // might want to change this hard coding later
+      },
 
     }
   },
   methods: {
-    createVisit(castleId, userId) {
-      this.visit.castleId = castleId;
-      this.visit.userId = userId;
-      this.$store.dispatch('createVisit', this.visit);
-    },
-    dateChange() {
+    createVisit() {
+      // castle ID
+      this.visit.castleId = this.castle.castleId;
+
+      //date attempts :(
+      const aDate = new Date(this.visit.date);
+      this.visit.date = aDate.toISOString(); //.split('T')[0]);
+
       console.log(this.visit);
+      this.$store.dispatch('createVisit', this.visit);  
     },
+    
   }
 }
 </script>

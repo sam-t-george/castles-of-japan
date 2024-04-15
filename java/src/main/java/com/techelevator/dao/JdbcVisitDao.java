@@ -6,10 +6,12 @@ import com.techelevator.model.Visit;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.jdbc.CannotGetJdbcConnectionException;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.SqlOutParameter;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -47,7 +49,9 @@ public class JdbcVisitDao implements VisitDao {
 
         try{
             int newVisitId = jdbcTemplate.queryForObject(sql, int.class, visit.getUserId(), visit.getCastleId(), visit.getVisitDate());
-            newVisit = getVisitById(newVisit.getVisitId());
+
+            newVisit = getVisitById(newVisitId);
+
         } catch (CannotGetJdbcConnectionException e) {
             throw new DaoException("Unable to connect to server or database", e);
         } catch (DataIntegrityViolationException e) {

@@ -28,6 +28,8 @@ public class VisitController {
     @PostMapping(path = "/add/visit")
     public Visit createVisit(@Valid @RequestBody Visit visit, Principal principal){
 
+        //System.out.println("date = " + visit.getVisitDate());
+        System.out.println("castleId = " +visit.getCastleId());
         return visitDao.createVisit(visit);
     }
 
