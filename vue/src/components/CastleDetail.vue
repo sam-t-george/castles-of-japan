@@ -18,7 +18,7 @@
                     <img v-for="(image, index) in images" :key="index" :src="image" alt="Castle Image">
                 </div> -->
 
-                <div id="carouselExampleIndicators" class="carousel" data-interval="false" ref="carousel">
+            <div id="carouselExampleIndicators" class="carousel" data-interval="false" ref="carousel">
                 <div class="thumbnail">
                     <div v-for="(image, index) in images" :key="'item' + index" class="carousel-item"
                         :class="{ active: index === 0 }">
@@ -33,7 +33,7 @@
                     </button>
                 </div>
             </div>
-            
+
             <div id="carouselExampleIndicators" class="carousel" data-interval="false" ref="carousel">
                 <div class="thumbnail">
                     <div v-for="(image, index) in images" :key="'item' + index" class="carousel-item"

@@ -9,6 +9,7 @@ export function createStore(currentToken, currentUser) {
       castleList: [],
       castle: {},
       visit: {},
+      visitList: [],
     },
 
 
@@ -88,6 +89,11 @@ export function createStore(currentToken, currentUser) {
         axios.defaults.headers.common = {};
       },
     },
+    getters: {
+      getVisitByDate(state) {
+        return state.visit.filter(visit => visit)
+      }
+    }
   });
   return store;
 }
