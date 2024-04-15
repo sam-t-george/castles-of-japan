@@ -60,12 +60,8 @@ export function createStore(currentToken, currentUser) {
         state.castleList = castles;
       },
       SET_VISIT(state, visit) {
-
         state.visit = visit;
       },
-
-
-
       SET_CASTLE(state, castle) {
         state.castle = castle;
       },
