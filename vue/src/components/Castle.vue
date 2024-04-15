@@ -14,7 +14,7 @@
       <i class="pi pi-plus-circle" @click="toggleCalendar"></i>
       <div v-show="showMenu" class="calendar-container">
         <div class="card flex justify-content-center">
-          <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar>
+          <Calendar v-model="visit.date" inline showWeek class="Calendar" dateFormat="YYYY-MM-DD" @click="createVisit()"> </Calendar>
           <p> date: {{ visit.date }}</p>
         </div>
       </div>
@@ -39,19 +39,28 @@ export default {
       visit: {
         date: '',
         userId: 1,       // might want to change this hard coding later
-        castleId: 22      // might want to change this hard coding later
+        castleId: '',      // might want to change this hard coding later
       }
 
     }
   },
   methods: {
-    createVisit(castleId, userId) {
-      this.visit.castleId = castleId;
-      this.visit.userId = userId;
-      this.$store.dispatch('createVisit', this.visit);
-    },
-    dateChange() {
+    createVisit() {
+      // const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+      
+      console.log(this.visit.date);
+      let dateObject = new Date(this.visit.date);
+      console.log(dateObject.toISOString()); //.split('T')[0]);
+      this.visit.date = dateObject.toISOString().split('T')[0];
+      this.visit.castleId = this.castle.castleId;
+      // console.log(JSON.parse(JSON.stringify(this.visit)));
+      // console.log(this.castle.castleId);
       console.log(this.visit);
+      if (!isNaN(this.visit.date) && !this.visit.date === ''){
+        this.$store.dispatch('');
+      } else {
+        this.$store.dispatch('createVisit', this.visit);
+      }
     },
   }
 }

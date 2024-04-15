@@ -23,6 +23,7 @@
                 </div>
             </div> -->
             <!---->
+            
             <div id="carouselExampleIndicators" class="carousel" data-interval="false" ref="carousel">
                 <div class="thumbnail">
                     <div v-for="(image, index) in images" :key="'item' + index" class="carousel-item"
