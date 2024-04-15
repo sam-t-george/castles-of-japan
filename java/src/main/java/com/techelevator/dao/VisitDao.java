@@ -8,7 +8,8 @@ import java.util.List;
 public interface VisitDao {
     Visit createVisit(Visit visit);
     Visit getVisitById(int visitId);
-
-    List<Visit> getVisitsByUserIdAndVisitDate(String userName, LocalDate visitDate);
+    List<Visit> getVisitsByUsernameAndVisitDate(String userName, LocalDate visitDate);
+    int deleteVisitByUsernameAndVisitDate(String username, LocalDate visitDate);
+    int deleteVisitById(int visitId);
 
 }

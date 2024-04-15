@@ -63,16 +63,20 @@ public class JdbcVisitDao implements VisitDao {
         return visit;
     }
 
-    public List<Visit> getVisitsByUserIdAndVisitDate(String username, LocalDate visitDate) {
+    public List<Visit> getVisitsByUsernameAndVisitDate(String username, LocalDate visitDate) {
         List<Visit> visits = new ArrayList<>();
-        String sql =
-                "SELECT " +
-                "visit_id, " +
-                "username, " +
-                "castle_id, " +
-                "visit_date " +
-                "FROM visit " +
-                "WHERE username = ? AND visit_date = ?";
+        String sql = "SELECT DISTINCT " +
+                "v.visit_id, " +
+                "v.username, " +
+                "v.castle_id, " +
+                "v.visit_date, " +
+                "c.castle_name, " +
+                "c.castle_banner_photo, " +
+                "c.region, " +
+                "c.short_desc " +
+                "FROM visit v " +
+                "JOIN castle c ON c.castle_id = v.castle_id " +
+                "WHERE v.username = ? AND v.visit_date = ?";
         try{
             SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, username, visitDate);
             while (rowSet.next()) {
@@ -84,13 +88,42 @@ public class JdbcVisitDao implements VisitDao {
         return visits;
     }
 
+    @Override
+    public int deleteVisitByUsernameAndVisitDate(String username, LocalDate visitDate) {
+        String sql = "DELETE FROM visit WHERE username = ? AND visit_date = ?";
+        int numberDeleted = 0;
+        try {
+            jdbcTemplate.update(sql, username, visitDate);
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to database.", e);
+        }
+
+        return numberDeleted;
+    }
+
+    @Override
+    public int deleteVisitById(int visitId) {
+        String sql = "DELETE FROM visit WHERE visit_id = ?";
+        int numberDeleted = 0;
+        try {
+            jdbcTemplate.update(sql, visitId);
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to database.", e);
+        }
+        return numberDeleted;
+    }
+
 
     public Visit mapRowToVisit(SqlRowSet rowSet) {
         Visit visit = new Visit();
         visit.setVisitId(rowSet.getInt("visit_id"));
         visit.setCastleId(rowSet.getInt("castle_id"));
-        visit.setUsername(rowSet.getString("user_id"));
+        visit.setUsername(rowSet.getString("username"));
         visit.setVisitDate(rowSet.getDate("visit_date").toLocalDate());
+        visit.setCastleName(rowSet.getString("castle_name"));
+        visit.setCastleBannerPhoto(rowSet.getString("castle_banner_photo"));
+        visit.setShortDesc(rowSet.getString("short_desc"));
+        visit.setRegion(rowSet.getString("region"));
         return visit;
     }
 }

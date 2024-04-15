@@ -6,18 +6,22 @@ import java.time.LocalDateTime;
 public class Visit {
 
     private int castleId;
-    private int visitId;
+    private Integer visitId;
     private String username;
     private LocalDate visitDate;
-
+    private String castleName;
+    private String castleBannerPhoto;
+    private String shortDesc;
+    private String region;
     public Visit(){
+    };
+
+    public String getRegion() {
+        return region;
     }
 
-    public Visit(int castleId, int visitId, String username, LocalDate visitDate) {
-        this.castleId = castleId;
-        this.visitId = visitId;
-        this.username = username;
-        this.visitDate = visitDate;
+    public void setRegion(String region) {
+        this.region = region;
     }
 
     public int getCastleId() {
@@ -28,11 +32,11 @@ public class Visit {
         this.castleId = castleId;
     }
 
-    public int getVisitId() {
+    public Integer getVisitId() {
         return visitId;
     }
 
-    public void setVisitId(int visitId) {
+    public void setVisitId(Integer visitId) {
         this.visitId = visitId;
     }
 
@@ -50,5 +54,29 @@ public class Visit {
 
     public void setVisitDate(LocalDate visitDate) {
         this.visitDate = visitDate;
+    }
+
+    public String getCastleName() {
+        return castleName;
+    }
+
+    public void setCastleName(String castleName) {
+        this.castleName = castleName;
+    }
+
+    public String getCastleBannerPhoto() {
+        return castleBannerPhoto;
+    }
+
+    public void setCastleBannerPhoto(String castleBannerPhoto) {
+        this.castleBannerPhoto = castleBannerPhoto;
+    }
+
+    public String getShortDesc() {
+        return shortDesc;
+    }
+
+    public void setShortDesc(String shortDesc) {
+        this.shortDesc = shortDesc;
     }
 }
