@@ -7,17 +7,17 @@ public class Visit {
 
     private int castleId;
     private int visitId;
-    private int userId;
+    private String username;
     private LocalDate visitDate;
 
-    public Visit(int castleId, int visitId, int userId, LocalDate visitDate) {
-        this.castleId = castleId;
-        this.visitId = visitId;
-        this.userId = userId;
-        this.visitDate = visitDate;
+    public Visit(){
     }
 
-    public Visit() {
+    public Visit(int castleId, int visitId, String username, LocalDate visitDate) {
+        this.castleId = castleId;
+        this.visitId = visitId;
+        this.username = username;
+        this.visitDate = visitDate;
     }
 
     public int getCastleId() {
@@ -36,12 +36,12 @@ public class Visit {
         this.visitId = visitId;
     }
 
-    public int getUserId() {
-        return userId;
+    public String getUsername() {
+        return username;
     }
 
-    public void setUserId(int userId) {
-        this.userId = userId;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public LocalDate getVisitDate() {
