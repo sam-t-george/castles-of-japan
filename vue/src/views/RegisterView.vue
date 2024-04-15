@@ -18,7 +18,7 @@
         
         <input type="password" placeholder="Confirm Password" id="confirmPassword" class="input" v-model="user.confirmPassword" required />
       </div>
-      <div class="btn-container"><button type="button" class="btn create-account" >Create Account</button> </div>
+      <div class="btn-container"><button type="button" class="btn create-account" @click="register()">Create Account</button> </div>
       <p><router-link v-bind:to="{ name: 'login' }" class="login-here">Already have an account? Log in.</router-link></p>
     </form>
   </div>

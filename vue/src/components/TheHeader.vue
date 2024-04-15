@@ -14,7 +14,7 @@
             <span class="bars" v-if="!isMapPage && !isLoginPage"> &nbsp;|&nbsp;</span>
             <router-link v-bind:to="{ name: 'login' }" class="nav-link" v-if="!isLoginPage">Sign In &nbsp; </router-link>
             <!--" v-if="$store.state.token = ''"-->
-            <router-link v-bind:to="{ name: 'logout' }" v-if="user || admin" class="nav-link">Sign Out &nbsp; </router-link>
+            <router-link v-bind:to="{ name: 'logout' }" class="nav-link">Sign Out &nbsp; </router-link>
             <!--" v-if="$store.state.token != ''"-->
         </nav>
     </div>

@@ -16,8 +16,8 @@
         <div class="form-input-group">
           <input type="password" placeholder="Password" id="password" class="input" v-model="user.password" required />
         </div>
-        <router-link v-bind:to="{ name: 'dashboard' }" class="btn-container"><button type="button"
-            class="btn btn-sign-in">Sign in</button></router-link>
+        <router-link v-bind:to="{ name: 'dashboard' }" class="btn-container"><button type="submit"
+            class="btn btn-sign-in"  @click="login()">Sign in</button></router-link>
         <p><router-link v-bind:to="{ name: 'register' }" class="register-here">New to Castles Of Japan? Register
             Here.</router-link></p>
       </form>
