@@ -11,7 +11,8 @@
           </div>
         </div>
       </router-link>
-      <i class="pi pi-plus-circle" v-show="isLoggedIn" @click="toggleCalendar"></i>
+      <i class="pi pi-plus-circle" v-if="isAuthenticated" @click="toggleCalendar"></i>
+
       <div v-show="showMenu" class="calendar-container">
         <div class="card flex justify-content-center">
           <Calendar v-model="visit.visitDate" inline class="Calendar" @click="createVisit()"> </Calendar>
@@ -29,6 +30,11 @@ import CastleService from '../services/CastleService';
 
 const date = ref();
 export default {
+  computed: {
+        isAuthenticated() {
+            return !!this.$store.state.token ;
+        },
+  },
   props: ['castle'],
   setup() {
     const showMenu = ref(false);
@@ -61,12 +67,6 @@ export default {
       this.visit.username = this.$store.state.user.username;
       this.$store.dispatch('createVisit', this.visit);  
     },
-    isLoggedIn() {
-      if ( this.visit.username ) {
-      return true;
-      }
-      return false;
-    }
   }
 }
 </script>

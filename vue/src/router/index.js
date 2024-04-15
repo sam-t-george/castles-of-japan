@@ -68,7 +68,7 @@ const routes = [
     name: 'map',
     component: MapView,
     meta: {
-      requiresAuth: false // changed home authentication to false for now
+      requiresAuth: false
     }
   },
   {
