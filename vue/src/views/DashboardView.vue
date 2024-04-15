@@ -1,23 +1,40 @@
 <template>
-    <div class="main-container">
-        <div class="calendar-container">
-            <CalenderContainer />
-        </div>
-        <div class="event-cards">
-            event cards 
-        </div>
+  <div class="main-container">
+    <div class="calendar-container">
+      <CalenderContainer />
     </div>
+    <div class="event-cards">
+      <h2>Event Cards </h2>
+      <div class="card2 card mb-3" style="max-width: 540px;">
+        <div class="row g-0 align-items-center">
+          <div class="col-sm-4 col-5">
+            <img src="https://codingyaar.com/wp-content/uploads/bootstrap-4-card-image-left-demo-image.jpg"
+              class="img-fluid rounded-start" alt="...">
+          </div>
+          <div class="col-sm-8 col-7">
+            <div class="card-body">
+              <h5 class="card-title"></h5>
+              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                content. This content is a little bit longer.</p>
+              <p class="card-text d-none d-sm-block"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 </template>
+       
+
 
 <script>
-import CalenderContainer from '../components/CalenderContainer.vue';
-
+import Castle from '../components/Castle.vue';
 export default {
-  props: ['castle'],
-    components: {
-        CalenderContainer,
-    }
-  
+  components: {
+    
+  },
+  props: ['castle']
 }
 </script>
 
@@ -43,4 +60,24 @@ export default {
   height: 100vh;
 }
 
-</style>
+@media screen and (max-width: 567px) {
+  .card-text {
+    margin-bottom: 0.5em;
+  }
+}
+
+.card {
+  margin: 5%;
+  flex-direction: row;
+}
+
+.card-body {
+  padding: 0.5em 1em;
+}
+
+.card1.card img {
+  max-width: 12em;
+  height: 100%;
+  border-bottom-left-radius: calc(0.25rem - 1px);
+  border-top-left-radius: calc(0.25rem - 1px);
+}</style>

@@ -12,9 +12,17 @@ public class Visit {
     private String castleName;
     private String castleBannerPhoto;
     private String shortDesc;
+    private String region;
     public Visit(){
     };
 
+    public String getRegion() {
+        return region;
+    }
+
+    public void setRegion(String region) {
+        this.region = region;
+    }
 
     public int getCastleId() {
         return castleId;

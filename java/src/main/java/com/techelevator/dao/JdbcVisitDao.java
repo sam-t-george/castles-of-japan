@@ -72,6 +72,7 @@ public class JdbcVisitDao implements VisitDao {
                 "v.visit_date, " +
                 "c.castle_name, " +
                 "c.castle_banner_photo, " +
+                "c.region, " +
                 "c.short_desc " +
                 "FROM visit v " +
                 "JOIN castle c ON c.castle_id = v.castle_id " +
@@ -122,7 +123,7 @@ public class JdbcVisitDao implements VisitDao {
         visit.setCastleName(rowSet.getString("castle_name"));
         visit.setCastleBannerPhoto(rowSet.getString("castle_banner_photo"));
         visit.setShortDesc(rowSet.getString("short_desc"));
-
+        visit.setRegion(rowSet.getString("region"));
         return visit;
     }
 }
