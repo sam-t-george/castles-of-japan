@@ -7,7 +7,9 @@ import com.techelevator.model.User;
 import com.techelevator.model.Visit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
+import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.server.ResponseStatusException;
 
 import javax.validation.Valid;
 import java.security.Principal;
@@ -55,6 +57,16 @@ public class VisitController {
             @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate visitDate) {
         User currentUser = userDao.getUserByUsername(principal.getName());
         return visitDao.deleteVisitByUsernameAndVisitDate(currentUser.getUsername(), visitDate);
+    }
+
+    @RequestMapping(path = "/visits", method = RequestMethod.GET)
+    public Visit[] getVisits() {
+        List<Visit> visits = visitDao.getVisits();
+        if (visits.size() == 0) {
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No castles found");
+        } else {
+            return visitDao.getVisits().toArray(new Visit[visits.size()]);
+        }
     }
 }
 

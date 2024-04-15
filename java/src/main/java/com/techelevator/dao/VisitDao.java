@@ -11,5 +11,6 @@ public interface VisitDao {
     List<Visit> getVisitsByUsernameAndVisitDate(String userName, LocalDate visitDate);
     int deleteVisitByUsernameAndVisitDate(String username, LocalDate visitDate);
     int deleteVisitById(int visitId);
+    List<Visit> getVisits();
 
 }
