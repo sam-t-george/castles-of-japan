@@ -12,12 +12,12 @@
 <script>
 import CalenderContainer from '../components/CalenderContainer.vue';
 
-
-
 export default {
+  props: ['castle'],
     components: {
-        CalenderContainer
+        CalenderContainer,
     }
+  
 }
 </script>
 

@@ -6,19 +6,16 @@ import java.time.LocalDateTime;
 public class Visit {
 
     private int castleId;
-    private int visitId;
+    private Integer visitId;
     private String username;
     private LocalDate visitDate;
-
-    public Visit(){
-    }
-
-    public Visit(int castleId, int visitId, String username, LocalDate visitDate) {
-        this.castleId = castleId;
-        this.visitId = visitId;
-        this.username = username;
-        this.visitDate = visitDate;
-    }
+    public Visit(){};
+//    public Visit (int castleId, int visitId, String username, LocalDate visitDate) {
+//        this.castleId = castleId;
+//        this.visitId = visitId;
+//        this.username = username;
+//        this.visitDate = visitDate;
+//    }
 
     public int getCastleId() {
         return castleId;

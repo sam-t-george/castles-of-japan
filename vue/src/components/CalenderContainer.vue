@@ -20,14 +20,9 @@ export default {
         }
     },
     methods: {
-        // createVisit(castleId, userId) {
-        //     this.visit.castleId = castleId;
-        //     this.visit.userId = userId;
-        //     this.$store.dispatch('createVisit', this.visit);
-        // },
-        // dateChange() {
-        //     console.log(this.visit);
-        // },
+        getItinerary() {
+            
+        }
     },
 }
 </script>

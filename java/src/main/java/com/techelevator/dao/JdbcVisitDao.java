@@ -63,7 +63,7 @@ public class JdbcVisitDao implements VisitDao {
         return visit;
     }
 
-    public List<Visit> getVisitsByUserIdAndVisitDate(String username, LocalDate visitDate) {
+    public List<Visit> getVisitsByUsernameAndVisitDate(String username, LocalDate visitDate) {
         List<Visit> visits = new ArrayList<>();
         String sql =
                 "SELECT " +
@@ -84,12 +84,37 @@ public class JdbcVisitDao implements VisitDao {
         return visits;
     }
 
+    @Override
+    public int deleteVisitByUsernameAndVisitDate(String username, LocalDate visitDate) {
+        String sql = "DELETE FROM visit WHERE username = ? AND visit_date = ?";
+        int numberDeleted = 0;
+        try {
+            jdbcTemplate.update(sql, username, visitDate);
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to database.", e);
+        }
+
+        return numberDeleted;
+    }
+
+    @Override
+    public int deleteVisitById(int visitId) {
+        String sql = "DELETE FROM visit WHERE visit_id = ?";
+        int numberDeleted = 0;
+        try {
+            jdbcTemplate.update(sql, visitId);
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to database.", e);
+        }
+        return numberDeleted;
+    }
+
 
     public Visit mapRowToVisit(SqlRowSet rowSet) {
         Visit visit = new Visit();
         visit.setVisitId(rowSet.getInt("visit_id"));
         visit.setCastleId(rowSet.getInt("castle_id"));
-        visit.setUsername(rowSet.getString("user_id"));
+        visit.setUsername(rowSet.getString("username"));
         visit.setVisitDate(rowSet.getDate("visit_date").toLocalDate());
         return visit;
     }
