@@ -1,38 +1,61 @@
 <template>
   <div class="main-container">
     <div class="calendar-container">
-      <CalenderContainer />
+      <Calendar v-model="date" inline class="Calendar" @click="createItinerary()"> </Calendar>
+      <p> date: {{ visit.visitDate }}</p>
     </div>
-    <div class="event-cards">
-      <h2>Event Cards </h2>
-      <div class="card2 card mb-3" style="max-width: 540px;">
-        <div class="row g-0 align-items-center">
-          <div class="col-sm-4 col-5">
-            <img src="https://codingyaar.com/wp-content/uploads/bootstrap-4-card-image-left-demo-image.jpg"
-              class="img-fluid rounded-start" alt="...">
-          </div>
-          <div class="col-sm-8 col-7">
-            <div class="card-body">
-              <h5 class="card-title"></h5>
-              <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                content. This content is a little bit longer.</p>
-              <p class="card-text d-none d-sm-block"><small class="text-muted">Last updated 3 mins ago</small></p>
-            </div>
-          </div>
-        </div>
+
+    <div>
+      <div class="visit">
+        <Visit />
       </div>
 
-    </div>
+      <div class="visitList">
+        <VisitList />
+      </div>
+    </div> 
+
+
+
+
+
   </div>
 </template>
        
 
 
 <script>
-import Castle from '../components/Castle.vue';
+import Visit from '../components/Visit.vue';
+import VisitList from '../components/VisitList.vue';
+
 export default {
   components: {
-    
+    Visit,
+    VisitList,
+  },
+  data() {
+      return {
+        visit: {
+          castleId: '',
+          visitId: '',
+          username: '',
+          visitDate: '',
+          castleName: '',
+          castleBannerPhoto: '',
+          shortDesc: ''
+
+        },
+  
+      }
+    },
+    methods: {
+    createItinerary(){
+      this.visit.castleId = this.currentVisit.castleId;
+
+
+
+      this.$store.dispatch('createItinerary', this.visit); 
+    },
   },
   props: ['castle']
 }
@@ -59,25 +82,4 @@ export default {
   padding: 20px;
   height: 100vh;
 }
-
-@media screen and (max-width: 567px) {
-  .card-text {
-    margin-bottom: 0.5em;
-  }
-}
-
-.card {
-  margin: 5%;
-  flex-direction: row;
-}
-
-.card-body {
-  padding: 0.5em 1em;
-}
-
-.card1.card img {
-  max-width: 12em;
-  height: 100%;
-  border-bottom-left-radius: calc(0.25rem - 1px);
-  border-top-left-radius: calc(0.25rem - 1px);
-}</style>
+</style>

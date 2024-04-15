@@ -8,6 +8,7 @@ export function createStore(currentToken, currentUser) {
       user: currentUser || {},
       castleList: [],
       castle: {},
+      visitList: [],
       visit: {},
     },
 
@@ -16,6 +17,13 @@ export function createStore(currentToken, currentUser) {
       getAllCastles(context) {
         CastleService.listCastles().then(response => {
           context.commit('SET_CASTLELIST', response.data);
+        })
+          .catch(err => console.error(err));
+      },
+      
+      getItineraryByDate(context, visit) {
+        CastleService.listVisits(visit.visitDate).then(response => {
+          context.commit('SET_VISITLIST', response.data);
         })
           .catch(err => console.error(err));
       },
@@ -51,6 +59,9 @@ export function createStore(currentToken, currentUser) {
           context.commit('SET_CASTLE_IMAGES', response.data);
         })
           .catch(err => console.error(err));
+
+
+
       },
     },
 
@@ -63,7 +74,10 @@ export function createStore(currentToken, currentUser) {
 
         state.visit = visit;
       },
+      SET_VISITLIST(state, visits) {
 
+        state.visitList = visits;
+      },
 
 
       SET_CASTLE(state, castle) {
