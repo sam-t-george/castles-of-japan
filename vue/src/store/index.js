@@ -20,6 +20,13 @@ export function createStore(currentToken, currentUser) {
         })
           .catch(err => console.error(err));
       },
+      getAllVisits(context) {
+        CastleService.listVisits().then(response => {
+          context.commit('SET_VISITLIST', response.data);
+        })
+          .catch(err => console.error(err));
+      },
+      
       
       getItineraryByDate(context, visit) {
         CastleService.listVisits(visit.visitDate).then(response => {
@@ -27,6 +34,8 @@ export function createStore(currentToken, currentUser) {
         })
           .catch(err => console.error(err));
       },
+
+      
       searchForCastle(context, searchTerms) {
         CastleService.searchForCastles(searchTerms.name)
           .then(response => {
@@ -34,6 +43,8 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
+
+
       createVisit(context, visit) {
         CastleService.createVisit(visit)
           .then(response => {

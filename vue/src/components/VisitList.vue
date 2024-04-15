@@ -28,7 +28,7 @@ export default {
 }
 </script>
 <style scoped>
-section#castleList {
+section#visitList {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;

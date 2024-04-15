@@ -11,7 +11,8 @@
           </div>
         </div>
       </router-link>
-      <i class="pi pi-plus-circle" v-if="isAuthenticated" @click="toggleCalendar"></i>
+      <i class="pi pi-plus-circle"  @click="toggleCalendar" ></i> 
+      <!-- v-if="isAuthenticated" -->
 
       <div v-show="showMenu" class="calendar-container">
         <div class="card flex justify-content-center">

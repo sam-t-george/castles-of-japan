@@ -25,7 +25,7 @@
   
   const date = ref();
   export default {
-    props: ['castle'],
+    props: ['visit'],
 
     setup() {
       const showMenu = ref(false);
