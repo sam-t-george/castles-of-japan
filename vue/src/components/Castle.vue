@@ -12,10 +12,11 @@
         </div>
       </router-link>
       <i class="pi pi-plus-circle" @click="toggleCalendar"></i>
+
       <div v-show="showMenu" class="calendar-container">
         <div class="card flex justify-content-center">
-          <Calendar v-model="visit.date" inline class="Calendar" @click="createVisit()"> </Calendar>
-          <p> date: {{ visit.date }}</p>
+          <Calendar v-model="visit.visitDate" inline class="Calendar" @click="createVisit()"> </Calendar>
+          <p> date: {{ visit.visitDate }}</p>
         </div>
       </div>
     </div>
@@ -24,6 +25,7 @@
 
 <script>
 import { ref } from 'vue';
+import CastleService from '../services/CastleService';
 const date = ref();
 export default {
   props: ['castle'],
@@ -32,12 +34,12 @@ export default {
     const toggleCalendar = () => {
       showMenu.value = !showMenu.value;
     }
-    return { showMenu, toggleCalendar, };
+    return { showMenu, toggleCalendar };
   },
   data() {
     return {
       visit: {
-        date: '',
+        visitDate: '',
         castleId: '',      // might want to change this hard coding later
         userId: '1'      // might want to change this hard coding later
       },
@@ -50,8 +52,8 @@ export default {
       this.visit.castleId = this.castle.castleId;
 
       //date attempts :(
-      const aDate = new Date(this.visit.date);
-      this.visit.date = aDate.toISOString(); //.split('T')[0]);
+      const aDate = new Date(this.visit.visitDate);
+      this.visit.visitDate = aDate.toISOString(); //.split('T')[0]);
 
       console.log(this.visit);
       this.$store.dispatch('createVisit', this.visit);  
@@ -168,4 +170,5 @@ opacity: 75%;
   height: auto;
   border: none;
   background-color: #FFFDF1;
-}</style>
+}
+</style>
