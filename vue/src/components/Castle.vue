@@ -26,6 +26,8 @@
 <script>
 import { ref } from 'vue';
 import CastleService from '../services/CastleService';
+import authService from "../services/AuthService";
+
 const date = ref();
 export default {
   props: ['castle'],
@@ -41,7 +43,7 @@ export default {
       visit: {
         visitDate: '',
         castleId: '',      // might want to change this hard coding later
-        userId: '1'      // might want to change this hard coding later
+        userId: ''      // might want to change this hard coding later
       },
 
     }
@@ -55,10 +57,11 @@ export default {
       const aDate = new Date(this.visit.visitDate);
       this.visit.visitDate = aDate.toISOString(); //.split('T')[0]);
 
-      console.log(this.visit);
+      // user ID efforts? :(
+      this.visit.userId = this.$store.state.user.id
       this.$store.dispatch('createVisit', this.visit);  
     },
-    
+
   }
 }
 </script>

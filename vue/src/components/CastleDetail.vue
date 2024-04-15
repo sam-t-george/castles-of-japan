@@ -32,8 +32,8 @@
                         <img :src="image" class="d-block w-100" alt="Thumbnail Image">
                     </button>
                 </div>
-            </div> -->
-            <!---->
+            </div>
+            
             <div id="carouselExampleIndicators" class="carousel" data-interval="false" ref="carousel">
                 <div class="thumbnail">
                     <div v-for="(image, index) in images" :key="'item' + index" class="carousel-item"
