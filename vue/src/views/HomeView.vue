@@ -4,7 +4,7 @@
     <div class="overlay">
       <h1>Unlock the Majesty: Explore Japan's Castles</h1>
       <router-link v-bind:to="{ name: 'castles' }">
-        <button class="explore"> EXPLORE </button>
+        <button type="button" class="btn btn-primary">Explore!</button>
       </router-link>
     </div>
   </div>
@@ -20,6 +20,7 @@ h1 {
   font-size: 4em;
   font-style: italic;
   color: #FFFDF1;
+  margin-bottom: 30px;
 }
 
 .home {
@@ -31,22 +32,31 @@ h1 {
   background-image: url('https://i.pinimg.com/originals/bb/b6/75/bbb6757f33883aa8703215437c054e96.jpg');
 }
 
-.explore {
+.btn-primary {
   font-size: 1.6em;
-  background-color: #fffdf1b9;
+  background-color: #fdb6b7;
   border-radius: 10px;
   width: 10vw;
   height: 3vw;
   color: #193144;
+  border: none;
+  font-style: italic;
 
 }
 
-.explore:hover {
+.btn-primary:hover {
   font-weight: 500;
   font-style: italic;
   color: #000;
-  background-color: #fffdf1de;
+  background-color: #ff9e9f;
   transform: scale(1.05);
+}
+
+.text {
+
+  display: flex;
+  justify-content: center;
+  margin: 10px;
 }
 
 .overlay {
@@ -59,4 +69,5 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-}</style>
+}
+</style>

@@ -14,7 +14,7 @@
       <i class="pi pi-plus-circle" @click="toggleCalendar"></i>
       <div v-show="showMenu" class="calendar-container">
         <div class="card flex justify-content-center">
-          <Calendar v-model="visit.date" inline showWeek class="Calendar" dateFormat="YYYY-MM-DD" @click="createVisit()"> </Calendar>
+          <Calendar v-model="visit.date" inline class="Calendar" @click="createVisit()"> </Calendar>
           <p> date: {{ visit.date }}</p>
         </div>
       </div>
@@ -38,30 +38,25 @@ export default {
     return {
       visit: {
         date: '',
-        userId: 1,       // might want to change this hard coding later
         castleId: '',      // might want to change this hard coding later
-      }
+        userId: '1'      // might want to change this hard coding later
+      },
 
     }
   },
   methods: {
     createVisit() {
-      // const monthNames = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-      
-      console.log(this.visit.date);
-      let dateObject = new Date(this.visit.date);
-      console.log(dateObject.toISOString()); //.split('T')[0]);
-      this.visit.date = dateObject.toISOString().split('T')[0];
+      // castle ID
       this.visit.castleId = this.castle.castleId;
-      // console.log(JSON.parse(JSON.stringify(this.visit)));
-      // console.log(this.castle.castleId);
+
+      //date attempts :(
+      const aDate = new Date(this.visit.date);
+      this.visit.date = aDate.toISOString(); //.split('T')[0]);
+
       console.log(this.visit);
-      if (!isNaN(this.visit.date) && !this.visit.date === ''){
-        this.$store.dispatch('');
-      } else {
-        this.$store.dispatch('createVisit', this.visit);
-      }
+      this.$store.dispatch('createVisit', this.visit);  
     },
+    
   }
 }
 </script>
@@ -69,11 +64,9 @@ export default {
 <style scoped>
 .castle-card {
   display: block;
-  max-width: 20rem;
-  /* max scalable width */
-  height: 30rem;
-  /* new card height */
-  background-color: #8bbab187;
+  max-width: 20rem; /* max scalable width */
+  height: 30rem; /* new card height */
+  background-color: #8bbab1;
   border: 1.5px solid #000000;
   border-radius: 20px;
   overflow: hidden;
@@ -137,17 +130,17 @@ export default {
 }
 
 .castle-region small {
-  color: #6C757D;
+  color: #555b61;
   font-size: .8em;
 }
 
 .pi-plus-circle {
-  margin-top: .5rem;
-  font-size: 2rem;
-  display: flex;
-  justify-content: end;
-  padding: 10px;
-  opacity: 75%;
+margin-top: .5rem;
+font-size: 1.5rem;
+display: flex;
+justify-content: end;
+padding: 10px;
+opacity: 75%;
 }
 
 .pi-plus-circle:hover {
