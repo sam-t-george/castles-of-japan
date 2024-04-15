@@ -76,7 +76,7 @@ const routes = [
     name: "dashboard",
     component: DashboardView,
     meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
