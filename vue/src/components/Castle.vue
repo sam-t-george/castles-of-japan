@@ -43,7 +43,7 @@ export default {
       visit: {
         visitDate: '',
         castleId: '',      // might want to change this hard coding later
-        userId: ''      // might want to change this hard coding later
+        username: ''      // might want to change this hard coding later
       },
 
     }
@@ -58,7 +58,7 @@ export default {
       this.visit.visitDate = aDate.toISOString(); //.split('T')[0]);
 
       // user ID efforts? :(
-      this.visit.userId = this.$store.state.user.id
+      this.visit.username = this.$store.state.user.username;
       this.$store.dispatch('createVisit', this.visit);  
     },
 
