@@ -4,7 +4,7 @@
             <CalenderContainer />
         </div>
         <div class="event-cards">
-            event cards
+            event cards 
         </div>
     </div>
 </template>

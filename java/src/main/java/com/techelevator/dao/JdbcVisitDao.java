@@ -28,7 +28,7 @@ public class JdbcVisitDao implements VisitDao {
     @Override
     public Visit getVisitById(int visitId) {
         Visit visit = new Visit();
-        String sql = "SELECT visit_id, user_id, castle_id, visit_date FROM visit WHERE visit_id = ?;";
+        String sql = "SELECT visit_id, username, castle_id, visit_date FROM visit WHERE visit_id = ?;";
 
         try{
             SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql,visitId);
@@ -46,12 +46,12 @@ public class JdbcVisitDao implements VisitDao {
 
         Visit newVisit = new Visit();
         String sql =
-                "INSERT INTO visit(user_id, castle_id, visit_date) " +
+                "INSERT INTO visit(username, castle_id, visit_date) " +
                 "VALUES(?, ?, ?) " +
                 "RETURNING visit_id;";
 
         try{
-            int newVisitId = jdbcTemplate.queryForObject(sql, Integer.class, visit.getUserId(), visit.getCastleId(), visit.getVisitDate()); //int.class before //visit.getUserId(), visit.getCastleId(), visit.getVisitDate() new Object[]{visit.getUserId(), visit.getCastleId(), java.sql.Date.valueOf(visit.getVisitDate())},
+            int newVisitId = jdbcTemplate.queryForObject(sql, Integer.class, visit.getUsername(), visit.getCastleId(), visit.getVisitDate()); //int.class before //visit.getUserId(), visit.getCastleId(), visit.getVisitDate() new Object[]{visit.getUserId(), visit.getCastleId(), java.sql.Date.valueOf(visit.getVisitDate())},
 //            new int[]{Types.INTEGER, Types.INTEGER, Types.DATE}
             newVisit = getVisitById(newVisitId); //newVisit.getVisitId()
 
@@ -63,18 +63,18 @@ public class JdbcVisitDao implements VisitDao {
         return visit;
     }
 
-    public List<Visit> getVisitsByUserIdAndVisitDate(int userId, LocalDate visitDate) {
+    public List<Visit> getVisitsByUserIdAndVisitDate(String username, LocalDate visitDate) {
         List<Visit> visits = new ArrayList<>();
         String sql =
                 "SELECT " +
                 "visit_id, " +
-                "user_id, " +
+                "username, " +
                 "castle_id, " +
                 "visit_date " +
                 "FROM visit " +
-                "WHERE user_id = ? AND visit_date = ?";
+                "WHERE username = ? AND visit_date = ?";
         try{
-            SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, userId, visitDate);
+            SqlRowSet rowSet = jdbcTemplate.queryForRowSet(sql, username, visitDate);
             while (rowSet.next()) {
                 visits.add(mapRowToVisit(rowSet));
             }
@@ -89,7 +89,7 @@ public class JdbcVisitDao implements VisitDao {
         Visit visit = new Visit();
         visit.setVisitId(rowSet.getInt("visit_id"));
         visit.setCastleId(rowSet.getInt("castle_id"));
-        visit.setUserId(rowSet.getInt("user_id"));
+        visit.setUsername(rowSet.getString("user_id"));
         visit.setVisitDate(rowSet.getDate("visit_date").toLocalDate());
         return visit;
     }

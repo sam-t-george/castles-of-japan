@@ -29,7 +29,8 @@ public class VisitController {
     @PostMapping(path = "/add/visit")
     public Visit createVisit(@Valid @RequestBody Visit visit, Principal principal){
         System.out.println("date = " + visit.getVisitDate());
-        System.out.println("castleId = " +visit.getCastleId());
+        System.out.println("castleId = " + visit.getCastleId());
+        System.out.println("castleId = " + visit.getCastleId());
         return visitDao.createVisit(visit);
     }
 
@@ -44,7 +45,7 @@ public class VisitController {
             @PathVariable("visitDate")
             @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate visitDate) {
         User currentUser = userDao.getUserByUsername(principal.getName());
-        return visitDao.getVisitsByUserIdAndVisitDate(currentUser.getId(),visitDate);
+        return visitDao.getVisitsByUserIdAndVisitDate(currentUser.getUsername(), visitDate);
     }
 }
 

@@ -75,11 +75,14 @@ export function createStore(currentToken, currentUser) {
       SET_AUTH_TOKEN(state, token) {
         state.token = token;
         localStorage.setItem('token', token);
+        console.log('set_auth_token: ' + currentUser);
         axios.defaults.headers.common['Authorization'] = `Bearer ${token}`;
       },
       SET_USER(state, user) {
         state.user = user;
+        console.log('SET_USER: ' + currentUser);
         localStorage.setItem('user', JSON.stringify(user));
+        console.log(user);
       },
       LOGOUT(state) {
         localStorage.removeItem('token');
