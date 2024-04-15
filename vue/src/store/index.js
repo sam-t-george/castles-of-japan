@@ -26,9 +26,6 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
-
-
-
       createVisit(context, visit) {
         CastleService.createVisit(visit)
           .then(response => {
@@ -36,9 +33,6 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
-
-
-
       filterByRegion(context, searchTerms) {
         CastleService.filterByRegion(searchTerms.region)
           .then(response => {
@@ -65,7 +59,6 @@ export function createStore(currentToken, currentUser) {
       SET_CASTLELIST(state, castles) {
         state.castleList = castles;
       },
-
       SET_VISIT(state, visit) {
 
         state.visit = visit;

@@ -5,6 +5,7 @@ import com.techelevator.dao.VisitDao;
 import com.techelevator.model.Castle;
 import com.techelevator.model.User;
 import com.techelevator.model.Visit;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,7 +28,8 @@ public class VisitController {
 
     @PostMapping(path = "/add/visit")
     public Visit createVisit(@Valid @RequestBody Visit visit, Principal principal){
-
+        System.out.println("date = " + visit.getVisitDate());
+        System.out.println("castleId = " +visit.getCastleId());
         return visitDao.createVisit(visit);
     }
 

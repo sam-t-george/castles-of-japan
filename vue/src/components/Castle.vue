@@ -15,9 +15,8 @@
 
       <div v-show="showMenu" class="calendar-container">
         <div class="card flex justify-content-center">
-          <!-- <Calendar v-model="visit.date" inline showWeek class="Calendar" @click="createVisit()"> </Calendar> -->
-          <input type="date" class="Calendar" v-model="visit.date" @click="createVisit">
-          <p> date: {{ visit.date }}</p>
+          <Calendar v-model="visit.visitDate" inline class="Calendar" @click="createVisit()"> </Calendar>
+          <p> date: {{ visit.visitDate }}</p>
         </div>
       </div>
     </div>
@@ -40,24 +39,26 @@ export default {
   data() {
     return {
       visit: {
-        date: '',
-        userId: '',       // might want to change this hard coding later
-        castleId: ''     // might want to change this hard coding later
-      }
+        visitDate: '',
+        castleId: '',      // might want to change this hard coding later
+        userId: '1'      // might want to change this hard coding later
+      },
 
     }
   },
   methods: {
     createVisit() {
+      // castle ID
       this.visit.castleId = this.castle.castleId;
-      this.visit.userId = 3;
-      CastleService.createVisit(this.visit);
-      // this.$store.dispatch('createVisit', this.visit);
+
+      //date attempts :(
+      const aDate = new Date(this.visit.visitDate);
+      this.visit.visitDate = aDate.toISOString(); //.split('T')[0]);
+
       console.log(this.visit);
+      this.$store.dispatch('createVisit', this.visit);  
     },
-    dateChange() {
-      console.log(this.visit); // function not being called
-    }
+    
   }
 }
 </script>
