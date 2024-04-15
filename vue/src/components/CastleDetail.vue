@@ -6,9 +6,6 @@
             </div>
         </div>
         <div class="information">
-            <!-- <div class="castleaddress">
-                <p class="address">Address: {{ castle.address }}</p>
-            </div> -->
             <div class="description">
                 <p class="body">{{ castle.longDesc }}</p>
             </div>
@@ -16,14 +13,12 @@
                 <iframe :src="castle.mapLocation" width="600" height="450" style="border:0;" allowfullscreen=""
                     loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-
             <!-- <div class="img-container">
                 <div class="img" v-if="images && images.length">
                     <img v-for="(image, index) in images" :key="index" :src="image" alt="Castle Image">
                 </div>
             </div> -->
             <!---->
-            
             <div id="carouselExampleIndicators" class="carousel" data-interval="false" ref="carousel">
                 <div class="thumbnail">
                     <div v-for="(image, index) in images" :key="'item' + index" class="carousel-item"
@@ -71,9 +66,11 @@ export default {
 .carousel-item {
     transition: none !important;
 }
-#carousel-indicators{
+
+#carousel-indicators {
     margin-left: 0px;
 }
+
 .overlay {
     position: absolute;
     top: 0;
