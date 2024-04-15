@@ -1,40 +1,63 @@
 <template>
-    <div class="main-container">
-        <div class="calendar-container">
-            <CalenderContainer />
-        </div>
-        <div class="event-cards">
-            <h2>Event Cards </h2>
-            <div class="card2 card mb-3" style="max-width: 540px;">
-  <div class="row g-0 align-items-center">
-    <div class="col-sm-4 col-5">
-      <img src="https://codingyaar.com/wp-content/uploads/bootstrap-4-card-image-left-demo-image.jpg" class="img-fluid rounded-start" alt="...">
+  <div class="main-container">
+    <div class="calendar-container">
+      <Calendar v-model="date" inline class="Calendar" @click="createItinerary()"> </Calendar>
+      <p> date: {{ visit.visitDate }}</p>
     </div>
-    <div class="col-sm-8 col-7">
-      <div class="card-body">
-        <h5 class="card-title"></h5>
-        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-        <p class="card-text d-none d-sm-block"><small class="text-muted">Last updated 3 mins ago</small></p>
-      </div>
-    </div>
-  </div>
-</div>
 
-    </div>
+    <div>
+      <div class="visit">
+        <Visit />
+      </div>
+
+      <div class="visitList">
+        <VisitList />
+      </div>
+    </div> 
+
+
+
+
+
   </div>
 </template>
        
 
+
 <script>
-import CalenderContainer from '../components/CalenderContainer.vue';
-
-
+import Visit from '../components/Visit.vue';
+import VisitList from '../components/VisitList.vue';
 
 export default {
-    components: {
-        CalenderContainer
+  components: {
+    Visit,
+    VisitList,
+  },
+  data() {
+      return {
+        visit: {
+          castleId: '',
+          visitId: '',
+          username: '',
+          visitDate: '',
+          castleName: '',
+          castleBannerPhoto: '',
+          shortDesc: ''
+
+        },
+  
+      }
     },
-    props:['castle']
+    methods: {
+    createItinerary(){
+      this.visit.castleId = this.currentVisit.castleId;
+
+
+
+      this.$store.dispatch('createItinerary', this.visit); 
+    },
+  },
+  props: ['castle']
 }
 </script>
 
@@ -59,5 +82,4 @@ export default {
   padding: 20px;
   height: 100vh;
 }
-
 </style>

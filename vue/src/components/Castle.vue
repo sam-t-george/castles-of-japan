@@ -30,11 +30,11 @@ import CastleService from '../services/CastleService';
 
 const date = ref();
 export default {
-  computed: {
-        isAuthenticated() {
-            return !!this.$store.state.token ;
-        },
-  },
+  // computed: {
+  //       isAuthenticated() {
+  //           return !!this.$store.state.token ;
+  //       },
+  // },
   props: ['castle'],
   setup() {
     const showMenu = ref(false);

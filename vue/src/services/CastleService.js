@@ -3,6 +3,11 @@ export default {
     listCastles() {
         return axios.get('/castles');
     },
+    listVisits(visitDate) {
+        let url = '/itinerary';
+        url += visitDate;
+        return axios.get(url);
+    },
     searchForCastles(name) {
         let url = '/castle/search/';
         if (name) {
@@ -50,5 +55,4 @@ export default {
         .then(response => console.log(response))
         .catch(error => console.error(error));
     }
-
 }
