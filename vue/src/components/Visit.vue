@@ -12,7 +12,7 @@
           </div>
         
 
-        <i class="pi pi-trash" @click="toggleCalendar"></i>
+        <i class="pi pi-trash" @click="deleteVisit()"></i>
         
       </div>
     </div>
@@ -28,16 +28,12 @@
     props: ['visit'],
 
     setup() {
-      const showMenu = ref(false);
-      const toggleCalendar = () => {
-        showMenu.value = !showMenu.value;
-      }
-      return { showMenu, toggleCalendar };
+      
     },
     
     methods: {
       
-  
+      //deleteVisits()
     }
   }
   </script>

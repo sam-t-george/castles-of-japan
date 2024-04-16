@@ -72,6 +72,7 @@ export default {
     font-style: italic;
 }
 
+
 .big-image {
     height: 18vh;
     width: 100vw;
@@ -80,8 +81,17 @@ export default {
     background-position: center;
 }
 .carousel-item {
-    transition: none !important;
+    transition:cubic-bezier(0.68, -0.55, 0.265, 1.55);
     height: 50vh;
+    
+/* >img {
+	vertical-align: middle;	
+	position: relative;
+    border: 10px solid #8bbab1; 
+	top:50%;
+	transform: translateY(-50%);
+    } */
+
 }
 .carousel {
     height: 60vh;
