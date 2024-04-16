@@ -4,8 +4,11 @@ export default {
         return axios.get('/castles');
     },
     getVisitsByDate(visitDate) {
-        console.log(visitDate)
         return axios.get('/itinerary/'+ visitDate);
+    },
+
+    deleteVisitsById(visitId) {
+        return axios.delete('/visit/'+ visitId);
     },
 
     

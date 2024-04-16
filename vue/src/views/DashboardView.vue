@@ -1,13 +1,14 @@
 <template>
   <div class="main-container">
-
     <div class="calendar-container">
-      <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()" > </Calendar>
-    </div>
+    <div class="calendar">
+      <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()" style="width: 600px; "></Calendar>
 
+    </div>
+  </div>
      <div>
       
-      
+       
       <div class="visitList">
         <VisitList />
       </div>
@@ -34,6 +35,7 @@ import VisitList from '../components/VisitList.vue';
 import CastleService from '../services/CastleService';
 
 
+
 export default {
   components: {
     // Visit,
@@ -50,6 +52,7 @@ export default {
   
       }
     },
+    
     methods: {
     getItinerary(){ 
       const aDate = new Date(this.visit.visitDate);
@@ -81,18 +84,21 @@ export default {
 }
 
 .calendar-container {
-  flex: 1;
-  height: fit-content;
+  width: 50%;
+  height: 90vh;
   padding: 20px;
 }
 
-.event-cards {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+
+.calendar {
+  size-adjust: 7rem;
+  height: 100%;
   padding: 20px;
-  height: 100vh;
 }
+
+.visitList{
+  width: 50vw;
+  margin-bottom: 5rem;
+}
+
 </style>

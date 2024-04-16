@@ -66,7 +66,7 @@ export default {
       console.log(this.visit);
       // user ID efforts? :(
       this.visit.username = this.$store.state.user.username;
-      this.$store.dispatch('createVisit', this.visit);  
+      this.$store.dispatch('createVisit', this.visit);
     },
   }
 }
@@ -78,7 +78,7 @@ export default {
   max-width: 20rem; 
   height: 30rem; 
   background-color: #8bbab1;
-  border: 1.5px solid #000000;
+  border: 1.5px solid #193144;
   border-radius: 20px;
   overflow: hidden;
   text-decoration: none;
