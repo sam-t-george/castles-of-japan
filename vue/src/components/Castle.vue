@@ -66,7 +66,7 @@ export default {
       console.log(this.visit);
       // user ID efforts? :(
       this.visit.username = this.$store.state.user.username;
-      this.$store.dispatch('createVisit', this.visit);  
+      this.$store.dispatch('createVisit', this.visit);
     },
   }
 }
