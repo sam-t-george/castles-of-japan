@@ -14,11 +14,11 @@
         <div class="col-xs-6 col-md-3">
           <h6>Categories</h6>
           <ul class="footer-links">
-            <li><a href="#">Java</a></li>
-            <li><a href="#">Java Script</a></li>
-            <li><a href="#">Vue</a></li>
-            <li><a href="#">SQL</a></li>
-            <li><a href="#">Postman</a></li>
+            <li><a href="#">Our Mission</a></li>
+            <li><a href="#">Join the Team</a></li>
+            <li><a href="#">Have a Question?</a></li>
+            <li><a href="#">Sing up for Premium</a></li>
+            <li><a href="#">Partners</a></li>
           </ul>
         </div>
 
@@ -28,7 +28,7 @@
             <li><a href="#">About Us</a></li>
             <li><a href="#">Contact Us</a></li>
             <li><a href="#">Contribute</a></li>
-            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Community Outreach</a></li>
           </ul>
         </div>
       </div>

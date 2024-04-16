@@ -2,7 +2,7 @@
   <div class="home">
 
     <div class="overlay">
-      <h1>Unlock the Majesty: Explore Japan's Castles</h1>
+      <h1>Unlock the Majesty of Japan's Castles </h1>
       <router-link v-bind:to="{ name: 'castles' }">
         <button type="button" class="btn btn-primary">Explore!</button>
       </router-link>
@@ -19,8 +19,9 @@ export default {
 h1 {
   font-size: 4em;
   font-style: italic;
-  color: #FFFDF1;
-  margin-bottom: 30px;
+  color: white;
+  margin-bottom: 22rem;
+  text-shadow: 2px 2px 4px black;
 }
 
 .home {
@@ -29,7 +30,10 @@ h1 {
   position: relative;
   background-size: cover;
   background-position: 50%;
-  background-image: url('https://i.pinimg.com/originals/bb/b6/75/bbb6757f33883aa8703215437c054e96.jpg');
+  background-image: url('https://www.wendywutours.co.nz/resource/upload/900/banner-osaka-castle.jpg');
+  box-shadow: 0 0 300px rgb(0, 0, 0) inset;
+  /* background-image: url('https://i.pinimg.com/originals/bb/b6/75/bbb6757f33883aa8703215437c054e96.jpg'); */
+  
 }
 
 .btn-primary {
@@ -41,28 +45,32 @@ h1 {
   color: #193144;
   border: none;
   font-style: italic;
+  margin-bottom: 6rem;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
 }
 
 .btn-primary:hover {
   font-weight: 500;
   font-style: italic;
   color: #000;
-  background-color: #ff9e9f;
+  background-color: #fdb6b7;
   transform: scale(1.05);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
 }
 
 .text {
   display: flex;
   justify-content: center;
   margin: 10px;
+  
 }
 
 .overlay {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0.429);
-  color: white;
+  background: rgba(0, 0, 0, 0.37);
+  color: rgb(0, 0, 0);
   display: flex;
   align-items: center;
   justify-content: center;

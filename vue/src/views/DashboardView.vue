@@ -39,6 +39,9 @@ export default {
       this.visit.visitDate = aDate.toISOString().split('T')[0];
       this.$store.dispatch('getVisitsByDate', this.visit.visitDate);
     },
+    printPage() {
+      window.print(); // This triggers the browser's print functionality
+    }
   },
   async created() {  //EDITED TO CALL FOR IMAGES
     if (this.visitId) {
@@ -71,8 +74,25 @@ export default {
   display: flex;
   height: 23rem;
   padding: 20px;
+}
+
+.visitList {
   width: 50vw;
   margin-top: 20px;
   justify-content: center;
+}
+
+.bi-printer {
+  position: fixed;
+  top: 7vw;
+  right: 0;
+  height: 50px;
+  width: 5vw;
+  display: flex;
+  justify-content: flex-end;
+  height: 50px;
+  width: 5vw;
+  display: flex;
+  justify-content: flex-end;
 }
 </style>
