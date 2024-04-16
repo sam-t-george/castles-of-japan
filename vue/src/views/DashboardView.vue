@@ -42,13 +42,9 @@ export default {
   data() {
       return {
         visit: {
-          castleId: '',
-          visitId: '',
-          username: '',
+          
           visitDate: '',
-          castleName: '',
-          castleBannerPhoto: '',
-          shortDesc: ''
+          
 
         },
   
