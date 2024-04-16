@@ -20,7 +20,7 @@ h1 {
   font-size: 4em;
   font-style: italic;
   color: #FFFDF1;
-  margin-bottom: 30px;
+  margin-bottom:150px;
 }
 
 .home {
@@ -29,7 +29,13 @@ h1 {
   position: relative;
   background-size: cover;
   background-position: 50%;
-  background-image: url('https://i.pinimg.com/originals/bb/b6/75/bbb6757f33883aa8703215437c054e96.jpg');
+  background-image: url('https://www.wendywutours.co.nz/resource/upload/900/banner-osaka-castle.jpg');
+  box-shadow: 0 0 200px rgb(0, 0, 0) inset;
+  border: 'none';
+  height: '700px';
+  width: '700px';
+  /* background-image: url('https://i.pinimg.com/originals/bb/b6/75/bbb6757f33883aa8703215437c054e96.jpg'); */
+  
 }
 
 .btn-primary {
@@ -63,7 +69,7 @@ h1 {
   position: absolute;
   height: 100vh;
   width: 100vw;
-  background: rgba(0, 0, 0, 0.429);
+  background: rgba(0, 0, 0, 0.384);
   color: white;
   display: flex;
   align-items: center;
