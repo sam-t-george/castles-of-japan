@@ -8,6 +8,7 @@ export function createStore(currentToken, currentUser) {
       user: currentUser || {},
       castleList: [],
       castle: {},
+      visitList: [],
       visit: {},
     },
 
@@ -19,6 +20,22 @@ export function createStore(currentToken, currentUser) {
         })
           .catch(err => console.error(err));
       },
+      getAllVisits(context) {
+        CastleService.listVisits().then(response => {
+          context.commit('SET_VISITLIST', response.data);
+        })
+          .catch(err => console.error(err));
+      },
+      
+      
+      getItineraryByDate(context, visit) {
+        CastleService.listVisits(visit.visitDate).then(response => {
+          context.commit('SET_VISITLIST', response.data);
+        })
+          .catch(err => console.error(err));
+      },
+
+      
       searchForCastle(context, searchTerms) {
         CastleService.searchForCastles(searchTerms.name)
           .then(response => {
@@ -26,6 +43,8 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
+
+
       createVisit(context, visit) {
         CastleService.createVisit(visit)
           .then(response => {
@@ -51,6 +70,9 @@ export function createStore(currentToken, currentUser) {
           context.commit('SET_CASTLE_IMAGES', response.data);
         })
           .catch(err => console.error(err));
+
+
+
       },
     },
 
@@ -60,10 +82,12 @@ export function createStore(currentToken, currentUser) {
         state.castleList = castles;
       },
       SET_VISIT(state, visit) {
-
         state.visit = visit;
       },
+      SET_VISITLIST(state, visits) {
 
+        state.visitList = visits;
+      },
 
 
       SET_CASTLE(state, castle) {
@@ -92,20 +116,11 @@ export function createStore(currentToken, currentUser) {
         axios.defaults.headers.common = {};
       },
     },
+    getters: {
+      getVisitByDate(state) {
+        return state.visit.filter(visit => visit)
+      }
+    }
   });
   return store;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-

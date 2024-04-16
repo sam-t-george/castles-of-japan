@@ -10,6 +10,9 @@ import PrimeVue from 'primevue/config';
 import Calendar from 'primevue/calendar';
 import 'primevue/resources/themes/aura-light-green/theme.css';
 import Menu from 'primevue/menu';
+import { defineComponent } from 'vue';
+
+
 
 
 
@@ -34,7 +37,6 @@ if (currentToken) {
 
 // Create the Vuex store passing in the stored credentials
 const store = createStore(currentToken, currentUser);
-
 const app = createApp(CapstoneApp);
 app.use(store);
 app.use(router);

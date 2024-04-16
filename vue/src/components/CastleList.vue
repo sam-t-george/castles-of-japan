@@ -2,7 +2,8 @@
     <body id="body">
         <section id="castleList">
             <Castle v-for="currentCastle in castles" 
-            v-bind:key="currentCastle.castleId" v-bind:castle="currentCastle" />
+            v-bind:key="currentCastle.castleId" 
+            v-bind:castle="currentCastle" />
         </section>
     </body>
 </template>

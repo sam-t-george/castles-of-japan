@@ -11,12 +11,12 @@
           </div>
         </div>
       </router-link>
-      <i class="pi pi-plus-circle" v-if="isAuthenticated" @click="toggleCalendar"></i>
+      <i class="pi pi-plus-circle"  @click="toggleCalendar" ></i> 
+      <!-- v-if="isAuthenticated" -->
 
       <div v-show="showMenu" class="calendar-container">
         <div class="card flex justify-content-center">
           <Calendar v-model="visit.visitDate" inline class="Calendar" @click="createVisit()"> </Calendar>
-          <p> date: {{ visit.visitDate }}</p>
         </div>
       </div>
     </div>
@@ -25,16 +25,17 @@
 
 <script>
 import { ref } from 'vue';
+import { useStore } from 'vuex';
+import AuthService from '../services/AuthService';
 import CastleService from '../services/CastleService';
-import authService from "../services/AuthService";
 
 const date = ref();
 export default {
-  computed: {
-        isAuthenticated() {
-            return !!this.$store.state.token ;
-        },
-  },
+  // computed: {
+  //       isAuthenticated() {
+  //           return !!this.$store.state.token ;
+  //       },
+  // },
   props: ['castle'],
   setup() {
     const showMenu = ref(false);
@@ -43,6 +44,7 @@ export default {
     }
     return { showMenu, toggleCalendar };
   },
+  
   data() {
     return {
       visit: {
@@ -61,12 +63,11 @@ export default {
       //date attempts :(
       const aDate = new Date(this.visit.visitDate);
       this.visit.visitDate = aDate.toISOString(); //.split('T')[0]);
-
+      console.log(this.visit);
       // user ID efforts? :(
       this.visit.username = this.$store.state.user.username;
       this.$store.dispatch('createVisit', this.visit);  
     },
-
   }
 }
 </script>

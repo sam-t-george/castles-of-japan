@@ -3,6 +3,10 @@ export default {
     listCastles() {
         return axios.get('/castles');
     },
+    listVisits() {
+        console.log("castle service: list visits")
+        return axios.get('/visits');
+    },
     searchForCastles(name) {
         let url = '/castle/search/';
         if (name) {
@@ -50,5 +54,4 @@ export default {
         .then(response => console.log(response))
         .catch(error => console.error(error));
     }
-
 }
