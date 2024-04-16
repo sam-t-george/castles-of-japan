@@ -1,29 +1,14 @@
 <template>
   <div class="main-container">
     <div class="calendar-container">
-    <div class="calendar">
-      <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()" style="width: 600px; "></Calendar>
-
+      <div class="calendar">
+        <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()" style="width: 600px; ">
+        </Calendar>
+      </div>
     </div>
-  </div>
-     <div>
-      
-       
-      <div class="visitList">
-        <VisitList />
-      </div>
-
-      <div class="visit">
-        <Visit />
-      </div>
-
-      
-    </div>  
-
-
-
-
-
+    <div class="list-cont">
+      <VisitList />
+    </div>
   </div>
 </template>
        
@@ -42,37 +27,30 @@ export default {
     VisitList,
   },
   data() {
-      return {
-        visit: {
-          
-          visitDate: '',
-          
-
-        },
-  
-      }
-    },
-    
-    methods: {
-    getItinerary(){ 
+    return {
+      visit: {
+        visitDate: '',
+      },
+    }
+  },
+  methods: {
+    getItinerary() {
       const aDate = new Date(this.visit.visitDate);
       this.visit.visitDate = aDate.toISOString().split('T')[0];
-      
-
-      this.$store.dispatch('getVisitsByDate', this.visit.visitDate); 
+      this.$store.dispatch('getVisitsByDate', this.visit.visitDate);
     },
   },
   async created() {  //EDITED TO CALL FOR IMAGES
     if (this.visitId) {
-        try {
-            const visitResponse = await CastleService.getCastleById(this.visitId);
-            this.visit = visitResponse.data;
-            this.$store.dispatch('getAllVisits', this.visit);
-        } catch (error) {
-            console.error(error);
-        } //add better error message later
+      try {
+        const visitResponse = await CastleService.getCastleById(this.visitId);
+        this.visit = visitResponse.data;
+        this.$store.dispatch('getAllVisits', this.visit);
+      } catch (error) {
+        console.error(error);
+      } //add better error message later
     }
-},
+  },
   props: ['castle']
 }
 </script>
@@ -80,25 +58,21 @@ export default {
 <style scoped>
 .main-container {
   display: flex;
-  justify-content: space-between;
+  width: 100%;
 }
-
-.calendar-container {
-  width: 50%;
-  height: 90vh;
-  padding: 20px;
+#calendar-container {
+  width: 50vw;
 }
-
+.list-cont {
+  width: 50vw;
+}
 
 .calendar {
-  size-adjust: 7rem;
-  height: 100%;
+  display: flex;
+  height: 23rem;
   padding: 20px;
-}
-
-.visitList{
   width: 50vw;
-  margin-bottom: 5rem;
+  margin-top: 20px;
+  justify-content: center;
 }
-
 </style>

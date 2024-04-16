@@ -42,11 +42,12 @@ Header {
   flex: 1;
   margin-top: 0px;
   overflow-y: auto;
+  overflow-x: hidden !important;
 }
 
 body {
   margin: 0 !important;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   font-family: "Comic Sans MS", "Comic Sans", cursive;
 }
 </style>

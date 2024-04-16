@@ -1,7 +1,7 @@
 <template>
     <div id="header">
         <router-link to="/"><img src="../assets/logo.png" alt="logo" width="125" height="125" class="pic"></router-link>
-        <h1>Castles Of Japan | 日本の城 </h1>
+        <h1>Castles of Japan | 日本の城 </h1>
 
         <nav id="nav" class="d-flex">
             <router-link v-bind:to="{ name: 'home' }" class="nav-link" v-if="!isHomePage">Home</router-link>
@@ -76,6 +76,7 @@ export default {
     color: inherit;
     margin: .8vw;
     font-size: 1.4em;
+    /* text-shadow: 2px 2px 4px black;  */
 }
 
 .nav-link:hover {
@@ -90,4 +91,9 @@ export default {
     align-items: center;
     font-size: 1.5em;
     color: inherit;
-}</style>
+}
+/* h1 {
+    text-shadow: 2px 2px 4px black; 
+    }  */
+
+</style>

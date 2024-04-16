@@ -41,7 +41,6 @@ h1 {
   color: #193144;
   border: none;
   font-style: italic;
-
 }
 
 .btn-primary:hover {
@@ -53,7 +52,6 @@ h1 {
 }
 
 .text {
-
   display: flex;
   justify-content: center;
   margin: 10px;
