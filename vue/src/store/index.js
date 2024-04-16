@@ -20,20 +20,19 @@ export function createStore(currentToken, currentUser) {
         })
           .catch(err => console.error(err));
       },
-      getAllVisits(context) {
-        CastleService.listVisits().then(response => {
+
+
+
+      getVisitsByDate(context, visitDate) {
+        console.log(visitDate);
+        CastleService.getVisitsByDate(visitDate).then(response => {
+          console.log(response.data);
           context.commit('SET_VISITLIST', response.data);
         })
           .catch(err => console.error(err));
       },
       
-      
-      getItineraryByDate(context, visit) {
-        CastleService.listVisits(visit.visitDate).then(response => {
-          context.commit('SET_VISITLIST', response.data);
-        })
-          .catch(err => console.error(err));
-      },
+
 
       
       searchForCastle(context, searchTerms) {
@@ -43,8 +42,6 @@ export function createStore(currentToken, currentUser) {
           })
           .catch(err => console.error(err));
       },
-
-
       createVisit(context, visit) {
         CastleService.createVisit(visit)
           .then(response => {
