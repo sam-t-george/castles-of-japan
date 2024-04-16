@@ -103,18 +103,6 @@ public class JdbcVisitDao implements VisitDao {
     }
 
     @Override
-    public int deleteVisitById(int visitId) {
-        String sql = "DELETE FROM visit WHERE visit_id = ?";
-        int numberDeleted = 0;
-        try {
-            jdbcTemplate.update(sql, visitId);
-        } catch (CannotGetJdbcConnectionException e) {
-            throw new DaoException("Unable to connect to database.", e);
-        }
-        return numberDeleted;
-    }
-
-    @Override
     public List<Visit> getVisits() {
         List<Visit> visits = new ArrayList<>();
         String sql = "SELECT v.visit_id, v.username, v.castle_id, v.visit_date, c.castle_name, c.castle_banner_photo, c.region, c.short_desc FROM visit v JOIN castle c ON c.castle_id = v.castle_id";
@@ -128,6 +116,25 @@ public class JdbcVisitDao implements VisitDao {
             throw new DaoException("Unable to connect to server or database", e);
         }
         return visits;
+    }
+    @Override
+    public int deleteVisitById(int visitId) {
+        String sql = "DELETE FROM visit WHERE visit_id = ?";
+        int numberDeleted = 0;
+
+        try {
+            numberDeleted = jdbcTemplate.update(sql, visitId);
+
+            if (numberDeleted != 1) {
+                throw new DaoException(numberDeleted + " parks where deleted, but should have only been one!");
+            }
+        } catch (CannotGetJdbcConnectionException e) {
+            throw new DaoException("Unable to connect to database.", e);
+        } catch (DataIntegrityViolationException e) {
+            throw new DaoException("Park needs to be removed from Park State", e);
+        }
+
+        return numberDeleted;
     }
 
 
