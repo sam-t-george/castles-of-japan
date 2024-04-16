@@ -1,6 +1,5 @@
 <template>
-    <GoogleMapAPI/>
-
+    <GoogleMapAPI />
 </template>
 
 
@@ -10,13 +9,13 @@ import GoogleMapAPI from '../components/GoogleMapAPI.vue';
 export default {
     components: {
         GoogleMapAPI
-}
+    }
 }
 </script>
 
 <style scoped>
 h1 {
     display: flex;
-    justify-content:  center;
+    justify-content: center;
 }
 </style>
