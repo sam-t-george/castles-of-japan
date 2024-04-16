@@ -3,11 +3,15 @@ export default {
     listCastles() {
         return axios.get('/castles');
     },
-    listVisits(visitDate) {
-        let url = '/itinerary';
-        url += visitDate;
-        return axios.get(url);
+    getVisitsByDate(visitDate) {
+        return axios.get('/itinerary/'+ visitDate);
     },
+
+    deleteVisitsById(visitId) {
+        return axios.delete('/visit/'+ visitId);
+    },
+
+    
     searchForCastles(name) {
         let url = '/castle/search/';
         if (name) {

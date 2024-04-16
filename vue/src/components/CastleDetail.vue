@@ -13,11 +13,7 @@
                 <iframe :src="castle.mapLocation" width="600" height="450" style="border:0;" allowfullscreen=""
                     loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
-            <!-- <div class="img-container">
-                <div class="img" v-if="images && images.length">
-                    <img v-for="(image, index) in images" :key="index" :src="image" alt="Castle Image">
-                </div> -->
-                <div id="carouselExampleIndicators" class="carousel" data-interval="false" ref="carousel">
+            <div id="carouselExampleIndicators" class="carousel" data-interval="false" ref="carousel">
                     <div class="thumbnail">
                         <div v-for="(image, index) in images" :key="'item' + index" class="carousel-item"
                             :class="{ active: index === 0 }">
@@ -60,14 +56,6 @@ export default {
 </script>
 
 <style scoped>
-.carousel-item {
-    transition: none !important;
-}
-
-#carousel-indicators {
-    margin-left: 0px;
-}
-
 .overlay {
     position: absolute;
     top: 0;
@@ -84,50 +72,73 @@ export default {
     font-style: italic;
 }
 
+
 .big-image {
-    height: 25vh;
+    height: 18vh;
     width: 100vw;
     position: relative;
     background-size: cover;
     background-position: center;
 }
+.carousel-item {
+    transition:cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    height: 50vh;
+    
+/* >img {
+	vertical-align: middle;	
+	position: relative;
+    border: 10px solid #8bbab1; 
+	top:50%;
+	transform: translateY(-50%);
+    } */
 
+}
+.carousel {
+    height: 60vh;
+    object-fit: contain; 
+}
+
+.carousel-item img {
+    object-fit: cover; 
+    height: 100%;
+}
+
+.carousel-indicators {
+    bottom: 2rem;
+}
 .information {
     display: grid;
-    grid-template-columns: 2.5fr 2fr;
-    grid-template-rows: 3fr 2.5fr;
-    gap: 20px;
-    padding: 20px;
+    grid-template-columns: 2fr 2fr; 
+    column-gap: 4rem;
+    padding-left: 7rem;
+    padding-right: 7rem;
+    padding-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 .img-container {
-    grid-area: 1 / 1 / 3 / 2;
+    grid-area: 1 / 1;
     display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
 }
 
 .google-map {
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 2 ;
     width: 100%;
     margin: 0;
+    height: 50vh;
 }
 
 .description {
-    grid-area: 2 / 2 / 3 / 3;
+    grid-area: 2 /1 ;
     width: 100%;
     height: auto;
-    font-size: 2.3em;
+    font-size: 1.2rem;
     align-content: start;
+    font-style: italic;
 }
 
 .google-map iframe {
     width: 100%;
     height: 100%;
-}
-
-.img img {
-    width: 100%;
-    padding: 2px;
 }
 </style>

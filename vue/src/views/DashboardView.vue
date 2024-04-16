@@ -1,19 +1,24 @@
 <template>
   <div class="main-container">
     <div class="calendar-container">
-      <Calendar v-model="date" inline class="Calendar" @click="createItinerary()"> </Calendar>
-      <p> date: {{ visit.visitDate }}</p>
-    </div>
+    <div class="calendar">
+      <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()" style="width: 600px; "></Calendar>
 
-    <div>
+    </div>
+  </div>
+     <div>
+      
+       
+      <div class="visitList">
+        <VisitList />
+      </div>
+
       <div class="visit">
         <Visit />
       </div>
 
-      <div class="visitList">
-        <VisitList />
-      </div>
-    </div> 
+      
+    </div>  
 
 
 
@@ -27,36 +32,47 @@
 <script>
 import Visit from '../components/Visit.vue';
 import VisitList from '../components/VisitList.vue';
+import CastleService from '../services/CastleService';
+
+
 
 export default {
   components: {
-    Visit,
+    // Visit,
     VisitList,
   },
   data() {
       return {
         visit: {
-          castleId: '',
-          visitId: '',
-          username: '',
+          
           visitDate: '',
-          castleName: '',
-          castleBannerPhoto: '',
-          shortDesc: ''
+          
 
         },
   
       }
     },
+    
     methods: {
-    createItinerary(){
-      this.visit.castleId = this.currentVisit.castleId;
+    getItinerary(){ 
+      const aDate = new Date(this.visit.visitDate);
+      this.visit.visitDate = aDate.toISOString().split('T')[0];
+      
 
-
-
-      this.$store.dispatch('createItinerary', this.visit); 
+      this.$store.dispatch('getVisitsByDate', this.visit.visitDate); 
     },
   },
+  async created() {  //EDITED TO CALL FOR IMAGES
+    if (this.visitId) {
+        try {
+            const visitResponse = await CastleService.getCastleById(this.visitId);
+            this.visit = visitResponse.data;
+            this.$store.dispatch('getAllVisits', this.visit);
+        } catch (error) {
+            console.error(error);
+        } //add better error message later
+    }
+},
   props: ['castle']
 }
 </script>
@@ -68,18 +84,21 @@ export default {
 }
 
 .calendar-container {
-  flex: 1;
-  height: fit-content;
+  width: 50%;
+  height: 90vh;
   padding: 20px;
 }
 
-.event-cards {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: center;
+
+.calendar {
+  size-adjust: 7rem;
+  height: 100%;
   padding: 20px;
-  height: 100vh;
 }
+
+.visitList{
+  width: 50vw;
+  margin-bottom: 5rem;
+}
+
 </style>

@@ -11,7 +11,8 @@
           </div>
         </div>
       </router-link>
-      <i class="pi pi-plus-circle" v-if="isAuthenticated" @click="toggleCalendar"></i>
+      <i class="pi pi-plus-circle" v-if="isAuthenticated"  @click="toggleCalendar" ></i> 
+     
 
       <div v-show="showMenu" class="calendar-container">
         <div class="card flex justify-content-center">
@@ -30,11 +31,11 @@ import CastleService from '../services/CastleService';
 
 const date = ref();
 export default {
-  // computed: {
-  //       isAuthenticated() {
-  //           return !!this.$store.state.token ;
-  //       },
-  // },
+  computed: {
+        isAuthenticated() {
+            return !!this.$store.state.token ;
+        },
+  },
   props: ['castle'],
   setup() {
     const showMenu = ref(false);
@@ -61,11 +62,11 @@ export default {
 
       //date attempts :(
       const aDate = new Date(this.visit.visitDate);
-      this.visit.visitDate = aDate.toISOString(); //.split('T')[0]);
+      this.visit.visitDate = aDate.toISOString(); 
       console.log(this.visit);
       // user ID efforts? :(
       this.visit.username = this.$store.state.user.username;
-      this.$store.dispatch('createVisit', this.visit);  
+      this.$store.dispatch('createVisit', this.visit);
     },
   }
 }
@@ -74,23 +75,23 @@ export default {
 <style scoped>
 .castle-card {
   display: block;
-  max-width: 20rem; /* max scalable width */
-  height: 30rem; /* new card height */
+  max-width: 20rem; 
+  height: 30rem; 
   background-color: #8bbab1;
-  border: 1.5px solid #000000;
+  border: 1.5px solid #193144;
   border-radius: 20px;
   overflow: hidden;
   text-decoration: none;
   font-size: 1.4rem;
   color: inherit;
   transition: transform 0.15s;
-  /* I think this is useless */
+  /* affects how fast the scale is on hover */
   box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.4);
 }
 
 .castle-card:hover {
   transform: scale(1.015);
-  /* dropped and raised again due to card size shrink */
+  
 }
 
 .castle-card-body {
@@ -123,20 +124,20 @@ export default {
   margin: 0rem;
   text-align: center;
   color: white;
-  /* Changed font to white, will change back. We also need to pick a new font for stuff */
+
 
 }
 
 .castle-desc {
   font-size: .8em;
   text-shadow: 1px 1px 2px black;
-  /* Text shadow */
+ 
 }
 
 .castle-name {
   font-size: 1.5rem;
   text-shadow: 1px 1px 2px black;
-  /* Text shadow */
+
 }
 
 .castle-region small {

@@ -63,7 +63,7 @@ public class VisitController {
     public Visit[] getVisits() {
         List<Visit> visits = visitDao.getVisits();
         if (visits.size() == 0) {
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No castles found");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No visits found");
         } else {
             return visitDao.getVisits().toArray(new Visit[visits.size()]);
         }

@@ -20,13 +20,29 @@ export function createStore(currentToken, currentUser) {
         })
           .catch(err => console.error(err));
       },
-      
-      getItineraryByDate(context, visit) {
-        CastleService.listVisits(visit.visitDate).then(response => {
+
+
+
+      getVisitsByDate(context, visitDate) {
+        console.log(visitDate);
+        CastleService.getVisitsByDate(visitDate).then(response => {
+          console.log(response.data);
           context.commit('SET_VISITLIST', response.data);
         })
           .catch(err => console.error(err));
       },
+
+      deleteVisitsById(context, visitId) {
+        CastleService.deleteVisitsById(visitId).then(response => {
+          console.log(response.data);
+          context.commit('SET_VISITLIST', response.data);
+        })
+          .catch(err => console.error(err));
+      },
+      
+
+
+      
       searchForCastle(context, searchTerms) {
         CastleService.searchForCastles(searchTerms.name)
           .then(response => {
