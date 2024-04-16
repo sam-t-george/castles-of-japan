@@ -100,11 +100,6 @@ export default {
   padding: 20px;
 }
 
-
-#pv_id_3_panel {
-  height: ;
-}
-
 .visitList{
   width: 50vw;
   margin-bottom: 5rem;
