@@ -31,6 +31,14 @@ export function createStore(currentToken, currentUser) {
         })
           .catch(err => console.error(err));
       },
+
+      deleteVisitsById(context, visitId) {
+        CastleService.deleteVisitsById(visitId).then(response => {
+          console.log(response.data);
+          context.commit('SET_VISITLIST', response.data);
+        })
+          .catch(err => console.error(err));
+      },
       
 
 
