@@ -11,7 +11,7 @@
               <h5 class="visit-title">{{ visit.castleName }}</h5>
               <p class="visit-text">{{ visit.shortDesc }}</p>
               <p class="visit-region"><small class="text-muted">{{ visit.region }}</small></p>
-              <i class="pi pi-trash" @click="deleteVisit()"></i>
+              <i type="button" class="pi pi-trash" @click="deleteVisit()"></i>
             </div>
           </div>
         </div>
@@ -44,7 +44,6 @@ export default {
   methods: {
     deleteVisit() {
       this.$store.dispatch('deleteVisitsById', this.visit.visitId);
-
   }
 }
 }
