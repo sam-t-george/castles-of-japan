@@ -69,6 +69,7 @@ export default {
    font-size: 15px;
    line-height: 24px;
    color: #737373;
+   width: 100vw;
  }
 
  .site-footer hr {
