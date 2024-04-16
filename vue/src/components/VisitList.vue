@@ -2,7 +2,8 @@
     <body id="body">
         <section id="visitList">
             <Visit v-for="currentVisit in visits" 
-            v-bind:key="currentVisit.visitId" v-bind:visit="currentVisit" />
+            v-bind:key="currentVisit.visitId" 
+            v-bind:visit="currentVisit" />
         </section>
     </body>
 </template>
@@ -14,7 +15,11 @@ export default {
         Visit
     },
     data() {
-        
+        return {
+            visit: {
+                visitDate: ''
+            }
+        }
     },
     computed: {
         visits() {
@@ -23,8 +28,10 @@ export default {
     },
     
     created() {
-        this.$store.dispatch('getAllVisits');
-    }
+        
+        this.$store.dispatch('getVisitsByDate', this.visit.visitDate);
+    },
+    props: ['visit.visitDate'],
 }
 </script>
 <style scoped>

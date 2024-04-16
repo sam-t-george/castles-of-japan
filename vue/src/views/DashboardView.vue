@@ -1,8 +1,8 @@
 <template>
   <div class="main-container">
+
     <div class="calendar-container">
-      <Calendar v-model="visitDate" inline class="Calendar" > </Calendar>
-      
+      <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()" > </Calendar>
     </div>
 
      <div>
@@ -12,9 +12,9 @@
         <VisitList />
       </div>
 
-      <!-- <div class="visit">
+      <div class="visit">
         <Visit />
-      </div> -->
+      </div>
 
       
     </div>  
@@ -55,12 +55,12 @@ export default {
       }
     },
     methods: {
-    createItinerary(){
-      this.visit.castleId = this.currentVisit.castleId;
+    getItinerary(){ 
+      const aDate = new Date(this.visit.visitDate);
+      this.visit.visitDate = aDate.toISOString().split('T')[0];
+      
 
-
-
-      this.$store.dispatch('createItinerary', this.visit); 
+      this.$store.dispatch('getVisitsByDate', this.visit.visitDate); 
     },
   },
   async created() {  //EDITED TO CALL FOR IMAGES
