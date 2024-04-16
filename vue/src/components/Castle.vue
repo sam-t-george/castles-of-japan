@@ -78,7 +78,7 @@ export default {
   max-width: 20rem; 
   height: 30rem; 
   background-color: #8bbab1;
-  border: 1.5px solid #000000;
+  border: 1.5px solid #193144;
   border-radius: 20px;
   overflow: hidden;
   text-decoration: none;
