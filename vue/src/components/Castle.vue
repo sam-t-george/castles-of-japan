@@ -62,7 +62,7 @@ export default {
 
       //date attempts :(
       const aDate = new Date(this.visit.visitDate);
-      this.visit.visitDate = aDate.toISOString(); //.split('T')[0]);
+      this.visit.visitDate = aDate.toISOString(); 
       console.log(this.visit);
       // user ID efforts? :(
       this.visit.username = this.$store.state.user.username;

@@ -3,10 +3,12 @@ export default {
     listCastles() {
         return axios.get('/castles');
     },
-    listVisits() {
-        console.log("castle service: list visits")
-        return axios.get('/visits');
+    getVisitsByDate(visitDate) {
+        console.log(visitDate)
+        return axios.get('/itinerary/'+ visitDate);
     },
+
+    
     searchForCastles(name) {
         let url = '/castle/search/';
         if (name) {
