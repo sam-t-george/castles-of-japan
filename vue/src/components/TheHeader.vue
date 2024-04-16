@@ -4,13 +4,13 @@
         <h1>Castles Of Japan | 日本の城 </h1>
 
         <nav id="nav" class="d-flex">
-            <router-link v-bind:to="{ name: 'home' }" class="nav-link" v-if="!isHomePage">Home</router-link>
+            <router-link v-bind:to="{ name: 'home' }" class="nav-link" v-if="!isHomePage"><i class="pi pi-home"></i> Home</router-link>
             <span class="bars" v-if="!isHomePage"> &nbsp;|&nbsp;</span>
-            <router-link v-bind:to="{ name: 'castles' }" class="nav-link" v-if="!isExplorePage">Explore Castles</router-link>
+            <router-link v-bind:to="{ name: 'castles' }" class="nav-link" v-if="!isExplorePage"> <i class="pi pi-search"></i> Explore Castles</router-link>
             <span class="bars" v-if="!isExplorePage"> &nbsp;|&nbsp;</span>
-            <router-link v-bind:to="{ name: 'dashboard' }" class="nav-link" v-if="!isDashboardPage && isAuthenticated">My Dashboard</router-link>
+            <router-link v-bind:to="{ name: 'dashboard' }" class="nav-link" v-if="!isDashboardPage && isAuthenticated">  My Dashboard</router-link>
             <span class="bars" v-if="!isDashboardPage && isAuthenticated"> &nbsp;|&nbsp;</span>
-            <router-link v-bind:to="{ name: 'map' }" class="nav-link" v-if="!isMapPage">Map</router-link>
+            <router-link v-bind:to="{ name: 'map' }" class="nav-link" v-if="!isMapPage"> <i class="pi pi-map"></i> Map</router-link>
             <span class="bars" v-if="!isMapPage && !isLoginPage"> &nbsp;|&nbsp;</span>
             <router-link v-bind:to="{ name: 'login' }" class="nav-link" v-if="!isLoginPage && !isAuthenticated">Sign In &nbsp; </router-link>
             <!--" v-if="$store.state.token = ''"-->

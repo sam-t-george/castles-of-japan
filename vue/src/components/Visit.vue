@@ -4,7 +4,9 @@
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-4">
+            <router-link :to="{ name: 'castleDetail', params: { castleId: visit.castleId } }">
             <img class="visit-image" :src="visit.castleBannerPhoto" alt="bannerPhoto">
+          </router-link>
           </div>
           <div class="col-md-8">
             <div class="card-body">
