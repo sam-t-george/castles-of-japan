@@ -90,8 +90,7 @@ export default {
 }
 
 .castle-card:hover {
-  transform: scale(1.015);
-  
+  transform: scale(1.015);  
 }
 
 .castle-card-body {
