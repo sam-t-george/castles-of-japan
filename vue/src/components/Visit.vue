@@ -71,6 +71,7 @@ export default {
 .pi-trash:hover {
   opacity: 100%;
   color: rgb(184, 0, 0);
+  transform: scale(1.015);
 }
 .cardplus {
   margin-bottom: 1.9rem;
