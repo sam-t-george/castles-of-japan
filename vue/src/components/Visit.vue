@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="cardplus">
-      <div class="card mb-3" style="max-width: 30vw; ">
+      <div class="card mb-3" style="max-width: 28vw; ">
         <div class="row g-0">
-          <div class="col-md-4">
+          <div class="col-md-4"> 
             <router-link :to="{ name: 'castleDetail', params: { castleId: visit.castleId } }">
               <img class="visit-image" :src="visit.castleBannerPhoto" alt="bannerPhoto" >
             </router-link>
@@ -13,7 +13,7 @@
               <h5 class="visit-title">{{ visit.castleName }}</h5>
               <p class="visit-text">{{ visit.shortDesc }}</p>
               <p class="visit-region"><small class="text-muted">{{ visit.region }}</small></p>
-              <i class="pi pi-trash" @click="deleteVisit"></i>
+              <i type = "button" class="pi pi-trash" @click="deleteVisit"></i>
             </div>
           </div>
         </div>
@@ -48,7 +48,6 @@ export default {
 <style scoped>
 .visit-image {
   width: 100%;
-  height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
   overflow: hidden;
