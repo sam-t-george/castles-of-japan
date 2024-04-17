@@ -11,7 +11,7 @@
     </div>
     
     <div class="list-cont">
-      <h2 class="itinerary-name">Steve's Itinerary</h2>
+      <h2 class="itinerary-name">Foxtrot's Itinerary</h2>
       <!-- <h2 class="visit-title">{{this.$store.state.user.username}}'s Itinerary</h2> -->
       <VisitList />
     </div>

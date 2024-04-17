@@ -1,8 +1,8 @@
 <template>
     <div class="premium">
-    <h2> Join the Clan Today! </h2>
-    <img src="../assets/logo.png" alt="logo" width="125" height="125" class="premium-dash">
-    <h6> Sign up to be able to be able to add castles to a personalized dashboard</h6>
+    <h2 class = "join"> Join the Clan Today! </h2>
+    <router-link v-bind:to="{ name: 'register' }" class="nav-link"><img src="../assets/premium-dash.png" alt="logo" width="125" height="125" class="premium-dash" /> </router-link>
+    <h6 class="sign-up-text"> Sign up to be able  to add castles to a personalized dashboard!</h6>
     </div>  
   </template>
 
@@ -15,15 +15,21 @@
 .premium {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content:space-around;
     align-items: center;
     color: white;
     background-color: #193144;
-    height: 100vh
+    height: 100vh;
+    border-top: solid 2px #8BBAB1;
+    
 }
-h2,
-h6{
-  font-size: 4em;
+.join{
+    font-size: 5rem;
+    font-style: italic;
+    text-shadow: 2px 2px 4px black;
+}
+.sign-up-text{
+  font-size: 1.3rem;
   font-style: italic;
   text-shadow: 2px 2px 4px black;
 }
@@ -31,9 +37,10 @@ h6{
     display: flex;
     justify-self: center;
     margin-top: 2rem;
-    border-radius: 10px;
+    border-radius: 5px;
     transform: scale(4);
-    border: solid 2px #8BBAB1;
+    border: solid .75px #8BBAB1;
+    width: 17rem;
     
    
 }
