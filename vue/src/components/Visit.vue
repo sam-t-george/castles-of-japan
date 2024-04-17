@@ -26,6 +26,7 @@
 import { ref } from 'vue';
 import CastleService from '../services/CastleService';
 import authService from "../services/AuthService";
+import DashboardView from '../views/DashboardView.vue';
 
 const date = ref();
 export default {
@@ -38,10 +39,15 @@ export default {
     }
     return { showMenu, toggleCalendar };
   },
+  
 
   methods: {
     deleteVisit() {
+      localStorage.visitDate= this.visit.visitDate;
       this.$store.dispatch('deleteVisitsById', this.visit.visitId);
+      this.$store.dispatch('getVisitsByDate', localStorage.visitDate);
+      window.location.reload();
+      
     }
   }
 } 

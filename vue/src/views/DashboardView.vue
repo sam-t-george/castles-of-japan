@@ -1,13 +1,23 @@
 <template>
   <div class="main-container">
+    <body @onload="loadToday()"></body>
     <div class="calendar-container">
       <div class="calendar">
-        <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()" style="width: 600px; ">
+        <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()"
+          style="width: 600px; ">
+          
         </Calendar>
       </div>
+
+
+
+
     </div>
+    
     <div class="list-cont">
+      <h2 class="visit-title">{{ visit.visitDate }}</h2>
       <VisitList />
+      
     </div>
   </div>
 </template>
@@ -36,24 +46,41 @@ export default {
   methods: {
     getItinerary() {
       const aDate = new Date(this.visit.visitDate);
-      this.visit.visitDate = aDate.toISOString().split('T')[0];
+      this.visit.visitDate = aDate.toISOString().split('T')[0];   
       this.$store.dispatch('getVisitsByDate', this.visit.visitDate);
+      localStorage.visitDate= this.visit.visitDate;
+
     },
     printPage() {
       window.print(); // This triggers the browser's print functionality
+    },
+    loadToday() {
+      console.log('is this working?');
+      let loadedDate = new Date();  
+      this.visit.visitDate = loadedDate.toISOString().split('T')[0];
+      this.$store.dispatch('getVisitsByDate', this.visit.visitDate);
     }
+  
   },
-  async created() {  //EDITED TO CALL FOR IMAGES
+
+  
+  created() {  //EDITED TO CALL FOR IMAGES
     if (this.visitId) {
       try {
-        const visitResponse = await CastleService.getCastleById(this.visitId);
+        const visitResponse = CastleService.getCastleById(this.visitId);
         this.visit = visitResponse.data;
-        this.$store.dispatch('getAllVisits', this.visit);
+        this.$store.dispatch('getVisitsByDate', this.visit);
       } catch (error) {
         console.error(error);
       } //add better error message later
+    
     }
+    let loadedDate = new Date();  
+    this.visit.visitDate = loadedDate.toISOString().split('T')[0];
+    this.$store.dispatch('getVisitsByDate', localStorage.visitDate);
   },
+  
+
   props: ['castle']
 }
 </script>
@@ -63,9 +90,11 @@ export default {
   display: flex;
   width: 100%;
 }
+
 #calendar-container {
   width: 50vw;
 }
+
 .list-cont {
   width: 50vw;
 }
@@ -93,6 +122,10 @@ export default {
   height: 50px;
   width: 5vw;
   display: flex;
-  justify-content: flex-end;
+}
+h2 {
+  /* position:relative; */
+  display: flex;
+  justify-content: center;
 }
 </style>
