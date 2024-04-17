@@ -1,35 +1,20 @@
 <template>
-<<<<<<< HEAD
-  <div class="cardplus">
-    <div class="card mb-0" style="max-width: 30vw;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img class="visit-image" :src="visit.castleBannerPhoto" alt="bannerPhoto">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="visit-title">{{ visit.castleName }}</h5>
-            <p class="visit-text">{{ visit.shortDesc }}</p>
-            <p class="visit-region"><small class="text-muted">{{ visit.region }}</small></p>
-            <i class="pi pi-trash" @click="deleteVisit()"></i>
-=======
   <div>
     <div class="cardplus">
       <div class="card mb-3" style="max-width: 540px;">
         <div class="row g-0">
           <div class="col-md-4">
             <router-link :to="{ name: 'castleDetail', params: { castleId: visit.castleId } }">
-            <img class="visit-image" :src="visit.castleBannerPhoto" alt="bannerPhoto">
-          </router-link>
+              <img class="visit-image" :src="visit.castleBannerPhoto" alt="bannerPhoto">
+            </router-link>
           </div>
           <div class="col-md-8">
             <div class="card-body">
               <h5 class="visit-title">{{ visit.castleName }}</h5>
               <p class="visit-text">{{ visit.shortDesc }}</p>
               <p class="visit-region"><small class="text-muted">{{ visit.region }}</small></p>
-              <i type="button" class="pi pi-trash" @click="deleteVisit()"></i>
+              <i type="button" class="pi pi-trash" @click="deleteVisit"></i>
             </div>
->>>>>>> e96bd349ce0ef2926d8be9df50faac29dd3e30c6
           </div>
         </div>
       </div>
@@ -44,24 +29,22 @@ import authService from "../services/AuthService";
 
 const date = ref();
 export default {
+
   props: ['visit'],
 
-  setup() {
-    const showMenu = ref(false);
-    const toggleCalendar = () => {
-      showMenu.value = !showMenu.value;
-    }
-    return { showMenu, toggleCalendar };
-  },
+  // setup() {
+  //   const showMenu = ref(false);
+  //   const toggleCalendar = () => {
+  //     showMenu.value = !showMenu.value;
+  //   }
+  //   return { showMenu, toggleCalendar };
+  // },
 
   methods: {
     deleteVisit() {
       this.$store.dispatch('deleteVisitsById', this.visit.visitId);
-<<<<<<< HEAD
-
+      this.stor
     }
-=======
->>>>>>> e96bd349ce0ef2926d8be9df50faac29dd3e30c6
   }
 }
 </script>
@@ -76,25 +59,30 @@ export default {
   border-right: solid 1.5px black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .visit-title,
 .visit-text,
 .visit-region {
   font-style: italic;
   color: white;
 }
+
 .pi-trash {
   margin-top: .5rem;
   display: flex;
   width: 1rem;
   opacity: 75%;
 }
+
 .pi-trash:hover {
   opacity: 100%;
   color: rgb(184, 0, 0);
 }
+
 .cardplus {
   margin-bottom: 1.9rem;
 }
+
 .card {
   display: flex;
   justify-content: center;
@@ -104,7 +92,7 @@ export default {
   background-color: #8BBAB1;
   box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.4);
 }
+
 .card:hover {
   transform: scale(1.015);
-}
-</style>
+}</style>

@@ -35,7 +35,7 @@ export function createStore(currentToken, currentUser) {
       deleteVisitsById(context, visitId) {
         CastleService.deleteVisitsById(visitId).then(response => {
           console.log(response.data);
-          context.commit('SET_VISIT', response.data);
+          context.commit('SET_VISITLIST', response.data);
         })
           .catch(err => console.error(err));
       },
