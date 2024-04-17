@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="cardplus">
-      <div class="card mb-3" style="max-width: 28vw;  ">
+      <div class="card mb-3" style="width: 40vw;">
         <div class="row g-0">
-          <div class="col-md-4">
+          <div class="col-md-3 d-flex" >
             <router-link :to="{ name: 'castleDetail', params: { castleId: visit.castleId } }">
               <img class="visit-image" :src="visit.castleBannerPhoto" alt="bannerPhoto">
             </router-link>
@@ -12,8 +12,8 @@
             <div class="card-body">
               <h5 class="visit-title">{{ visit.castleName }}</h5>
               <p class="visit-text">{{ visit.shortDesc }}</p>
-              <p class="visit-region"><small class="text-muted">{{ visit.region }}</small></p>
-              <i type="button" class="pi pi-trash" @click="deleteVisit"></i>
+              <p class="visit-region"><small class="text-muted" >{{ visit.region }}</small></p>
+              <i type="button" class="pi pi-trash" @click="deleteVisit()"></i>
             </div>
           </div>
         </div>
@@ -61,8 +61,8 @@ export default {
       localStorage.visitDate = this.visit.visitDate;
       this.$store.dispatch('deleteVisitsById', this.visit.visitId);
       this.$store.dispatch('getVisitsByDate', localStorage.visitDate);
+    
       window.location.reload();
-
     }
   }
 } 
@@ -70,9 +70,9 @@ export default {
 
 <style scoped>
 .visit-image {
-  width: 100%;
+  width: 90%;
   height: 100%;
-  aspect-ratio: 1/1;
+  aspect-ratio: 1.5/1;
   object-fit: cover;
   overflow: hidden;
   border-radius: 10px;
@@ -82,9 +82,10 @@ export default {
 
 .visit-title,
 .visit-text,
-.visit-region {
+.visit-region{
   font-style: italic;
   color: white;
+  
 }
 
 .pi-trash {
@@ -110,6 +111,10 @@ export default {
   border-radius: 10px;
   background-color: #8BBAB1;
   box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.4);
+  background-image: url('https://slack-imgs.com/?c=1&o1=ro.gu&url=https%3A%2F%2Ffiles.oaiusercontent.com%2Ffile-jqG8nxEUHnn9Uk9ujKaSKS51%3Fse%3D2024-04-17T22%253A02%253A42Z%26sp%3Dr%26sv%3D2021-08-06%26sr%3Db%26rscc%3Dmax-age%253D31536000%252C%2520immutable%26rscd%3Dattachment%253B%2520filename%253D9156c601-a3dc-4fe2-8ce6-256363e582ac.webp%26sig%3D22sB%252BIT1C1Qhg6FlGS%2Fa5nirJ3I7yfuPawwm9mzGnZE%253D');
+  background-position: 157%;
+  background-position-y: 30%;
+
 }
 
 .card:hover {

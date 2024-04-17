@@ -17,7 +17,7 @@
             <li><a href="#">Our Mission</a></li>
             <li><a href="#">Join the Team</a></li>
             <li><a href="#">Have a Question?</a></li>
-            <li><a href="#">Sing up for Premium</a></li>
+            <li><a href="#">Sign up for Premium</a></li>
             <li><a href="#">Partners</a></li>
           </ul>
         </div>
