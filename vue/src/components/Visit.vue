@@ -1,21 +1,7 @@
 <template>
-<<<<<<< HEAD
-  <div class="cardplus">
-    <div class="card mb-0" style="max-width: 30vw;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img class="visit-image" :src="visit.castleBannerPhoto" alt="bannerPhoto">
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="visit-title">{{ visit.castleName }}</h5>
-            <p class="visit-text">{{ visit.shortDesc }}</p>
-            <p class="visit-region"><small class="text-muted">{{ visit.region }}</small></p>
-            <i class="pi pi-trash" @click="deleteVisit()"></i>
-=======
   <div>
     <div class="cardplus">
-      <div class="card mb-3" style="max-width: 540px;">
+      <div class="card mb-3" style="max-width: 30vw;">
         <div class="row g-0">
           <div class="col-md-4">
             <router-link :to="{ name: 'castleDetail', params: { castleId: visit.castleId } }">
@@ -29,7 +15,6 @@
               <p class="visit-region"><small class="text-muted">{{ visit.region }}</small></p>
               <i type="button" class="pi pi-trash" @click="deleteVisit()"></i>
             </div>
->>>>>>> e96bd349ce0ef2926d8be9df50faac29dd3e30c6
           </div>
         </div>
       </div>
@@ -57,12 +42,8 @@ export default {
   methods: {
     deleteVisit() {
       this.$store.dispatch('deleteVisitsById', this.visit.visitId);
-<<<<<<< HEAD
-
-    }
-=======
->>>>>>> e96bd349ce0ef2926d8be9df50faac29dd3e30c6
   }
+}
 }
 </script>
   
