@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="cardplus">
-      <div class="card mb-3" style="max-width: 28vw; ">
+      <div class="card mb-3" style="max-width: 28vw;  ">
         <div class="row g-0">
           <div class="col-md-4"> 
             <router-link :to="{ name: 'castleDetail', params: { castleId: visit.castleId } }">
@@ -48,6 +48,7 @@ export default {
 <style scoped>
 .visit-image {
   width: 100%;
+  height: 100%;
   aspect-ratio: 1/1;
   object-fit: cover;
   overflow: hidden;
