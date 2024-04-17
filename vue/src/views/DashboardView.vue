@@ -4,16 +4,16 @@
     <div class="calendar-container">
       <div class="calendar">
         <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()"
-          style="width: 600px; ">
+          style="width: 40vw; ">
           
         </Calendar>
       </div>
     </div>
     
     <div class="list-cont">
-      <h2 class="visit-title">{{ visit.visitDate }}</h2>
+      <h2 class="itinerary-name">Foxtrot's Itinerary</h2>
+      <!-- <h2 class="visit-title">{{this.$store.state.user.username}}'s Itinerary</h2> -->
       <VisitList />
-      
     </div>
     <div class="icon-container">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up" type="button"
@@ -89,7 +89,7 @@ export default {
       } //add better error message later
     
     }
-    let loadedDate = new Date();  
+    let loadedDate = new Date();
     this.visit.visitDate = loadedDate.toISOString().split('T')[0];
     this.$store.dispatch('getVisitsByDate', localStorage.visitDate);
   },
@@ -102,15 +102,12 @@ export default {
 <style scoped>
 .main-container {
   display: flex;
-  width: 100%;
+  width: 100vw;
 }
 
-#calendar-container {
-  width: 50vw;
-}
 
 .list-cont {
-  width: 50vw;
+  width: 55vw;
 }
 
 .calendar {
@@ -120,8 +117,7 @@ export default {
 }
 
 .visitList {
-  width: 50vw;
-  margin-top: 20px;
+  
   justify-content: center;
 }
 
@@ -149,16 +145,23 @@ export default {
 }
 
 .icon-container {
+  flex-direction: column;
   height: 1rem;
   margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
-  width: 9rem;
+  height: 9rem;
 }
-h2 {
+.itinerary-name {
   /* position:relative; */
+  margin-top: 1rem;
   display: flex;
+  font-size: 3rem;
   justify-content: center;
-
+  font-weight: 500;
+  font-style: italic;
+  text-transform: uppercase;
+  text-shadow: none;
 }
+  
 </style>
