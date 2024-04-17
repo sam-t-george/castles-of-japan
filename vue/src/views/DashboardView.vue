@@ -161,6 +161,7 @@ export default {
   font-weight: 500;
   font-style: italic;
   text-transform: uppercase;
+  text-shadow: none;
 }
   
 </style>
