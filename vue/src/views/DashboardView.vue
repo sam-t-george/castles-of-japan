@@ -11,7 +11,7 @@
     </div>
     
     <div class="list-cont">
-      <h2 class="visit-title">Steve's Itinerary</h2>
+      <h2 class="itinerary-name">Steve's Itinerary</h2>
       <!-- <h2 class="visit-title">{{this.$store.state.user.username}}'s Itinerary</h2> -->
       <VisitList />
     </div>
@@ -152,14 +152,15 @@ export default {
   justify-content: space-between;
   height: 9rem;
 }
-h2 {
+.itinerary-name {
   /* position:relative; */
   margin-top: 1rem;
   display: flex;
+  font-size: 3rem;
   justify-content: center;
   font-weight: 500;
   font-style: italic;
   text-transform: uppercase;
-  }
+}
   
 </style>
