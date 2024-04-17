@@ -25,10 +25,7 @@ export default {
         }
     },
     
-    created() {
-        
-        this.$store.dispatch('getVisitsByDate', this.visit.visitDate);
-    },
+   
     props: ['visit.visitDate'],
 }
 </script>

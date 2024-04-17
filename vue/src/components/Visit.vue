@@ -1,11 +1,11 @@
 <template>
   <div>
     <div class="cardplus">
-      <div class="card mb-3" style="max-width: 540px;">
+      <div class="card mb-3" style="max-width: 28vw;  ">
         <div class="row g-0">
-          <div class="col-md-4">
+          <div class="col-md-4"> 
             <router-link :to="{ name: 'castleDetail', params: { castleId: visit.castleId } }">
-              <img class="visit-image" :src="visit.castleBannerPhoto" alt="bannerPhoto">
+              <img class="visit-image" :src="visit.castleBannerPhoto" alt="bannerPhoto" >
             </router-link>
           </div>
           <div class="col-md-8">
@@ -13,7 +13,7 @@
               <h5 class="visit-title">{{ visit.castleName }}</h5>
               <p class="visit-text">{{ visit.shortDesc }}</p>
               <p class="visit-region"><small class="text-muted">{{ visit.region }}</small></p>
-              <i type="button" class="pi pi-trash" @click="deleteVisit"></i>
+              <i type = "button" class="pi pi-trash" @click="deleteVisit"></i>
             </div>
           </div>
         </div>
@@ -21,38 +21,43 @@
     </div>
   </div>
 </template>
-  
+
 <script>
 import { ref } from 'vue';
 import CastleService from '../services/CastleService';
 import authService from "../services/AuthService";
+import DashboardView from '../views/DashboardView.vue';
 
-const date = ref();
 export default {
 
   props: ['visit'],
 
-  // setup() {
-  //   const showMenu = ref(false);
-  //   const toggleCalendar = () => {
-  //     showMenu.value = !showMenu.value;
-  //   }
-  //   return { showMenu, toggleCalendar };
-  // },
+  setup() {
+    const showMenu = ref(false);
+    const toggleCalendar = () => {
+      showMenu.value = !showMenu.value;
+    }
+    return { showMenu, toggleCalendar };
+  },
+  
 
   methods: {
     deleteVisit() {
+      localStorage.visitDate= this.visit.visitDate;
       this.$store.dispatch('deleteVisitsById', this.visit.visitId);
-      this.stor
+      this.$store.dispatch('getVisitsByDate', localStorage.visitDate);
+      window.location.reload();
+      
     }
   }
-}
+} 
 </script>
-  
+
 <style scoped>
 .visit-image {
   width: 100%;
   height: 100%;
+  aspect-ratio: 1/1;
   object-fit: cover;
   overflow: hidden;
   border-radius: 10px;
@@ -77,6 +82,7 @@ export default {
 .pi-trash:hover {
   opacity: 100%;
   color: rgb(184, 0, 0);
+  transform: scale(1.015);
 }
 
 .cardplus {
@@ -88,11 +94,11 @@ export default {
   justify-content: center;
   border: 1.5px solid #193144;
   border-radius: 10px;
-  border: 1.5px solid #193144;
   background-color: #8BBAB1;
   box-shadow: 7px 10px 15px rgba(0, 0, 0, 0.4);
 }
 
 .card:hover {
   transform: scale(1.015);
-}</style>
+}
+</style>

@@ -24,18 +24,18 @@ export function createStore(currentToken, currentUser) {
 
 
       getVisitsByDate(context, visitDate) {
-        console.log(visitDate);
+        console.log('getVisitsByDate: ' + visitDate);
         CastleService.getVisitsByDate(visitDate).then(response => {
-          console.log(response.data);
           context.commit('SET_VISITLIST', response.data);
         })
           .catch(err => console.error(err));
       },
 
+    
       deleteVisitsById(context, visitId) {
         CastleService.deleteVisitsById(visitId).then(response => {
-          console.log(response.data);
-          context.commit('SET_VISITLIST', response.data);
+          console.log('localStorage.visitDate ' + localStorage.visitDate);
+          context.commit('SET_VISITLIST', localStorage.visitDate);
         })
           .catch(err => console.error(err));
       },
