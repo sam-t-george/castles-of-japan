@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="cardplus">
-      <div class="card mb-3" style="max-width: 540px;">
+      <div class="card mb-3" style="max-width: 30vw;">
         <div class="row g-0">
           <div class="col-md-4">
             <router-link :to="{ name: 'castleDetail', params: { castleId: visit.castleId } }">
