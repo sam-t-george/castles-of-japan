@@ -2,7 +2,7 @@
   <div class="main-container">
     <div class="calendar-container">
       <div class="calendar">
-        <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()" style="width: 600px; ">
+        <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()" style="width: 40rem; ">
         </Calendar>
       </div>
     </div>
@@ -61,7 +61,7 @@ export default {
 <style scoped>
 .main-container {
   display: flex;
-  width: 100%;
+  width: 100vw;
 }
 #calendar-container {
   width: 50vw;
@@ -73,7 +73,7 @@ export default {
 .calendar {
   display: flex;
   height: 23rem;
-  padding: 20px;
+  margin: 40px;
 }
 
 .visitList {
@@ -86,10 +86,6 @@ export default {
   position: fixed;
   top: 7vw;
   right: 0;
-  height: 50px;
-  width: 5vw;
-  display: flex;
-  justify-content: flex-end;
   height: 50px;
   width: 5vw;
   display: flex;
