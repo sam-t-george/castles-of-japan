@@ -8,7 +8,7 @@
             <span class="bars" v-if="!isHomePage"> &nbsp;|&nbsp;</span>
             <router-link v-bind:to="{ name: 'castles' }" class="nav-link" v-if="!isExplorePage"> <i class="pi pi-search"></i> Explore Castles</router-link>
             <span class="bars" v-if="!isExplorePage"> &nbsp;|&nbsp;</span>
-            <router-link v-bind:to="{ name: 'dashboard' }" class="nav-link" v-if="!isDashboardPage && isAuthenticated">  My Dashboard</router-link>
+            <router-link v-bind:to="{ name: 'dashboard' }" class="nav-link" v-if="!isDashboardPage && isAuthenticated"><i class="pi pi-desktop"></i>  My Dashboard</router-link>
             <span class="bars" v-if="!isDashboardPage && isAuthenticated"> &nbsp;|&nbsp;</span>
             <router-link v-bind:to="{ name: 'map' }" class="nav-link" v-if="!isMapPage"> <i class="pi pi-map"></i> Map</router-link>
             <span class="bars" v-if="!isMapPage && !isLoginPage"> &nbsp;|&nbsp;</span>
