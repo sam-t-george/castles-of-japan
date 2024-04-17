@@ -6,12 +6,17 @@
       <router-link v-bind:to="{ name: 'castles' }">
         <button type="button" class="btn btn-primary">Explore!</button>
       </router-link>
-    </div>
+      </div>
   </div>
+  <Premium/>
 </template>
 
 <script>
+import Premium from '../components/Premium.vue';
 export default {
+  components: {
+    Premium
+  }
 };
 </script>
 
@@ -32,7 +37,7 @@ h1 {
   background-position: 50%;
   background-image: url('https://www.wendywutours.co.nz/resource/upload/900/banner-osaka-castle.jpg');
   box-shadow: 0 0 300px rgb(0, 0, 0) inset;
-  /* background-image: url('https://i.pinimg.com/originals/bb/b6/75/bbb6757f33883aa8703215437c054e96.jpg'); */
+ 
   
 }
 
@@ -43,7 +48,7 @@ h1 {
   width: 10vw;
   height: 3vw;
   color: #193144;
-  border: none;
+  border:none;
   font-style: italic;
   margin-bottom: 6rem;
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
@@ -75,5 +80,6 @@ h1 {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  
 }
 </style>

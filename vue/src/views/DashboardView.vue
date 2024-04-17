@@ -4,7 +4,8 @@
     <div class="calendar-container">
       <div class="calendar">
         <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()"
-          style="width: 600px; ">
+          style="width: 40vw; ">
+          
         </Calendar>
       </div>
     </div>
@@ -101,15 +102,12 @@ export default {
 <style scoped>
 .main-container {
   display: flex;
-  width: 100%;
+  width: 100vw;
 }
 
-#calendar-container {
-  width: 50vw;
-}
 
 .list-cont {
-  width: 50vw;
+  width: 55vw;
 }
 
 .calendar {
@@ -119,8 +117,7 @@ export default {
 }
 
 .visitList {
-  width: 50vw;
-  margin-top: 20px;
+  
   justify-content: center;
 }
 
@@ -148,15 +145,16 @@ export default {
 }
 
 .icon-container {
+  flex-direction: column;
   height: 1rem;
   margin-top: 1.5rem;
   display: flex;
   justify-content: space-between;
-  width: 9rem;
+  height: 9rem;
 }
 h2 {
-  margin-top: 1.5rem;
-  text-shadow: 2px;
+  /* position:relative; */
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
   font-weight: 500;
