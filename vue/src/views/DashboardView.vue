@@ -5,19 +5,14 @@
       <div class="calendar">
         <Calendar v-model="visit.visitDate" inline class="Calendar" @click="getItinerary()"
           style="width: 600px; ">
-          
         </Calendar>
       </div>
-
-
-
-
     </div>
     
     <div class="list-cont">
-      <h2 class="visit-title">{{ visit.visitDate }}</h2>
+      <h2 class="visit-title">Steve's Itinerary</h2>
+      <!-- <h2 class="visit-title">{{this.$store.state.user.username}}'s Itinerary</h2> -->
       <VisitList />
-      
     </div>
     <div class="icon-container">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up" type="button"
@@ -93,7 +88,7 @@ export default {
       } //add better error message later
     
     }
-    let loadedDate = new Date();  
+    let loadedDate = new Date();
     this.visit.visitDate = loadedDate.toISOString().split('T')[0];
     this.$store.dispatch('getVisitsByDate', localStorage.visitDate);
   },
@@ -160,9 +155,13 @@ export default {
   width: 9rem;
 }
 h2 {
-  /* position:relative; */
+  margin-top: 1.5rem;
+  text-shadow: 2px;
   display: flex;
   justify-content: center;
-
-}
+  font-weight: 500;
+  font-style: italic;
+  text-transform: uppercase;
+  }
+  
 </style>

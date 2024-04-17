@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="cardplus">
-      <div class="card mb-3" style="max-width: 28vw;  ">
+      <div class="card mb-3" style="width: 40vw;  ">
         <div class="row g-0">
           <div class="col-md-4"> 
             <router-link :to="{ name: 'castleDetail', params: { castleId: visit.castleId } }">
@@ -13,7 +13,7 @@
               <h5 class="visit-title">{{ visit.castleName }}</h5>
               <p class="visit-text">{{ visit.shortDesc }}</p>
               <p class="visit-region"><small class="text-muted">{{ visit.region }}</small></p>
-              <i type = "button" class="pi pi-trash" @click="deleteVisit"></i>
+              <i type = "button" class="pi pi-trash" @click="deleteVisit()"></i>
             </div>
           </div>
         </div>
@@ -45,8 +45,8 @@ export default {
       localStorage.visitDate= this.visit.visitDate;
       this.$store.dispatch('deleteVisitsById', this.visit.visitId);
       this.$store.dispatch('getVisitsByDate', localStorage.visitDate);
+    
       window.location.reload();
-      
     }
   }
 } 
