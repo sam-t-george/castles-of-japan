@@ -81,6 +81,7 @@ export default defineComponent({
     align-items: center;
     display: flex;
     background: #334e49ce;
+    
 }
 .map {
     box-shadow: 2px 0px 15px 17px rgba(0, 0, 0, 0.35);
