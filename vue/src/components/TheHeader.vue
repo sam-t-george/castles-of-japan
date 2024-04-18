@@ -59,6 +59,11 @@ export default {
     overflow: hidden;
 }
 
+.pic:hover {
+    transform: scale(1.01);
+    border-bottom: 1px solid #8BBAB1;
+}
+
 #header {
     width: 100vw;
     display: flex;

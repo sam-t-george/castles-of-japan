@@ -15,6 +15,7 @@
     "bootstrap": "^5.3.3",
     "bootstrap-icons": "^1.11.3",
     "bootstrap-vue": "^2.23.1",
+    "maki": "^2.1.0",
     "primeicons": "^7.0.0",
     "primevue": "^3.51.0",
     "vue": "^3.4.21",
