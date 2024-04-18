@@ -140,7 +140,7 @@ const geojsonData = {
         "description": "A northside park that is home to the Lincoln Park Zoo"
       },
       "geometry": {
-        "coordinates": [-86.637596, 41.940403],
+        "coordinates": [35.6870, 139.7556],
         "type": "Point"
       }
     },
@@ -151,7 +151,7 @@ const geojsonData = {
         "description": "A northside park that is home to the Lincoln Park Zoo"
       },
       "geometry": {
-        "coordinates": [-87.637596, 41.940403],
+        "coordinates": [32.7892, 130.3673],
         "type": "Point"
       }
     },
@@ -162,7 +162,7 @@ const geojsonData = {
         "description": "A northside park that is home to the Lincoln Park Zoo"
       },
       "geometry": {
-        "coordinates": [-86.637596, 41.940403],
+        "coordinates": [35.2765, 136.2518],
         "type": "Point"
       }
     },
@@ -173,7 +173,7 @@ const geojsonData = {
         "description": "A northside park that is home to the Lincoln Park Zoo"
       },
       "geometry": {
-        "coordinates": [-87.637596, 41.940403],
+        "coordinates": [36.1519, 136.27046],
         "type": "Point"
       }
     },
@@ -181,10 +181,10 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Gifu Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Mountainous Stronghold"
       },
       "geometry": {
-        "coordinates": [-86.637596, 41.940403],
+        "coordinates": [136.780955, 35.434049],
         "type": "Point"
       }
     },
@@ -192,10 +192,10 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Marugame Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "The Fan-shaped Fortress"
       },
       "geometry": {
-        "coordinates": [-87.637596, 41.940403],
+        "coordinates": [133.799613, 34.286113],
         "type": "Point"
       }
     },
@@ -203,10 +203,10 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Kiyosu Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "the Unifiers Assembly Hall"
       },
       "geometry": {
-        "coordinates": [-86.637596, 41.940403],
+        "coordinates": [136.842723, 35.215084],
         "type": "Point"
       }
     },
@@ -214,10 +214,10 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Kanazawa Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Historic Maeda Clan Fortress"
       },
       "geometry": {
-        "coordinates": [-87.637596, 41.940403],
+        "coordinates": [136.657880, 36.56544],
         "type": "Point"
       }
     },
@@ -225,10 +225,10 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Iwamura Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Ancient Mountain Fortress"
       },
       "geometry": {
-        "coordinates": [-86.637596, 41.940403],
+        "coordinates": [137.451786, 35.360812],
         "type": "Point"
       }
     },
@@ -236,10 +236,10 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Uwajima Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Original Hilltop Castle"
       },
       "geometry": {
-        "coordinates": [-87.637596, 41.940403],
+        "coordinates": [132.564898, 33.218973],
         "type": "Point"
       }
     },
@@ -247,10 +247,10 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Zakimi Castle Ruins",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Historical Fortress Ruins in Okinawa"
       },
       "geometry": {
-        "coordinates": [-86.637596, 41.940403],
+        "coordinates": [127.741224, 26.405427],
         "type": "Point"
       }
     },
