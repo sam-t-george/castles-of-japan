@@ -63,6 +63,7 @@ export default {
 
 <style scoped>
 .site-footer {
+   
    border-top: 2px solid #8BBAB1;
    background-color: #193144;
    padding: 45px 0 20px;
