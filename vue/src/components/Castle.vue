@@ -49,8 +49,8 @@ export default {
     return {
       visit: {
         visitDate: '',
-        castleId: '',      // might want to change this hard coding later
-        username: ''      // might want to change this hard coding later
+        castleId: '',
+        username: ''
       },
 
     }
@@ -90,8 +90,7 @@ export default {
 }
 
 .castle-card:hover {
-  transform: scale(1.015);
-  
+  transform: scale(1.015);  
 }
 
 .castle-card-body {
@@ -129,7 +128,7 @@ export default {
 }
 
 .castle-desc {
-  font-size: .8em;
+  font-size: .8em; 
   text-shadow: 1px 1px 2px black;
  
 }
