@@ -290,8 +290,8 @@ export default {
         const map = new mapboxgl.Map({
             container: mapDoc,
             style: "mapbox://styles/mapbox/streets-v12",
-            center: [138.391614, 39.031578],
-            zoom: 4.8,
+            center: [137.391614, 35.031578],
+            zoom: 4.3,
         });
         map.on('load', () => {
             map.resize();
