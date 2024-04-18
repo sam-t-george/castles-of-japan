@@ -36,9 +36,8 @@ h1 {
   background-size: cover;
   background-position: 50%;
   background-image: url('https://www.wendywutours.co.nz/resource/upload/900/banner-osaka-castle.jpg');
+  /* background-image: url('https://media3.giphy.com/media/Vdn2fjMv5ASxI3rZ3S/200w.gif?cid=6c09b952jy4l5n4usq9hq9hsv9rjlzsj7bb3tca0o058nvcv&ep=v1_gifs_search&rid=200w.gif&ct=g'); */
   box-shadow: 0 0 300px rgb(0, 0, 0) inset;
- 
-  
 }
 
 .btn-primary {
