@@ -11,8 +11,7 @@
     </div>
     
     <div class="list-cont">
-      <h2 class="itinerary-name">Foxtrot's Itinerary</h2>
-      <!-- <h2 class="visit-title">{{this.$store.state.user.username}}'s Itinerary</h2> -->
+      <h2 class="itinerary-name">{{this.$store.state.user.username}}'s Itinerary</h2>
       <VisitList />
     </div>
     <div class="icon-container">
@@ -114,6 +113,7 @@ export default {
   display: flex;
   height: 23rem;
   padding: 20px;
+  margin-bottom: 4rem;
 }
 
 .visitList {
