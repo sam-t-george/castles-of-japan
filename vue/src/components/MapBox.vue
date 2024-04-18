@@ -114,7 +114,7 @@ const geojsonData = {
       "properties": {
         "title": "Matsumae Castle",
         "description": "The Lonely Castle of Hokkaido",
-        "marker-color" : ""
+        "marker-color" : "#358057"
       },
       "geometry": {
         "coordinates": [140.1064, 41.4292],
@@ -197,8 +197,7 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Gifu Castle",
-        "description": "Mountainous Stronghold"
-        ,
+        "description": "Mountainous Stronghold",
         "marker-color" : "#3190BE"
       },
       "geometry": {
@@ -278,8 +277,6 @@ const geojsonData = {
         "type": "Point"
       }
     },
-    
-    // Add other features here
   ],
   "type": "FeatureCollection"
 };
@@ -299,33 +296,26 @@ export default {
         });
         map.on('load', () => {
     map.resize();
-    // Load the GeoJSON data onto the map
+            //load json on map
     geojsonData.features.forEach((feature) => {
-        // Check if a marker-color is defined, otherwise use a default color (e.g., red)
-        const symbol = feature.properties['marker-symbol'] || 'religious-shinto.svg'; // Default to a generic marker icon
+        const symbol = feature.properties['marker-symbol'] || 'religious-shinto.svg'; //defaults generic marker
 
-        const color = feature.properties['marker-color'] || '#FF0000'; // Default to red if no color specified
-
-        // Create the marker with the default shape and specified color
+        const color = feature.properties['marker-color'] || '#FF0000'; //defaults red
         const marker = new mapboxgl.Marker({ color: color })
             .setLngLat(feature.geometry.coordinates)
-            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+            .setPopup(new mapboxgl.Popup({ offset: 25 })
                 .setHTML(`<h3>${feature.properties.title}</h3>
-                          <p>${feature.properties.description}</p>
-                          <p><strong>Marker Color:</strong> <span style="color:${color};">${color}</span></p>`))
+                          <p>${feature.properties.description}</p>`))
             .addTo(map);
     });
 });
-
-
         this.map = map;
     },
-    unmounted() {
+    unmounted() { //best practice safety method
         if (this.map) {
             this.map.remove();
         }
     }
-    
 }
 </script>
 
@@ -336,57 +326,6 @@ export default {
     box-shadow: 2px 0px 15px 17px rgba(0, 0, 0, 0.35);
     border: 2px solid white;
 }
-/* Other styles remain unchanged */
-</style>
-
-
-<!-- 
-<template>
-    <div class="mapview">
-        <div class="mapColorBackground">
-            <div id="mapContainer" ref="mapContainer" class="map-container"></div>
-        </div>
-    </div>
-</template>
-
-<script>
-import mapboxgl from "mapbox-gl";
-mapboxgl.accessToken = "pk.eyJ1IjoiamtuYWhheSIsImEiOiJjbHY0OWNucXcwNmZiMndtc29ld2FwcDV2In0.bJ_p63ehT0V3LBk7v3Fc1Q"
-export default {
-    components: {
-
-    },
-    mounted() {
-        const mapDoc = document.getElementById("mapContainer")
-        const map = new mapboxgl.Map({
-            container: mapDoc,
-            style: "mapbox://styles/mapbox/streets-v12",
-            center: [138.391614, 38.031578],
-            zoom: 4.8,
-        });
-        map.on('load', () => {
-            map.resize();
-        }),
-            map.on('click', (e) => {
-                const marker = new mapboxgl.Marker();
-                marker.setLngLat(e.lngLat).addTo(map);
-            });
-    },
-    unmounted() {
-        this.map.remove();
-        this.map = null;
-    }
-    
-}
-</script>
-<style>
-.map-container {
-    width: 90vw;
-    height: 70vh;
-    box-shadow: 2px 0px 15px 17px rgba(0, 0, 0, 0.35);
-    border: 2px solid white;
-}
-
 .mapview {
     height: 86vh;
     display: flex;
@@ -395,7 +334,6 @@ export default {
     background-position: 25%;
     background-image: url('../assets/mapBackground.jpg');
 }
-
 .mapboxgl-ctrl-bottom-right,
 .mapboxgl-ctrl-bottom-left {
     opacity: 0;
@@ -409,4 +347,4 @@ export default {
     display: flex;
     background: #334e49ce;
 }
-</style> -->
+</style>
