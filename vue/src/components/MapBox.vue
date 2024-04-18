@@ -210,7 +210,7 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Marugame Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "description": "The Fan-shaped Fortress",
         "marker-color" : "#80BF26"
       },
       "geometry": {
@@ -222,7 +222,7 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Kiyosu Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "description": "The Unifiers Assembly Hall",
         "marker-color" : "#3190BE"
       },
       "geometry": {
@@ -234,7 +234,7 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Kanazawa Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "description": "Historic Maeda Clan Fortress",
         "marker-color" : "#3190BE"
       },
       "geometry": {
@@ -246,7 +246,7 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Iwamura Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "description": "Ancient Mountain Fortress",
         "marker-color" : "#3190BE"
       },
       "geometry": {
@@ -258,7 +258,7 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Uwajima Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "description": "Original Hilltop Castle",
         "marker-color" : "#80BF26"
       },
       "geometry": {
@@ -270,7 +270,7 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Zakimi Castle Ruins",
-        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "description": "Historic Fortress Ruins in Okinawa",
         "marker-color" : "#936034"
       },
       "geometry": {
