@@ -153,18 +153,15 @@ export default {
     color: #358057;
     border-color: #358057;
 }
-
 .btn-outline-hokkaido:hover {
     color: white;
     background-color: #358057;
     border-color: #358057;
 }
-
 .btn-outline-tohoku {
     color: #F39438;
     border-color: #F39438;
 }
-
 .btn-outline-tohoku:hover {
     background-color: #F39438;
     border-color: #F39438;
