@@ -1,7 +1,7 @@
 <template>
     <div class="premium">
     <h2 class = "join"> Join the Clan Today! </h2>
-    <router-link v-bind:to="{ name: 'register' }" class="nav-link"><img src="../assets/premium-dash.png" alt="logo" width="125" height="125" class="premium-dash" /> </router-link>
+    <router-link v-bind:to="{ name: 'register' }" class="nav-link"><img src="../assets/Foxtrots- Screenshots/Dashboard.png" alt="logo" width="125" height="125" class="premium-dash" /> </router-link>
     <h6 class="sign-up-text"> Sign up to be able  to add castles to a personalized dashboard!</h6>
     </div>  
   </template>
