@@ -21,6 +21,22 @@
     </div>
   </div>
 </template>
+  
+<!-- <div class="cardplus">
+  <div class="card mb-0" style="max-width: 30vw;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img class="visit-image" :src="visit.castleBannerPhoto" alt="bannerPhoto">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="visit-title">{{ visit.castleName }}</h5>
+          <p class="visit-text">{{ visit.shortDesc }}</p>
+          <p class="visit-region"><small class="text-muted">{{ visit.region }}</small></p>
+          <i class="pi pi-trash" @click="deleteVisit()"></i> -->
+
+
+
 
 <script>
 import { ref } from 'vue';
@@ -38,11 +54,11 @@ export default {
     }
     return { showMenu, toggleCalendar };
   },
-  
+
 
   methods: {
     deleteVisit() {
-      localStorage.visitDate= this.visit.visitDate;
+      localStorage.visitDate = this.visit.visitDate;
       this.$store.dispatch('deleteVisitsById', this.visit.visitId);
       this.$store.dispatch('getVisitsByDate', localStorage.visitDate);
     
@@ -63,6 +79,7 @@ export default {
   border-right: solid 1.5px black;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
+
 .visit-title,
 .visit-text,
 .visit-region{
@@ -77,17 +94,19 @@ export default {
   width: 1rem;
   opacity: 75%;
 }
+
 .pi-trash:hover {
   opacity: 100%;
   color: rgb(184, 0, 0);
   transform: scale(1.015);
 }
+
 .cardplus {
   margin-bottom: 1.9rem;
 }
+
 .card {
   display: flex;
-  justify-content: center;
   border: 1.5px solid #193144;
   border-radius: 10px;
   background-color: #8BBAB1;
@@ -97,7 +116,7 @@ export default {
   background-position-y: 30%;
 
 }
+
 .card:hover {
   transform: scale(1.015);
-}
-</style>
+}</style>
