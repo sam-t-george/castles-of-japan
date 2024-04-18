@@ -16,10 +16,12 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Nijo Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Japans Most Spectacular Feudal Castle",
+        "marker-color" : "#923063",
+        "marker-symbol" : "castle"
       },
       "geometry": {
-        "coordinates": [-87.637596, 41.940403],
+        "coordinates": [135.7488, 35.0142],
         "type": "Point"
       }
     },
@@ -27,10 +29,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Himeji Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Ancient White Heron",
+        "marker-color" : "#923063"
       },
       "geometry": {
-        "coordinates": [-86.637596, 41.940403],
+        "coordinates": [134.8419, 34.8394],
         "type": "Point"
       }
     },
@@ -38,10 +41,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Hirosaki Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "1 of 12 Authentic Castles in Japan",
+        "marker-color" : "#F39438"
       },
       "geometry": {
-        "coordinates": [-87.637596, 41.940403],
+        "coordinates": [140.4641, 40.6090],
         "type": "Point"
       }
     },
@@ -49,10 +53,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Osaka Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Icon of Unity",
+        "marker-color" : "#923063"
       },
       "geometry": {
-        "coordinates": [-86.637596, 41.940403],
+        "coordinates":  [135.5262, 34.6873],
         "type": "Point"
       }
     },
@@ -60,10 +65,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Matsumoto-jo Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "The Crow Castle",
+        "marker-color" : "#3190BE"
       },
       "geometry": {
-        "coordinates": [-87.637596, 41.940403],
+        "coordinates": [137.9686, 36.2380],
         "type": "Point"
       }
     },
@@ -71,10 +77,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Nagoya Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "The Golden Shachihoko",
+        "marker-color" : "#3190BE"
       },
       "geometry": {
-        "coordinates": [-86.637596, 41.940403],
+        "coordinates": [136.9042, 35.1856],
         "type": "Point"
       }
     },
@@ -82,10 +89,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Matsuyama-jo Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Feudal Elegance",
+        "marker-color" : "#80BF26"
       },
       "geometry": {
-        "coordinates": [-87.637596, 41.940403],
+        "coordinates": [132.7654, 33.8392],
         "type": "Point"
       }
     },
@@ -93,10 +101,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Matsue-jo Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Plover Castle",
+        "marker-color" : "#EB6437"
       },
       "geometry": {
-        "coordinates": [-86.637596, 41.940403],
+        "coordinates": [133.0484, 35.4723],
         "type": "Point"
       }
     },
@@ -104,10 +113,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Matsumae Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "The Lonely Castle of Hokkaido",
+        "marker-color" : ""
       },
       "geometry": {
-        "coordinates": [-87.637596, 41.940403],
+        "coordinates": [140.1064, 41.4292],
         "type": "Point"
       }
     },
@@ -115,10 +125,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Inuyama Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Japans Oldest Castle Tower",
+        "marker-color" : "#3190BE"
       },
       "geometry": {
-        "coordinates": [-86.637596, 41.940403],
+        "coordinates": [136.9756, 35.3801],
         "type": "Point"
       }
     },
@@ -126,10 +137,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Hiroshima Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "The Carp Castle",
+        "marker-color" : "#3190BE"
       },
       "geometry": {
-        "coordinates": [-87.637596, 41.940403],
+        "coordinates": [132.4655, 34.3955],
         "type": "Point"
       }
     },
@@ -137,10 +149,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Edo Castle Ruins",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Heart of Historical Tokyo",
+        "marker-color" : "#EB6363"
       },
       "geometry": {
-        "coordinates": [35.6870, 139.7556],
+        "coordinates": [139.7585, 35.6848],
         "type": "Point"
       }
     },
@@ -148,10 +161,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Shimabara Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "A bastion of rebellion and faith",
+        "marker-color" : "#349493"
       },
       "geometry": {
-        "coordinates": [32.7892, 130.3673],
+        "coordinates": [130.3693, 32.7881],
         "type": "Point"
       }
     },
@@ -159,10 +173,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Hikone Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "Preserved Samurai Legacy",
+        "marker-color" : "#923063"
       },
       "geometry": {
-        "coordinates": [35.2765, 136.2518],
+        "coordinates": [136.2513, 35.2773],
         "type": "Point"
       }
     },
@@ -170,10 +185,11 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Maruoka Castle",
-        "description": "A northside park that is home to the Lincoln Park Zoo"
+        "description": "The Mist Castle",
+        "marker-color" : "#923063"
       },
       "geometry": {
-        "coordinates": [36.1519, 136.27046],
+        "coordinates": [136.2906, 36.1541],
         "type": "Point"
       }
     },
@@ -182,6 +198,8 @@ const geojsonData = {
       "properties": {
         "title": "Gifu Castle",
         "description": "Mountainous Stronghold"
+        ,
+        "marker-color" : "#3190BE"
       },
       "geometry": {
         "coordinates": [136.780955, 35.434049],
@@ -192,7 +210,8 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Marugame Castle",
-        "description": "The Fan-shaped Fortress"
+        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "marker-color" : "#80BF26"
       },
       "geometry": {
         "coordinates": [133.799613, 34.286113],
@@ -203,7 +222,8 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Kiyosu Castle",
-        "description": "the Unifiers Assembly Hall"
+        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "marker-color" : "#3190BE"
       },
       "geometry": {
         "coordinates": [136.842723, 35.215084],
@@ -214,7 +234,8 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Kanazawa Castle",
-        "description": "Historic Maeda Clan Fortress"
+        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "marker-color" : "#3190BE"
       },
       "geometry": {
         "coordinates": [136.657880, 36.56544],
@@ -225,7 +246,8 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Iwamura Castle",
-        "description": "Ancient Mountain Fortress"
+        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "marker-color" : "#3190BE"
       },
       "geometry": {
         "coordinates": [137.451786, 35.360812],
@@ -236,7 +258,8 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Uwajima Castle",
-        "description": "Original Hilltop Castle"
+        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "marker-color" : "#80BF26"
       },
       "geometry": {
         "coordinates": [132.564898, 33.218973],
@@ -247,7 +270,8 @@ const geojsonData = {
       "type": "Feature",
       "properties": {
         "title": "Zakimi Castle Ruins",
-        "description": "Historical Fortress Ruins in Okinawa"
+        "description": "A northside park that is home to the Lincoln Park Zoo",
+        "marker-color" : "#936034"
       },
       "geometry": {
         "coordinates": [127.741224, 26.405427],
@@ -274,16 +298,26 @@ export default {
             zoom: 4.8,
         });
         map.on('load', () => {
-            map.resize();
-            // Load the GeoJSON data onto the map
-            geojsonData.features.forEach((feature) => {
-                const marker = new mapboxgl.Marker()
-                    .setLngLat(feature.geometry.coordinates)
-                    .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
-                        .setHTML(`<h3>${feature.properties.title}</h3><p>${feature.properties.description}</p>`))
-                    .addTo(map);
-            });
-        });
+    map.resize();
+    // Load the GeoJSON data onto the map
+    geojsonData.features.forEach((feature) => {
+        // Check if a marker-color is defined, otherwise use a default color (e.g., red)
+        const symbol = feature.properties['marker-symbol'] || 'religious-shinto.svg'; // Default to a generic marker icon
+
+        const color = feature.properties['marker-color'] || '#FF0000'; // Default to red if no color specified
+
+        // Create the marker with the default shape and specified color
+        const marker = new mapboxgl.Marker({ color: color })
+            .setLngLat(feature.geometry.coordinates)
+            .setPopup(new mapboxgl.Popup({ offset: 25 }) // add popups
+                .setHTML(`<h3>${feature.properties.title}</h3>
+                          <p>${feature.properties.description}</p>
+                          <p><strong>Marker Color:</strong> <span style="color:${color};">${color}</span></p>`))
+            .addTo(map);
+    });
+});
+
+
         this.map = map;
     },
     unmounted() {
