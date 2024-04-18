@@ -16,6 +16,17 @@ public class Visit {
     public Visit(){
     };
 
+    public Visit(int castleId, Integer visitId, String username, LocalDate visitDate, String castleName, String castleBannerPhoto, String shortDesc, String region) {
+        this.castleId = castleId;
+        this.visitId = visitId;
+        this.username = username;
+        this.visitDate = visitDate;
+        this.castleName = castleName;
+        this.castleBannerPhoto = castleBannerPhoto;
+        this.shortDesc = shortDesc;
+        this.region = region;
+    }
+
     public String getRegion() {
         return region;
     }
