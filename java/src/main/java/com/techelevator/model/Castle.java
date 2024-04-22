@@ -14,10 +14,10 @@ public class Castle {
     private String siteUrl;
     private String mapLocation;
     private String region;
-
+    //
     public Castle() {
     }
-
+    
     public Castle(
             int castleId,
             String castleName,
